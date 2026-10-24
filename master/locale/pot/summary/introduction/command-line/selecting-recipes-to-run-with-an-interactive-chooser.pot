@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/selecting-recipes-to-run-with-an-interactive-chooser.md:1
+msgid "Selecting Recipes to Run With an Interactive Chooser"
+msgstr ""
+
+#: src/selecting-recipes-to-run-with-an-interactive-chooser.md:3
+msgid ""
+"The `--choose` subcommand makes `just` invoke a chooser to select which "
+"recipes to run. Choosers should read lines containing recipe names from "
+"standard input and print one or more of those names separated by spaces to "
+"standard output."
+msgstr ""
+
+#: src/selecting-recipes-to-run-with-an-interactive-chooser.md:7
+msgid ""
+"Because there is currently no way to run a recipe that requires arguments "
+"with `--choose`, such recipes will not be given to the chooser. Private "
+"recipes and aliases are also skipped."
+msgstr ""
+
+#: src/selecting-recipes-to-run-with-an-interactive-chooser.md:11
+msgid ""
+"The chooser can be overridden with the `--chooser` flag. If `--chooser` is "
+"not given, then `just` first checks if `$JUST_CHOOSER` is set. If it isn’t, "
+"then the chooser defaults to `fzf`, a popular fuzzy finder."
+msgstr ""
+
+#: src/selecting-recipes-to-run-with-an-interactive-chooser.md:15
+msgid "Arguments can be included in the chooser, i.e. `fzf --exact`."
+msgstr ""
+
+#: src/selecting-recipes-to-run-with-an-interactive-chooser.md:17
+msgid ""
+"The chooser is invoked in the same way as recipe lines. For example, if the "
+"chooser is `fzf`, it will be invoked with `sh -cu 'fzf'`, and if the shell, "
+"or the shell arguments are overridden, the chooser invocation will respect "
+"those overrides."
+msgstr ""
+
+#: src/selecting-recipes-to-run-with-an-interactive-chooser.md:22
+msgid ""
+"If you’d like `just` to default to selecting recipes with a chooser, you can "
+"use this as your default recipe:"
+msgstr ""

@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/adding-and-removing-environment-variables.md:1
+msgid "Adding and Removing Environment Variables"
+msgstr ""
+
+#: src/adding-and-removing-environment-variables.md:3
+msgid ""
+"By default, environment variables which are exported or unexported in the "
+"`justfile` are included in the cache key, and environment variables exported "
+"outside the `justfile` and inherited by `just` are not included."
+msgstr ""
+
+#: src/adding-and-removing-environment-variables.md:7
+msgid ""
+"Environment variables can be added or removed from the cache key using "
+"`[cache(environment = EXPRESSION)]`<sup>1.59.0</sup>."
+msgstr ""
+
+#: src/adding-and-removing-environment-variables.md:10
+msgid ""
+"In this example, the environment variable `foo` will not be included in the "
+"cache key, but `PATH` will:"
+msgstr ""

@@ -1,0 +1,77 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/integrating-with-mise.md:1
+msgid "Integrating with `mise`"
+msgstr ""
+
+#: src/integrating-with-mise.md:3
+msgid ""
+"[`mise`](https://mise.jdx.dev/) is a tool for installing development tools, "
+"managing the environment, and running tasks."
+msgstr ""
+
+#: src/integrating-with-mise.md:6
+msgid ""
+"`just` and `mise` work well together, with `just` defining and running tasks "
+"and `mise` installing and managing development tools."
+msgstr ""
+
+#: src/integrating-with-mise.md:9
+msgid "To load the `mise` environment within `just`:"
+msgstr ""
+
+#: src/integrating-with-mise.md:20
+msgid ""
+"The environment is loaded once, when `just` starts, and is available in all "
+"recipes. `set dotenv-override` is required, since `mise env` returns a value "
+"for the `PATH` variable, which is always already set."
+msgstr ""
+
+#: src/integrating-with-mise.md:24
+msgid ""
+"`mise` will interactively prompt and ask if `mise.toml` should be trusted. "
+"In non-interactive environments, `mise trust` should be run first."
+msgstr ""
+
+#: src/integrating-with-mise.md:27
+msgid ""
+"`mise env` does not install missing tools, so run `mise install` first, or "
+"install missing tools automatically with:"
+msgstr ""
+
+#: src/integrating-with-mise.md:34
+msgid "Tool versions can be overridden for the entire justfile:"
+msgstr ""
+
+#: src/integrating-with-mise.md:40
+msgid "Or for individual recipes:"
+msgstr ""
+
+#: src/integrating-with-mise.md:52
+msgid ""
+"Alternatively, `set shell` can be used to run every line of every shell "
+"recipe with `mise exec`:"
+msgstr ""
+
+#: src/integrating-with-mise.md:62
+msgid ""
+"And the `[env]` attribute can be used to override tool versions on a per-"
+"recipe basis:"
+msgstr ""
+
+#: src/integrating-with-mise.md:73
+msgid ""
+"Note that `mise exec` takes longer to run than `sh`, so `set shell` may make "
+"shell recipes with many commands noticeably slower."
+msgstr ""

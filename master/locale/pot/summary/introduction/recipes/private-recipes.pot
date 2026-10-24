@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/private-recipes.md:1
+msgid "Private Recipes"
+msgstr ""
+
+#: src/private-recipes.md:3
+msgid ""
+"Recipes and aliases whose name starts with a `_` are omitted from `just --"
+"list`:"
+msgstr ""
+
+#: src/private-recipes.md:19
+msgid "And from `just --summary`:"
+msgstr ""
+
+#: src/private-recipes.md:26
+msgid ""
+"The `[private]` attribute<sup>1.10.0</sup> may also be used to hide recipes "
+"or aliases without needing to change the name:"
+msgstr ""
+
+#: src/private-recipes.md:45
+msgid ""
+"This is useful for helper recipes which are only meant to be used as "
+"dependencies of other recipes."
+msgstr ""

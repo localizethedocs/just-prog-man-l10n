@@ -1,0 +1,136 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/shell.md:1
+msgid "Shell"
+msgstr ""
+
+#: src/shell.md:3
+msgid ""
+"The `shell` setting controls the command used to invoke recipe lines and "
+"backticks. Shebang recipes are unaffected. The default shell is `sh -cu`."
+msgstr ""
+
+#: src/shell.md:6
+msgid ""
+"```just\n"
+"# use python3 to execute recipe lines and backticks\n"
+"set shell := [\"python3\", \"-c\"]\n"
+"\n"
+"# use print to capture result of evaluation\n"
+"foos := `print(\"foo\" * 4)`\n"
+"\n"
+"foo:\n"
+"  print(\"Snake snake snake snake.\")\n"
+"  print(\"{{foos}}\")\n"
+"```"
+msgstr ""
+
+#: src/shell.md:18
+msgid ""
+"`just` passes the command to be executed as an argument. Many shells will "
+"need an additional flag, often `-c`, to make them evaluate the first "
+"argument."
+msgstr ""
+
+#: src/shell.md:21
+msgid "Windows Shell"
+msgstr ""
+
+#: src/shell.md:23
+msgid ""
+"`just` uses `sh` on Windows by default. To use a different shell on Windows, "
+"use the `[windows]` attribute on the `shell` setting:"
+msgstr ""
+
+#: src/shell.md:26
+msgid ""
+"```just\n"
+"[windows]\n"
+"set shell := [\"powershell.exe\", \"-NoLogo\", \"-Command\"]\n"
+"\n"
+"hello:\n"
+"  Write-Host \"Hello, world!\"\n"
+"```"
+msgstr ""
+
+#: src/shell.md:34
+msgid ""
+"See [powershell.just](https://github.com/casey/just/blob/master/examples/"
+"powershell.just) for a justfile that uses PowerShell on all platforms."
+msgstr ""
+
+#: src/shell.md:38
+msgid "Python 3"
+msgstr ""
+
+#: src/shell.md:40
+msgid ""
+"```just\n"
+"set shell := [\"python3\", \"-c\"]\n"
+"```"
+msgstr ""
+
+#: src/shell.md:44
+msgid "Bash"
+msgstr ""
+
+#: src/shell.md:46
+msgid ""
+"```just\n"
+"set shell := [\"bash\", \"-uc\"]\n"
+"```"
+msgstr ""
+
+#: src/shell.md:50
+msgid "Z Shell"
+msgstr ""
+
+#: src/shell.md:52
+msgid ""
+"```just\n"
+"set shell := [\"zsh\", \"-uc\"]\n"
+"```"
+msgstr ""
+
+#: src/shell.md:56
+msgid "Fish"
+msgstr ""
+
+#: src/shell.md:58
+msgid ""
+"```just\n"
+"set shell := [\"fish\", \"-c\"]\n"
+"```"
+msgstr ""
+
+#: src/shell.md:62
+msgid "Nushell"
+msgstr ""
+
+#: src/shell.md:64
+msgid ""
+"```just\n"
+"set shell := [\"nu\", \"-c\"]\n"
+"```"
+msgstr ""
+
+#: src/shell.md:68
+msgid "If you want to change the default table mode to `light`:"
+msgstr ""
+
+#: src/shell.md:74
+msgid ""
+"_[Nushell](https://github.com/nushell/nushell) was written in Rust, and "
+"**has cross-platform support for Windows / macOS and Linux**._"
+msgstr ""

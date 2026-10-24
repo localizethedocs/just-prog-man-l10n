@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/input-files.md:1
+msgid "Input Files"
+msgstr ""
+
+#: src/input-files.md:3
+msgid ""
+"Input files can be provided with `[cache(inputs = FILES)]`, where `FILES` is "
+"an expression that is evaluated with recipe arguments in scope and whose "
+"evaluated elements are paths. Paths may be absolute or relative to the "
+"recipe’s working directory."
+msgstr ""
+
+#: src/input-files.md:8
+msgid ""
+"Each input file is hashed with BLAKE3 and added to the `inputs` cache key, "
+"which contains a map of paths to hashes."
+msgstr ""
+
+#: src/input-files.md:11
+msgid ""
+"Any changes to the contents of an input file changes the cache key, which "
+"causes the next invocation to miss the cache and re-run."
+msgstr ""
+
+#: src/input-files.md:14
+msgid "Missing inputs and paths to directories are errors."
+msgstr ""
+
+#: src/input-files.md:16
+msgid ""
+"In this example, the `build` recipe will re-run if `lib.c` or `main.c` "
+"change:"
+msgstr ""
+
+#: src/input-files.md:18
+msgid ""
+"```just\n"
+"set unstable\n"
+"set lists\n"
+"\n"
+"[script]\n"
+"[cache(inputs = [\"lib.c\", \"main.c\"])]\n"
+"build:\n"
+"  cc lib.c main.c -o main\n"
+"```"
+msgstr ""

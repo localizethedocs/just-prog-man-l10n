@@ -1,0 +1,295 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/constants.md:1
+msgid "Constants"
+msgstr ""
+
+#: src/constants.md:3
+msgid "A number of constants are predefined:"
+msgstr ""
+
+#: src/constants.md:5
+msgid "Name"
+msgstr ""
+
+#: src/constants.md:5
+msgid "Value"
+msgstr ""
+
+#: src/constants.md:5
+msgid "Value on Windows"
+msgstr ""
+
+#: src/constants.md:7
+msgid "`HEX`<sup>1.27.0</sup>"
+msgstr ""
+
+#: src/constants.md:7 src/constants.md:8
+msgid "`\"0123456789abcdef\"`"
+msgstr ""
+
+#: src/constants.md:8
+msgid "`HEXLOWER`<sup>1.27.0</sup>"
+msgstr ""
+
+#: src/constants.md:9
+msgid "`HEXUPPER`<sup>1.27.0</sup>"
+msgstr ""
+
+#: src/constants.md:9
+msgid "`\"0123456789ABCDEF\"`"
+msgstr ""
+
+#: src/constants.md:10
+msgid "`PATH_SEP`<sup>1.41.0</sup>"
+msgstr ""
+
+#: src/constants.md:10
+msgid "`\"/\"`"
+msgstr ""
+
+#: src/constants.md:10
+msgid "`\"\\\"`"
+msgstr ""
+
+#: src/constants.md:11
+msgid "`PATH_VAR_SEP`<sup>1.41.0</sup>"
+msgstr ""
+
+#: src/constants.md:11
+msgid "`\":\"`"
+msgstr ""
+
+#: src/constants.md:11
+msgid "`\";\"`"
+msgstr ""
+
+#: src/constants.md:12
+msgid "`CLEAR`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:12
+msgid "`\"\\ec\"`"
+msgstr ""
+
+#: src/constants.md:13
+msgid "`NORMAL`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:13
+msgid "`\"\\e[0m\"`"
+msgstr ""
+
+#: src/constants.md:14
+msgid "`BOLD`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:14
+msgid "`\"\\e[1m\"`"
+msgstr ""
+
+#: src/constants.md:15
+msgid "`ITALIC`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:15
+msgid "`\"\\e[3m\"`"
+msgstr ""
+
+#: src/constants.md:16
+msgid "`UNDERLINE`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:16
+msgid "`\"\\e[4m\"`"
+msgstr ""
+
+#: src/constants.md:17
+msgid "`INVERT`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:17
+msgid "`\"\\e[7m\"`"
+msgstr ""
+
+#: src/constants.md:18
+msgid "`HIDE`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:18
+msgid "`\"\\e[8m\"`"
+msgstr ""
+
+#: src/constants.md:19
+msgid "`STRIKETHROUGH`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:19
+msgid "`\"\\e[9m\"`"
+msgstr ""
+
+#: src/constants.md:20
+msgid "`BLACK`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:20
+msgid "`\"\\e[30m\"`"
+msgstr ""
+
+#: src/constants.md:21
+msgid "`RED`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:21
+msgid "`\"\\e[31m\"`"
+msgstr ""
+
+#: src/constants.md:22
+msgid "`GREEN`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:22
+msgid "`\"\\e[32m\"`"
+msgstr ""
+
+#: src/constants.md:23
+msgid "`YELLOW`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:23
+msgid "`\"\\e[33m\"`"
+msgstr ""
+
+#: src/constants.md:24
+msgid "`BLUE`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:24
+msgid "`\"\\e[34m\"`"
+msgstr ""
+
+#: src/constants.md:25
+msgid "`MAGENTA`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:25
+msgid "`\"\\e[35m\"`"
+msgstr ""
+
+#: src/constants.md:26
+msgid "`CYAN`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:26
+msgid "`\"\\e[36m\"`"
+msgstr ""
+
+#: src/constants.md:27
+msgid "`WHITE`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:27
+msgid "`\"\\e[37m\"`"
+msgstr ""
+
+#: src/constants.md:28
+msgid "`BG_BLACK`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:28
+msgid "`\"\\e[40m\"`"
+msgstr ""
+
+#: src/constants.md:29
+msgid "`BG_RED`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:29
+msgid "`\"\\e[41m\"`"
+msgstr ""
+
+#: src/constants.md:30
+msgid "`BG_GREEN`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:30
+msgid "`\"\\e[42m\"`"
+msgstr ""
+
+#: src/constants.md:31
+msgid "`BG_YELLOW`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:31
+msgid "`\"\\e[43m\"`"
+msgstr ""
+
+#: src/constants.md:32
+msgid "`BG_BLUE`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:32
+msgid "`\"\\e[44m\"`"
+msgstr ""
+
+#: src/constants.md:33
+msgid "`BG_MAGENTA`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:33
+msgid "`\"\\e[45m\"`"
+msgstr ""
+
+#: src/constants.md:34
+msgid "`BG_CYAN`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:34
+msgid "`\"\\e[46m\"`"
+msgstr ""
+
+#: src/constants.md:35
+msgid "`BG_WHITE`<sup>1.37.0</sup>"
+msgstr ""
+
+#: src/constants.md:35
+msgid "`\"\\e[47m\"`"
+msgstr ""
+
+#: src/constants.md:47
+msgid ""
+"Constants starting with `\\e` are [ANSI escape sequences](https://en."
+"wikipedia.org/wiki/ANSI_escape_code)."
+msgstr ""
+
+#: src/constants.md:50
+msgid ""
+"`CLEAR` clears the screen, similar to the `clear` command. The rest are of "
+"the form `\\e[Nm`, where `N` is an integer, and set terminal display "
+"attributes."
+msgstr ""
+
+#: src/constants.md:53
+msgid ""
+"Terminal display attribute escape sequences can be combined, for example "
+"text weight `BOLD`, text style `STRIKETHROUGH`, foreground color `CYAN`, and "
+"background color `BG_BLUE`. They should be followed by `NORMAL`, to reset "
+"the terminal back to normal."
+msgstr ""
+
+#: src/constants.md:58
+msgid ""
+"Escape sequences should be quoted, since `[` is treated as a special "
+"character by some shells."
+msgstr ""

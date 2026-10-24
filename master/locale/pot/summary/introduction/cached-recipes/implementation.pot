@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/implementation.md:1
+msgid "Implementation"
+msgstr ""
+
+#: src/implementation.md:3
+msgid ""
+"The cache is a directory named `.justcache` alongside the `justfile` and "
+"should not be committed to version control systems. It contains cache "
+"entries named `HASH.json`, where `HASH` is the BLAKE3 hash of a serialized "
+"cache key JSON object."
+msgstr ""
+
+#: src/implementation.md:8
+msgid "The keys of the cache key object are:"
+msgstr ""
+
+#: src/implementation.md:10
+msgid "`body`: evaluated recipe body"
+msgstr ""
+
+#: src/implementation.md:11
+msgid "`environment`: map of environment variable names to values"
+msgstr ""
+
+#: src/implementation.md:12
+msgid "`executor`: script interpreter or shebang"
+msgstr ""
+
+#: src/implementation.md:13
+msgid "`extension`: script file extension"
+msgstr ""
+
+#: src/implementation.md:14
+msgid "`extra`: user-supplied value"
+msgstr ""
+
+#: src/implementation.md:15
+msgid "`inputs`: map of file paths to content hashs"
+msgstr ""
+
+#: src/implementation.md:16
+msgid "`positional`: positional arguments"
+msgstr ""
+
+#: src/implementation.md:17
+msgid "`recipe`: `::`\\-separated module path to invoked recipe"
+msgstr ""
+
+#: src/implementation.md:18
+msgid "`working_directory`: current working directory"
+msgstr ""
+
+#: src/implementation.md:20
+msgid "All keys other than `extra` and `inputs` are populated automatically."
+msgstr ""
+
+#: src/implementation.md:22
+msgid ""
+"Cache key objects for invoked recipes can be printed to standard error with "
+"`just -vv`."
+msgstr ""
+
+#: src/implementation.md:25
+msgid ""
+"The environment variables included in `environment` may be controlled with "
+"`[cache(environment = EXPRESSION])`<sup>1.59.0<sup>."
+msgstr ""
+
+#: src/implementation.md:28
+msgid ""
+"The value of `extra` may be supplied with `[cache(extra = EXPRESSION)]`, "
+"where `EXPRESSION` is an arbitrary expression evaluated with recipe "
+"arguments in scope. Changes to the value of `extra` will cause a cache miss."
+msgstr ""
+
+#: src/implementation.md:32
+msgid ""
+"Before `just` runs a cached recipe, it creates a cache key, hashes it, and "
+"looks for the corresponding cache entry."
+msgstr ""
+
+#: src/implementation.md:35
+msgid "If the cache entry is non-empty, it skips the invocation."
+msgstr ""
+
+#: src/implementation.md:37
+msgid ""
+"If the cache entry does not exist or is empty, it runs the invocation and "
+"writes `{}` to the cache entry."
+msgstr ""
+
+#: src/implementation.md:40
+msgid ""
+"File locks are taken on cache entries, so concurrent execution of cached "
+"recipes by multiple `just` processes is safe. If two processes run a recipe "
+"invocation with the same cache key, the first will take the lock, run the "
+"recipe, write to the cache entry, and relinquish the lock. The second will "
+"block until the first relinquishes the lock, see that the entry is non-"
+"empty, and skip the invocation."
+msgstr ""
+
+#: src/implementation.md:47
+msgid "The cache can be bypassed entirely with the `--no-cache` flag."
+msgstr ""

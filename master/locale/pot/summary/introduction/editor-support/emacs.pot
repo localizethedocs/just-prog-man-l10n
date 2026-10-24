@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/emacs.md:1
+msgid "Emacs"
+msgstr ""
+
+#: src/emacs.md:3
+msgid ""
+"[just-mode](https://github.com/leon-barrett/just-mode.el) provides syntax "
+"highlighting and automatic indentation of `justfile`s. It is available on "
+"[MELPA](https://melpa.org/) as [just-mode](https://melpa.org/#/just-mode)."
+msgstr ""
+
+#: src/emacs.md:7
+msgid ""
+"[justl](https://github.com/psibi/justl.el) provides commands for executing "
+"and listing recipes."
+msgstr ""
+
+#: src/emacs.md:10
+msgid ""
+"You can add the following to an individual `justfile` to enable `make` mode "
+"on a per-file basis:"
+msgstr ""
