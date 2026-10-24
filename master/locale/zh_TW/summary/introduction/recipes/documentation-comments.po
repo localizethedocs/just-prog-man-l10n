@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/documentation-comments.md:1
+msgid "Documentation Comments"
+msgstr ""
+
+#: src/documentation-comments.md:3
+msgid "Comments immediately preceding a recipe will appear in `just --list`:"
+msgstr ""
+
+#: src/documentation-comments.md:22
+msgid ""
+"The `[doc]` attribute can be used to set or suppress a recipe’s doc comment:"
+msgstr ""
+
+#: src/documentation-comments.md:43
+msgid "The value of `[doc]` may be a const expression<sup>1.56.0</sup>."
+msgstr ""

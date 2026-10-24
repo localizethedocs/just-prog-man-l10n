@@ -1,0 +1,133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/global-and-user-justfiles.md:1
+msgid "Global and User `justfile`s"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:3
+msgid ""
+"If you want some recipes to be available everywhere, you have a few options."
+msgstr ""
+
+#: src/global-and-user-justfiles.md:5
+msgid "Global Justfile"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:7
+msgid ""
+"`just --global-justfile`, or `just -g` for short, searches the following "
+"paths, in-order, for a justfile:"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:10
+msgid "`$XDG_CONFIG_HOME/just/justfile`"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:11
+msgid "`$HOME/.config/just/justfile`"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:12
+msgid "`$HOME/justfile`"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:13
+msgid "`$HOME/.justfile`"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:15
+msgid ""
+"You can put recipes that are used across many projects in a global justfile "
+"to easily invoke them from any directory."
+msgstr ""
+
+#: src/global-and-user-justfiles.md:18
+msgid "User justfile tips"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:20
+msgid ""
+"You can also adopt some of the following workflows. These tips assume you’ve "
+"created a `justfile` at `~/.user.justfile`, but you can put this `justfile` "
+"at any convenient path on your system."
+msgstr ""
+
+#: src/global-and-user-justfiles.md:24
+msgid "Recipe Aliases"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:26
+msgid ""
+"If you want to call the recipes in `~/.user.justfile` by name, and don’t "
+"mind creating an alias for every recipe, add the following to your shell’s "
+"initialization script:"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:30
+msgid ""
+"```console\n"
+"for recipe in `just --justfile ~/.user.justfile --summary`; do\n"
+"  alias $recipe=\"just --justfile ~/.user.justfile --working-directory . "
+"$recipe\"\n"
+"done\n"
+"```"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:36
+msgid ""
+"Now, if you have a recipe called `foo` in `~/.user.justfile`, you can just "
+"type `foo` at the command line to run it."
+msgstr ""
+
+#: src/global-and-user-justfiles.md:39
+msgid ""
+"It took me way too long to realize that you could create recipe aliases like "
+"this. Notwithstanding my tardiness, I am very pleased to bring you this "
+"major advance in `justfile` technology."
+msgstr ""
+
+#: src/global-and-user-justfiles.md:43
+msgid "Forwarding Alias"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:45
+msgid ""
+"If you’d rather not create aliases for every recipe, you can create a single "
+"alias:"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:51
+msgid ""
+"Now, if you have a recipe called `foo` in `~/.user.justfile`, you can just "
+"type `.j foo` at the command line to run it."
+msgstr ""
+
+#: src/global-and-user-justfiles.md:54
+msgid "I’m pretty sure that nobody actually uses this feature, but it’s there."
+msgstr ""
+
+#: src/global-and-user-justfiles.md:56
+msgid "¯\\\\\\_(ツ)\\_/¯"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:58
+msgid "Customization"
+msgstr ""
+
+#: src/global-and-user-justfiles.md:60
+msgid ""
+"You can customize the above aliases with additional options. For example, if "
+"you’d prefer to have the recipes in your `justfile` run in your home "
+"directory, instead of the current directory:"
+msgstr ""

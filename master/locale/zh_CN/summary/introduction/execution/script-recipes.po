@@ -1,0 +1,45 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/script-recipes.md:1
+msgid "Script Recipes"
+msgstr ""
+
+#: src/script-recipes.md:3
+msgid ""
+"Recipes with a `[script(COMMAND)]`<sup>1.32.0</sup> attribute are run as "
+"scripts interpreted by `COMMAND`. This avoids some of the issues with "
+"shebang recipes, such as the use of `cygpath` on Windows, the need to use `/"
+"usr/bin/env`, inconsistencies in shebang line splitting across Unix OSs, and "
+"requiring a temporary directory from which files can be executed."
+msgstr ""
+
+#: src/script-recipes.md:9
+msgid ""
+"Recipes with an empty `[script]` attribute are executed with the value of "
+"`set script-interpreter := […]`<sup>1.33.0</sup>, defaulting to `sh -eu`, "
+"and _not_ the value of `set shell`."
+msgstr ""
+
+#: src/script-recipes.md:12
+msgid ""
+"The body of the recipe is evaluated, written to disk in the temporary "
+"directory, and run by passing its path as an argument to `COMMAND`."
+msgstr ""
+
+#: src/script-recipes.md:15
+msgid ""
+"With `set default-script := true`<sup>1.52.0</sup>, recipes default to "
+"script recipes instead of shell recipes, unless overridden with the "
+"`[shell]` attribute<sup>1.52.0</sup>."
+msgstr ""

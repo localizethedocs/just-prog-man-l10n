@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/global-fallback-justfile.md:1
+msgid "Global Fallback Justfile"
+msgstr ""
+
+#: src/global-fallback-justfile.md:3
+msgid ""
+"A global fallback justfile may be set with `--global-fallback-justfile "
+"<PATH>`, or by setting the `JUST_GLOBAL_FALLBACK_JUSTFILE` environment "
+"variable."
+msgstr ""
+
+#: src/global-fallback-justfile.md:6
+msgid ""
+"If no justfile is found, or if the search for a fallback does not succeed, "
+"the global fallback justfile is used instead. The working directory is set "
+"to the root of the current project, as determined by the presence of a "
+"directory like `.git`, or the invocation directory if no such directory is "
+"found. The global fallback justfile may itself use `set fallback`."
+msgstr ""
+
+#: src/global-fallback-justfile.md:12
+msgid ""
+"The global fallback justfile is ignored when `--justfile`, `--global-"
+"justfile`, or `--working-directory` is passed."
+msgstr ""

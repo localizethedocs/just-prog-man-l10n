@@ -1,0 +1,44 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/just-scripts.md:1
+msgid "Just Scripts"
+msgstr ""
+
+#: src/just-scripts.md:3
+msgid ""
+"By adding a shebang line to the top of a `justfile` and making it "
+"executable, `just` can be used as an interpreter for scripts:"
+msgstr ""
+
+#: src/just-scripts.md:19
+msgid ""
+"When a script with a shebang is executed, the system supplies the path to "
+"the script as an argument to the command in the shebang. So, with a shebang "
+"of `#!/usr/bin/env just --justfile`, the command will be `/usr/bin/env just "
+"--justfile PATH_TO_SCRIPT`."
+msgstr ""
+
+#: src/just-scripts.md:23
+msgid ""
+"With the above shebang, `just` will change its working directory to the "
+"location of the script. If you’d rather leave the working directory "
+"unchanged, use `#!/usr/bin/env just --working-directory . --justfile`."
+msgstr ""
+
+#: src/just-scripts.md:27
+msgid ""
+"Note: Shebang line splitting is not consistent across operating systems. The "
+"previous examples have only been tested on macOS. On Linux, you may need to "
+"pass the `-S` flag to `env`:"
+msgstr ""

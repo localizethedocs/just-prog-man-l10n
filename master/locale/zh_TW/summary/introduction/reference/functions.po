@@ -1,0 +1,887 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/functions.md:1
+msgid "Functions"
+msgstr ""
+
+#: src/functions.md:3
+msgid "System Information"
+msgstr ""
+
+#: src/functions.md:5
+msgid ""
+"`arch()` — Instruction set architecture. Possible values are: `\"aarch64\"`, "
+"`\"arm\"`, `\"asmjs\"`, `\"hexagon\"`, `\"mips\"`, `\"msp430\"`, "
+"`\"powerpc\"`, `\"powerpc64\"`, `\"s390x\"`, `\"sparc\"`, `\"wasm32\"`, "
+"`\"x86\"`, `\"x86_64\"`, and `\"xcore\"`."
+msgstr ""
+
+#: src/functions.md:9
+msgid "`num_cpus()`<sup>1.15.0</sup> — Number of logical CPUs."
+msgstr ""
+
+#: src/functions.md:10
+msgid ""
+"`os()` — Operating system. Possible values are: `\"android\"`, `\"bitrig\"`, "
+"`\"dragonfly\"`, `\"emscripten\"`, `\"freebsd\"`, `\"haiku\"`, `\"ios\"`, "
+"`\"linux\"`, `\"macos\"`, `\"netbsd\"`, `\"openbsd\"`, `\"solaris\"`, and "
+"`\"windows\"`."
+msgstr ""
+
+#: src/functions.md:13
+msgid ""
+"`os_family()` — Operating system family; possible values are: `\"unix\"` and "
+"`\"windows\"`."
+msgstr ""
+
+#: src/functions.md:16 src/functions.md:220
+msgid "For example:"
+msgstr ""
+
+#: src/functions.md:18
+msgid ""
+"```just\n"
+"system-info:\n"
+"  @echo \"This is an {{arch()}} machine.\"\n"
+"```"
+msgstr ""
+
+#: src/functions.md:28
+msgid ""
+"The `os_family()` function can be used to create cross-platform `justfile`s "
+"that work on various operating systems. For an example, see [cross-platform."
+"just](https://github.com/casey/just/blob/master/examples/cross-platform."
+"just) file."
+msgstr ""
+
+#: src/functions.md:33
+msgid "External Commands"
+msgstr ""
+
+#: src/functions.md:35
+msgid ""
+"`shell(command, args...)`<sup>1.27.0</sup> returns the standard output of "
+"shell script `command` with zero or more positional arguments `args`. The "
+"shell used to interpret `command` is the same shell that is used to evaluate "
+"recipe lines, and can be changed with `set shell := […]`."
+msgstr ""
+
+#: src/functions.md:40
+msgid ""
+"`command` is passed as the first argument, so if the command is `'echo $@'`, "
+"the full command line, with the default shell command `sh -cu` and `args` "
+"`'foo'` and `'bar'` will be:"
+msgstr ""
+
+#: src/functions.md:48
+msgid ""
+"This is so that `$@` works as expected, and `$1` refers to the first "
+"argument. `$@` does not include the first positional argument, which is "
+"expected to be the name of the program being run."
+msgstr ""
+
+#: src/functions.md:52
+msgid ""
+"```just\n"
+"# arguments can be variables or expressions\n"
+"file := '/sys/class/power_supply/BAT0/status'\n"
+"bat0stat := shell('cat $1', file)\n"
+"\n"
+"# commands can be variables or expressions\n"
+"command := 'wc -l'\n"
+"output := shell(command + ' \"$1\"', 'main.c')\n"
+"\n"
+"# arguments referenced by the shell command must be used\n"
+"empty := shell('echo', 'foo')\n"
+"full := shell('echo $1', 'foo')\n"
+"error := shell('echo $1')\n"
+"```"
+msgstr ""
+
+#: src/functions.md:67
+msgid ""
+"```just\n"
+"# Using python as the shell. Since `python -c` sets `sys.argv[0]` to `'-"
+"c'`,\n"
+"# the first \"real\" positional argument will be `sys.argv[2]`.\n"
+"set shell := [\"python3\", \"-c\"]\n"
+"olleh := shell('import sys; print(sys.argv[2][::-1])', 'hello')\n"
+"```"
+msgstr ""
+
+#: src/functions.md:74
+msgid "Environment Variables"
+msgstr ""
+
+#: src/functions.md:76
+msgid ""
+"`env(key)`<sup>1.15.0</sup> — Retrieves the environment variable with name "
+"`key`, aborting if it is not present."
+msgstr ""
+
+#: src/functions.md:79
+msgid ""
+"```just\n"
+"home_dir := env('HOME')\n"
+"\n"
+"test:\n"
+"  echo \"{{home_dir}}\"\n"
+"```"
+msgstr ""
+
+#: src/functions.md:91
+msgid ""
+"`env(key, default)`<sup>1.15.0</sup> — Retrieves the environment variable "
+"with name `key`, returning `default` if it is not present."
+msgstr ""
+
+#: src/functions.md:93
+msgid "`env_var(key)` — Deprecated alias for `env(key)`."
+msgstr ""
+
+#: src/functions.md:94
+msgid ""
+"`env_var_or_default(key, default)` — Deprecated alias for `env(key, "
+"default)`."
+msgstr ""
+
+#: src/functions.md:96
+msgid "Executables"
+msgstr ""
+
+#: src/functions.md:98
+msgid ""
+"`require(name)`<sup>1.39.0</sup> — Search directories in the `PATH` "
+"environment variable for the executable `name` and return its full path, or "
+"halt with an error if no executable with `name` exists."
+msgstr ""
+
+#: src/functions.md:102
+msgid ""
+"```just\n"
+"bash := require(\"bash\")\n"
+"\n"
+"@test:\n"
+"    echo \"bash: '{{bash}}'\"\n"
+"```"
+msgstr ""
+
+#: src/functions.md:114
+msgid ""
+"`which(name)`<sup>1.39.0</sup> — Search directories in the `PATH` "
+"environment variable for the executable `name` and return its full path, or "
+"the empty list if not found. Requires `set lists`<sup>1.53.0</sup>."
+msgstr ""
+
+#: src/functions.md:118
+msgid ""
+"```just\n"
+"set unstable\n"
+"set lists\n"
+"\n"
+"bosh := which(\"bosh\")\n"
+"\n"
+"@test:\n"
+"    echo \"bosh: '{{bosh}}'\"\n"
+"```"
+msgstr ""
+
+#: src/functions.md:133
+msgid "Invocation Information"
+msgstr ""
+
+#: src/functions.md:135
+msgid ""
+"`is_dependency()` - Returns the string `true` if the current recipe is being "
+"run as a dependency of another recipe, rather than being run directly, "
+"otherwise returns the string `false`."
+msgstr ""
+
+#: src/functions.md:139
+msgid ""
+"`num_jobs()`<sup>1.56.0</sup> — The value of `--jobs` or the empty list, "
+"`[]`, if it was not passed."
+msgstr ""
+
+#: src/functions.md:142
+msgid ""
+"`recipe_name()`<sup>1.53.0</sup> - Returns the name of the current recipe."
+msgstr ""
+
+#: src/functions.md:144
+msgid "Invocation Directory"
+msgstr ""
+
+#: src/functions.md:146
+msgid ""
+"`invocation_directory()` - Retrieves the absolute path to the current "
+"directory when `just` was invoked, before `just` changed it (chdir’d) prior "
+"to executing commands. On Windows, `invocation_directory()` uses `cygpath` "
+"to convert the invocation directory to a Cygwin-compatible `/`\\-separated "
+"path. Use `invocation_directory_native()` to return the verbatim invocation "
+"directory on all platforms."
+msgstr ""
+
+#: src/functions.md:153
+msgid ""
+"For example, to call `rustfmt` on files just under the “current "
+"directory” (from the user/invoker’s perspective), use the following recipe:"
+msgstr ""
+
+#: src/functions.md:161
+msgid ""
+"Alternatively, if your command needs to be run from the current directory, "
+"you could use (e.g.):"
+msgstr ""
+
+#: src/functions.md:169
+msgid ""
+"`invocation_directory_native()` - Retrieves the absolute path to the current "
+"directory when `just` was invoked, before `just` changed it (chdir’d) prior "
+"to executing commands."
+msgstr ""
+
+#: src/functions.md:173
+msgid "Justfile and Justfile Directory"
+msgstr ""
+
+#: src/functions.md:175
+msgid "`justfile()` - Retrieves the path of the current `justfile`."
+msgstr ""
+
+#: src/functions.md:177
+msgid ""
+"`justfile_directory()` - Retrieves the path of the parent directory of the "
+"current `justfile`."
+msgstr ""
+
+#: src/functions.md:180
+msgid ""
+"For example, to run a command relative to the location of the current "
+"`justfile`:"
+msgstr ""
+
+#: src/functions.md:188
+msgid "Source and Source Directory"
+msgstr ""
+
+#: src/functions.md:190
+msgid ""
+"`source_file()`<sup>1.27.0</sup> - Retrieves the path of the current source "
+"file."
+msgstr ""
+
+#: src/functions.md:192
+msgid ""
+"`source_directory()`<sup>1.27.0</sup> - Retrieves the path of the parent "
+"directory of the current source file."
+msgstr ""
+
+#: src/functions.md:195
+msgid ""
+"`source_file()` and `source_directory()` behave the same as `justfile()` and "
+"`justfile_directory()` in the root `justfile`, but will return the path and "
+"directory, respectively, of the current `import` or `mod` source file when "
+"called from within an import or submodule."
+msgstr ""
+
+#: src/functions.md:200
+msgid "Module and Module Directory"
+msgstr ""
+
+#: src/functions.md:202
+msgid "`module_file()` - Returns the path of the current module file."
+msgstr ""
+
+#: src/functions.md:204
+msgid ""
+"`module_directory()` - Returns the path of the parent directory of the "
+"current module file."
+msgstr ""
+
+#: src/functions.md:207
+msgid ""
+"`module_path()` - Returns the `::`\\-separated path to the current module."
+msgstr ""
+
+#: src/functions.md:209
+msgid ""
+"`module_file()` and `module_directory()` behave the same as `justfile()` and "
+"`justfile_directory()` in the root `justfile`, but will return the path and "
+"directory, respectively, of the current `mod` source file when called from "
+"within a submodule."
+msgstr ""
+
+#: src/functions.md:214
+msgid "Just Process and Executable"
+msgstr ""
+
+#: src/functions.md:216
+msgid "`just_executable()` - Absolute path to the `just` executable."
+msgstr ""
+
+#: src/functions.md:217
+msgid "`just_pid()` - Process ID of the `just` executable."
+msgstr ""
+
+#: src/functions.md:218
+msgid "`just_version()`<sup>1.55.0</sup> - Version of the `just` executable."
+msgstr ""
+
+#: src/functions.md:236
+msgid "String Manipulation"
+msgstr ""
+
+#: src/functions.md:238
+msgid ""
+"`append(suffix, s)`<sup>1.27.0</sup> - Append `suffix` to whitespace-"
+"separated strings in `s`. `append('/src', 'foo bar baz')` → `'foo/src bar/"
+"src baz/src'`"
+msgstr ""
+
+#: src/functions.md:241
+msgid ""
+"`prepend(prefix, s)`<sup>1.27.0</sup> - Prepend `prefix` to whitespace-"
+"separated strings in `s`. `prepend('src/', 'foo bar baz')` → `'src/foo src/"
+"bar src/baz'`"
+msgstr ""
+
+#: src/functions.md:244
+msgid ""
+"`encode_uri_component(s)`<sup>1.27.0</sup> - Percent-encode characters in "
+"`s` except `[A-Za-z0-9_.!~*'()-]`, matching the behavior of the [JavaScript "
+"`encodeURIComponent` function](https://developer.mozilla.org/en-US/docs/Web/"
+"JavaScript/Reference/Global_Objects/encodeURIComponent)."
+msgstr ""
+
+#: src/functions.md:247
+msgid ""
+"`quote(s)` - Replace all single quotes with `'\\''` and prepend and append "
+"single quotes to `s`. This is sufficient to escape special characters for "
+"many shells, including most Bourne shell descendants."
+msgstr ""
+
+#: src/functions.md:250
+msgid ""
+"`replace(s, from, to)` - Replace all occurrences of `from` in `s` with `to`."
+msgstr ""
+
+#: src/functions.md:251
+msgid ""
+"`replace_regex(s, regex, replacement)` - Replace all occurrences of `regex` "
+"in `s` with `replacement`. Regular expressions are provided by the [Rust "
+"`regex` crate](https://docs.rs/regex/latest/regex/). See the [syntax "
+"documentation](https://docs.rs/regex/latest/regex/#syntax) for usage "
+"examples. Capture groups are supported. The `replacement` string uses "
+"[Replacement string syntax](https://docs.rs/regex/latest/regex/struct.Regex."
+"html#replacement-string-syntax)."
+msgstr ""
+
+#: src/functions.md:257
+msgid "`trim(s)` - Remove leading and trailing whitespace from `s`."
+msgstr ""
+
+#: src/functions.md:258
+msgid "`trim_end(s)` - Remove trailing whitespace from `s`."
+msgstr ""
+
+#: src/functions.md:259
+msgid ""
+"`trim_end_match(s, substring)` - Remove suffix of `s` matching `substring`."
+msgstr ""
+
+#: src/functions.md:260
+msgid ""
+"`trim_end_matches(s, substring)` - Repeatedly remove suffixes of `s` "
+"matching `substring`."
+msgstr ""
+
+#: src/functions.md:262
+msgid "`trim_start(s)` - Remove leading whitespace from `s`."
+msgstr ""
+
+#: src/functions.md:263
+msgid ""
+"`trim_start_match(s, substring)` - Remove prefix of `s` matching `substring`."
+msgstr ""
+
+#: src/functions.md:264
+msgid ""
+"`trim_start_matches(s, substring)` - Repeatedly remove prefixes of `s` "
+"matching `substring`."
+msgstr ""
+
+#: src/functions.md:267
+msgid "Case Conversion"
+msgstr ""
+
+#: src/functions.md:269
+msgid ""
+"`capitalize(s)`<sup>1.7.0</sup> - Convert first character of `s` to "
+"uppercase and the rest to lowercase."
+msgstr ""
+
+#: src/functions.md:271
+msgid "`kebabcase(s)`<sup>1.7.0</sup> - Convert `s` to `kebab-case`."
+msgstr ""
+
+#: src/functions.md:272
+msgid "`lowercamelcase(s)`<sup>1.7.0</sup> - Convert `s` to `lowerCamelCase`."
+msgstr ""
+
+#: src/functions.md:273
+msgid "`lowercase(s)` - Convert `s` to lowercase."
+msgstr ""
+
+#: src/functions.md:274
+msgid ""
+"`shoutykebabcase(s)`<sup>1.7.0</sup> - Convert `s` to `SHOUTY-KEBAB-CASE`."
+msgstr ""
+
+#: src/functions.md:275
+msgid ""
+"`shoutysnakecase(s)`<sup>1.7.0</sup> - Convert `s` to `SHOUTY_SNAKE_CASE`."
+msgstr ""
+
+#: src/functions.md:276
+msgid "`snakecase(s)`<sup>1.7.0</sup> - Convert `s` to `snake_case`."
+msgstr ""
+
+#: src/functions.md:277
+msgid "`titlecase(s)`<sup>1.7.0</sup> - Convert `s` to `Title Case`."
+msgstr ""
+
+#: src/functions.md:278
+msgid "`uppercamelcase(s)`<sup>1.7.0</sup> - Convert `s` to `UpperCamelCase`."
+msgstr ""
+
+#: src/functions.md:279
+msgid "`uppercase(s)` - Convert `s` to uppercase."
+msgstr ""
+
+#: src/functions.md:281
+msgid "Path Manipulation"
+msgstr ""
+
+#: src/functions.md:283
+msgid "Fallible"
+msgstr ""
+
+#: src/functions.md:285
+msgid ""
+"`absolute_path(path)` - Absolute path to relative `path` in the working "
+"directory. `absolute_path(\"./bar.txt\")` in directory `/foo` is `/foo/bar."
+"txt`."
+msgstr ""
+
+#: src/functions.md:288
+msgid ""
+"`canonicalize(path)`<sup>1.24.0</sup> - Canonicalize `path` by resolving "
+"symlinks and removing `.`, `..`, and extra `/`s where possible."
+msgstr ""
+
+#: src/functions.md:290
+msgid ""
+"`extension(path)` - Extension of `path`. `extension(\"/foo/bar.txt\")` is "
+"`txt`."
+msgstr ""
+
+#: src/functions.md:292
+msgid ""
+"`file_name(path)` - File name of `path` with any leading directory "
+"components removed. `file_name(\"/foo/bar.txt\")` is `bar.txt`."
+msgstr ""
+
+#: src/functions.md:294
+msgid ""
+"`file_stem(path)` - File name of `path` without extension. `file_stem(\"/foo/"
+"bar.txt\")` is `bar`."
+msgstr ""
+
+#: src/functions.md:296
+msgid ""
+"`parent_directory(path)` - Parent directory of `path`. `parent_directory(\"/"
+"foo/bar.txt\")` is `/foo`."
+msgstr ""
+
+#: src/functions.md:298
+msgid ""
+"`without_extension(path)` - `path` without extension. `without_extension(\"/"
+"foo/bar.txt\")` is `/foo/bar`."
+msgstr ""
+
+#: src/functions.md:301
+msgid ""
+"These functions can fail, for example if a path does not have an extension, "
+"which will halt execution."
+msgstr ""
+
+#: src/functions.md:304
+msgid "Infallible"
+msgstr ""
+
+#: src/functions.md:306
+msgid ""
+"`clean(path)` - Simplify `path` by removing extra path separators, "
+"intermediate `.` components, and `..` where possible. `clean(\"foo//bar\")` "
+"is `foo/bar`, `clean(\"foo/..\")` is `.`, `clean(\"foo/./bar\")` is `foo/"
+"bar`."
+msgstr ""
+
+#: src/functions.md:309
+msgid ""
+"`join(a, b…)` - _This function uses `/` on Unix and `\\` on Windows, which "
+"can lead to unwanted behavior. The `/` operator, e.g., `a / b`, which always "
+"uses `/`, should be considered as a replacement unless `\\`s are "
+"specifically desired on Windows._ Join path `a` with path `b`. `join(\"foo/"
+"bar\", \"baz\")` is `foo/bar/baz`. Accepts two or more arguments."
+msgstr ""
+
+#: src/functions.md:315
+msgid "Filesystem Access"
+msgstr ""
+
+#: src/functions.md:317
+msgid ""
+"`path_exists(path)` - Returns the string `true` if the path points at an "
+"existing entity and the string `false` otherwise. Traverses symbolic links, "
+"and returns the string `false` if the path is inaccessible or points to a "
+"broken symlink."
+msgstr ""
+
+#: src/functions.md:321
+msgid ""
+"`read(path)`<sup>1.39.0</sup> - Returns the content of file at `path` as a "
+"string."
+msgstr ""
+
+#: src/functions.md:324
+msgid "Assertions and Error Reporting"
+msgstr ""
+
+#: src/functions.md:326
+msgid ""
+"`assert(CONDITION, EXPRESSION)`<sup>1.27.0</sup> - Error with message "
+"`EXPRESSION` if `CONDITION` is false. `EXPRESSION` may be "
+"omitted<sup>1.53.0</sup>,"
+msgstr ""
+
+#: src/functions.md:329
+msgid "`error(message)` - Abort execution and report error `message` to user."
+msgstr ""
+
+#: src/functions.md:331
+msgid "UUID and Hash Generation"
+msgstr ""
+
+#: src/functions.md:333
+msgid ""
+"`blake3(string)`<sup>1.25.0</sup> - Return [BLAKE3](https://github.com/"
+"BLAKE3-team/BLAKE3/) hash of `string` as hexadecimal string."
+msgstr ""
+
+#: src/functions.md:334
+msgid ""
+"`blake3_file(path)`<sup>1.25.0</sup> - Return [BLAKE3](https://github.com/"
+"BLAKE3-team/BLAKE3/) hash of file at `path` as hexadecimal string."
+msgstr ""
+
+#: src/functions.md:336
+msgid ""
+"`sha256(string)` - Return the SHA-256 hash of `string` as hexadecimal string."
+msgstr ""
+
+#: src/functions.md:337
+msgid ""
+"`sha256_file(path)` - Return SHA-256 hash of file at `path` as hexadecimal "
+"string."
+msgstr ""
+
+#: src/functions.md:339
+msgid "`uuid()` - Generate a random version 4 UUID."
+msgstr ""
+
+#: src/functions.md:341
+msgid "Random"
+msgstr ""
+
+#: src/functions.md:343
+msgid ""
+"`choose(n, alphabet)`<sup>1.27.0</sup> - Generate a string of `n` randomly "
+"selected characters from `alphabet`, which may not contain repeated "
+"characters. For example, `choose('64', HEX)` will generate a random 64-"
+"character lowercase hex string."
+msgstr ""
+
+#: src/functions.md:348
+msgid "Datetime"
+msgstr ""
+
+#: src/functions.md:350
+msgid "`datetime(format)`<sup>1.30.0</sup> - Return local time with `format`."
+msgstr ""
+
+#: src/functions.md:351
+msgid ""
+"`datetime_utc(format)`<sup>1.30.0</sup> - Return UTC time with `format`."
+msgstr ""
+
+#: src/functions.md:353
+msgid ""
+"The arguments to `datetime` and `datetime_utc` are `strftime`\\-style format "
+"strings, see the [`chrono` library docs](https://docs.rs/chrono/latest/"
+"chrono/format/strftime/index.html) for details."
+msgstr ""
+
+#: src/functions.md:358
+msgid "Semantic Versions"
+msgstr ""
+
+#: src/functions.md:360
+msgid ""
+"`semver_matches(version, requirement)`<sup>1.16.0</sup> - Check whether a "
+"[semantic `version`](https://semver.org), e.g., `\"0.1.0\"` matches a "
+"`requirement`, e.g., `\">=0.1.0\"`, returning the string `\"true\"` if so "
+"and the string `\"false\"` otherwise."
+msgstr ""
+
+#: src/functions.md:365
+msgid "Style"
+msgstr ""
+
+#: src/functions.md:367
+msgid ""
+"`style(styles)`<sup>1.37.0</sup> - Return a terminal escape sequence "
+"combining the named styles in `styles`."
+msgstr ""
+
+#: src/functions.md:370
+msgid ""
+"The styles supported by version 1.37.0 and later can be used to duplicate "
+"`just`’s own styles:"
+msgstr ""
+
+#: src/functions.md:373
+msgid "`command`: echoed recipe lines"
+msgstr ""
+
+#: src/functions.md:374
+msgid "`error`: errors"
+msgstr ""
+
+#: src/functions.md:375
+msgid ""
+"`warning`: warnings Additional styles supported by <sup>1.55.0</sup> and "
+"later include named colors:"
+msgstr ""
+
+#: src/functions.md:379
+msgid "`black`"
+msgstr ""
+
+#: src/functions.md:380
+msgid "`blue`"
+msgstr ""
+
+#: src/functions.md:381
+msgid "`cyan`"
+msgstr ""
+
+#: src/functions.md:382
+msgid "`green`"
+msgstr ""
+
+#: src/functions.md:383
+msgid "`magenta`"
+msgstr ""
+
+#: src/functions.md:384
+msgid "`red`"
+msgstr ""
+
+#: src/functions.md:385
+msgid "`white`"
+msgstr ""
+
+#: src/functions.md:386
+msgid ""
+"`yellow` The 256 indexed colors, written as integers between `0` and `255`, "
+"e.g., `1` or `67`."
+msgstr ""
+
+#: src/functions.md:390
+msgid ""
+"The 24-bit colors, written as `#RRGGBB` or `#RGB` hex codes, e.g., `#065535` "
+"or `#AAA`."
+msgstr ""
+
+#: src/functions.md:393
+msgid "And display properties:"
+msgstr ""
+
+#: src/functions.md:395
+msgid "`blink`"
+msgstr ""
+
+#: src/functions.md:396
+msgid "`bold`"
+msgstr ""
+
+#: src/functions.md:397
+msgid "`dim`"
+msgstr ""
+
+#: src/functions.md:398
+msgid "`hidden`"
+msgstr ""
+
+#: src/functions.md:399
+msgid "`italic`"
+msgstr ""
+
+#: src/functions.md:400
+msgid "`reverse`"
+msgstr ""
+
+#: src/functions.md:401
+msgid "`strikethrough`"
+msgstr ""
+
+#: src/functions.md:402
+msgid ""
+"`underline` Two stream names<sup>1.55.0</sup> gate the style on whether "
+"`just` would color the output stream, determined by `--color`, `JUST_COLOR`, "
+"and whether the stream is connected to a terminal:"
+msgstr ""
+
+#: src/functions.md:407
+msgid "`stdout`"
+msgstr ""
+
+#: src/functions.md:408
+msgid ""
+"`stderr` All color styles color the foreground by default, and come in "
+"explicit foreground variants prefixed with `fg:` and background variants "
+"prefixed with `bg:`, e.g., `bg:blue`, `fg:133`, and `#FFF`."
+msgstr ""
+
+#: src/functions.md:413
+msgid ""
+"`styles` may be a list of styles, in which case all listed styles are "
+"combined to produce the final escape sequence."
+msgstr ""
+
+#: src/functions.md:416
+msgid ""
+"Note that the escape sequence returned by `style(styles)` are prefixes. You "
+"can use the `NORMAL` constant to reset the style after use:"
+msgstr ""
+
+#: src/functions.md:419
+msgid ""
+"```just\n"
+"error message:\n"
+"  echo '{{style(\"error\") + message + NORMAL}}'\n"
+"```"
+msgstr ""
+
+#: src/functions.md:424
+msgid ""
+"`style(styles, text)`<sup>1.55.0</sup> Style `text` with `styles` as in the "
+"one-argument form. The style is reset automatically, so use of `NORMAL` to "
+"reset the terminal is not needed:"
+msgstr ""
+
+#: src/functions.md:428
+msgid ""
+"```just\n"
+"error message:\n"
+"  echo '{{style(\"error\", message)}}'\n"
+"```"
+msgstr ""
+
+#: src/functions.md:433
+msgid "User Directories"
+msgstr ""
+
+#: src/functions.md:435
+msgid ""
+"These functions<sup>1.23.0</sup> return paths to user-specific directories "
+"for things like configuration, data, caches, executables, and the user’s "
+"home directory."
+msgstr ""
+
+#: src/functions.md:439
+msgid ""
+"On Unix, these functions follow the [XDG Base Directory Specification]"
+"(https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest."
+"html)."
+msgstr ""
+
+#: src/functions.md:442
+msgid ""
+"On macOS and Windows, these functions return the system-specified user-"
+"specific directories. For example, `cache_directory()` returns `~/Library/"
+"Caches` on macOS and `{FOLDERID_LocalAppData}` on Windows."
+msgstr ""
+
+#: src/functions.md:446
+msgid ""
+"See the [`dirs`](https://docs.rs/dirs/latest/dirs/index.html) crate for more "
+"details."
+msgstr ""
+
+#: src/functions.md:449
+msgid "`cache_directory()` - The user-specific cache directory."
+msgstr ""
+
+#: src/functions.md:450
+msgid "`config_directory()` - The user-specific configuration directory."
+msgstr ""
+
+#: src/functions.md:451
+msgid ""
+"`config_local_directory()` - The local user-specific configuration directory."
+msgstr ""
+
+#: src/functions.md:452
+msgid "`data_directory()` - The user-specific data directory."
+msgstr ""
+
+#: src/functions.md:453
+msgid "`data_local_directory()` - The local user-specific data directory."
+msgstr ""
+
+#: src/functions.md:454
+msgid "`executable_directory()` - The user-specific executable directory."
+msgstr ""
+
+#: src/functions.md:455
+msgid "`home_directory()` - The user’s home directory."
+msgstr ""
+
+#: src/functions.md:456
+msgid ""
+"`runtime_directory()` - The user-specific runtime directory. Only defined on "
+"Linux."
+msgstr ""
+
+#: src/functions.md:459
+msgid ""
+"If you would like to use XDG base directories on all platforms you can use "
+"the `env(…)` function with the appropriate environment variable and "
+"fallback, although note that the XDG specification requires ignoring non-"
+"absolute paths, so for full compatibility with spec-compliant applications, "
+"you would need to do:"
+msgstr ""

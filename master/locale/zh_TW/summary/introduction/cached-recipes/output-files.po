@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/output-files.md:1
+msgid "Output Files"
+msgstr ""
+
+#: src/output-files.md:3
+msgid ""
+"Output files can be provided with `[cache(outputs = FILES)]`, where `FILES` "
+"is an expression that is evaluated with recipe arguments in scope and whose "
+"evaluated elements are paths. Paths may be absolute or relative to the "
+"recipe’s working directory."
+msgstr ""
+
+#: src/output-files.md:8
+msgid "Outputs are not part of the cache key."
+msgstr ""
+
+#: src/output-files.md:10
+msgid ""
+"All output files must exist for an invocation to be skipped, and after an "
+"invocation runs successfully, it is an error if any output file does not "
+"exist."
+msgstr ""
+
+#: src/output-files.md:13
+msgid ""
+"In this example, `build` re-runs whenever `main` is missing, and errors if "
+"it runs without producing `main`:"
+msgstr ""
+
+#: src/output-files.md:16
+msgid ""
+"```just\n"
+"set unstable\n"
+"set lists\n"
+"\n"
+"[script]\n"
+"[cache(inputs = [\"lib.c\", \"main.c\"], outputs = \"main\")]\n"
+"build:\n"
+"  cc lib.c main.c -o main\n"
+"\n"
+"clean:\n"
+"  rm -f main\n"
+"```"
+msgstr ""
+
+#: src/output-files.md:29
+msgid "This forces `build` to re-run if `main` is deleted by `clean`."
+msgstr ""

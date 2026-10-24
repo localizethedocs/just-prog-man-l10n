@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/avoiding-argument-splitting.md:1
+msgid "Avoiding Argument Splitting"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:3
+msgid "Given this `justfile`:"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:10
+msgid "The following command will create two files, `some` and `argument.txt`:"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:12
+msgid ""
+"```console\n"
+"$ just foo \"some argument.txt\"\n"
+"```"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:16
+msgid ""
+"The user’s shell will parse `\"some argument.txt\"` as a single argument, "
+"but when `just` replaces `touch {{argument}}` with `touch some argument."
+"txt`, the quotes are not preserved, and `touch` will receive two arguments."
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:20
+msgid ""
+"There are a few ways to avoid this: quoting, positional arguments, and "
+"exported arguments."
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:23
+msgid "Quoting"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:25
+msgid "Quotes can be added around the `{{argument}}` interpolation:"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:32
+msgid ""
+"This preserves `just`’s ability to catch variable name typos before running, "
+"for example if you were to write `{{argument}}`, but will not do what you "
+"want if the value of `argument` contains single quotes."
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:36
+msgid "Positional Arguments"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:38
+msgid ""
+"The `positional-arguments` setting causes all arguments to be passed as "
+"positional arguments, allowing them to be accessed with `$1`, `$2`, …, and "
+"`$@`, which can then be double-quoted to avoid further splitting by the "
+"shell:"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:42
+msgid ""
+"```just\n"
+"set positional-arguments\n"
+"\n"
+"foo argument:\n"
+"  touch \"$1\"\n"
+"```"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:49
+msgid ""
+"This defeats `just`’s ability to catch typos, for example if you type `$2` "
+"instead of `$1`, but works for all possible values of `argument`, including "
+"those with double quotes."
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:53
+msgid "Exported Arguments"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:55
+msgid "All arguments are exported when the `export` setting is set:"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:57
+msgid ""
+"```just\n"
+"set export\n"
+"\n"
+"foo argument:\n"
+"  touch \"$argument\"\n"
+"```"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:64
+msgid "Or individual arguments may be exported by prefixing them with `$`:"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:66
+msgid ""
+"```just\n"
+"foo $argument:\n"
+"  touch \"$argument\"\n"
+"```"
+msgstr ""
+
+#: src/avoiding-argument-splitting.md:71
+msgid ""
+"This defeats `just`’s ability to catch typos, for example if you type "
+"`$argument`, but works for all possible values of `argument`, including "
+"those with double quotes."
+msgstr ""

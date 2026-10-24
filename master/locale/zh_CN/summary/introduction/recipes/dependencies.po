@@ -1,0 +1,78 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/dependencies.md:1
+msgid "Dependencies"
+msgstr ""
+
+#: src/dependencies.md:3
+msgid "Dependencies run before recipes that depend on them:"
+msgstr ""
+
+#: src/dependencies.md:19
+msgid ""
+"In a given invocation of `just`, a recipe with the same arguments will only "
+"run once, regardless of how many times it appears in the command-line "
+"invocation, or how many times it appears as a dependency:"
+msgstr ""
+
+#: src/dependencies.md:43
+msgid ""
+"Multiple recipes may depend on a recipe that performs some kind of setup, "
+"and when those recipes run, that setup will only be performed once:"
+msgstr ""
+
+#: src/dependencies.md:64
+msgid ""
+"Recipes in a given run are only skipped when they receive the same arguments:"
+msgstr ""
+
+#: src/dependencies.md:81
+msgid "Running Recipes at the End of a Recipe"
+msgstr ""
+
+#: src/dependencies.md:83
+msgid ""
+"Normal dependencies of a recipe always run before a recipe starts. That is "
+"to say, the dependee always runs before the depender. These dependencies are "
+"called “prior dependencies”."
+msgstr ""
+
+#: src/dependencies.md:87
+msgid ""
+"A recipe can also have subsequent dependencies, which run immediately after "
+"the recipe and are introduced with an `&&`:"
+msgstr ""
+
+#: src/dependencies.md:104 src/dependencies.md:137
+msgid "…running _b_ prints:"
+msgstr ""
+
+#: src/dependencies.md:118
+msgid "Running Recipes in the Middle of a Recipe"
+msgstr ""
+
+#: src/dependencies.md:120
+msgid ""
+"`just` doesn’t support running recipes in the middle of another recipe, but "
+"you can call `just` recursively in the middle of a recipe. Given the "
+"following `justfile`:"
+msgstr ""
+
+#: src/dependencies.md:151
+msgid ""
+"This has limitations, since recipe `c` is run with an entirely new "
+"invocation of `just`: Assignments will be recalculated, dependencies might "
+"run twice, and command line arguments will not be propagated to the child "
+"`just` process."
+msgstr ""

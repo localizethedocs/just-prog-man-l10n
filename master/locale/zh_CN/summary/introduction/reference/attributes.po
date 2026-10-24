@@ -1,0 +1,437 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/attributes.md:1
+msgid "Attributes"
+msgstr ""
+
+#: src/attributes.md:3
+msgid ""
+"Recipes, `mod` statements, and aliases may be annotated with attributes that "
+"change their behavior."
+msgstr ""
+
+#: src/attributes.md:6
+msgid "Name"
+msgstr ""
+
+#: src/attributes.md:6
+msgid "Type"
+msgstr ""
+
+#: src/attributes.md:6
+msgid "Description"
+msgstr ""
+
+#: src/attributes.md:8
+msgid "`[arg(ARG, help=\"HELP\")]`<sup>1.46.0</sup>"
+msgstr ""
+
+#: src/attributes.md:8 src/attributes.md:9 src/attributes.md:10
+#: src/attributes.md:11 src/attributes.md:12 src/attributes.md:13
+#: src/attributes.md:14 src/attributes.md:15 src/attributes.md:16
+#: src/attributes.md:17 src/attributes.md:18 src/attributes.md:19
+#: src/attributes.md:22 src/attributes.md:23 src/attributes.md:24
+#: src/attributes.md:30 src/attributes.md:32 src/attributes.md:33
+#: src/attributes.md:34 src/attributes.md:36 src/attributes.md:37
+#: src/attributes.md:39 src/attributes.md:40 src/attributes.md:41
+#: src/attributes.md:42 src/attributes.md:43 src/attributes.md:46
+msgid "recipe"
+msgstr ""
+
+#: src/attributes.md:8
+msgid ""
+"Print help string `HELP` for `ARG` in usage messages. May be a const "
+"expression<sup>1.55.0</sup>."
+msgstr ""
+
+#: src/attributes.md:9
+msgid "`[arg(ARG, long=\"LONG\")]`<sup>1.46.0</sup>"
+msgstr ""
+
+#: src/attributes.md:9
+msgid ""
+"Require values of argument `ARG` to be passed as `--LONG` option. If the "
+"parameter is variadic, the option is repeatable<sup>1.55.0master</sup>."
+msgstr ""
+
+#: src/attributes.md:10
+msgid "`[arg(ARG, max=\"MAX\")]`<sup>1.56.0</sup>"
+msgstr ""
+
+#: src/attributes.md:10
+msgid ""
+"Allow at most `MAX` values to be passed to argument `ARG`. Requires "
+"`multiple` or a variadic parameter."
+msgstr ""
+
+#: src/attributes.md:11
+msgid "`[arg(ARG, min=\"MIN\")]`<sup>1.56.0</sup>"
+msgstr ""
+
+#: src/attributes.md:11
+msgid ""
+"Require at least `MIN` values to be passed to argument `ARG`. Requires "
+"`multiple` or a variadic parameter."
+msgstr ""
+
+#: src/attributes.md:12
+msgid "`[arg(ARG, pattern=\"PATTERN\")]`<sup>1.45.0</sup>"
+msgstr ""
+
+#: src/attributes.md:12
+msgid ""
+"Require values of argument `ARG` to match regular expression `PATTERN`. May "
+"be a const expression<sup>1.55.0</sup>."
+msgstr ""
+
+#: src/attributes.md:13
+msgid "`[arg(ARG, short=\"S\")]`<sup>1.46.0</sup>"
+msgstr ""
+
+#: src/attributes.md:13
+msgid ""
+"Require values of argument `ARG` to be passed as short `-S` option. If the "
+"parameter is variadic, the option is repeatable<sup>1.55.0</sup>."
+msgstr ""
+
+#: src/attributes.md:14
+msgid "`[arg(ARG, value=VALUE)]`<sup>1.46.0</sup>"
+msgstr ""
+
+#: src/attributes.md:14
+msgid "Makes option `ARG` a flag which does not take a value."
+msgstr ""
+
+#: src/attributes.md:15
+msgid "`[cache]`<sup>1.54.0</sup>"
+msgstr ""
+
+#: src/attributes.md:15
+msgid ""
+"Skip recipe invocations when a matching entry exists in the cache. See "
+"[cached recipes](cached-recipes.html) for details. Currently unstable."
+msgstr ""
+
+#: src/attributes.md:16
+msgid "`[confirm(PROMPT)]`<sup>1.23.0</sup>"
+msgstr ""
+
+#: src/attributes.md:16
+msgid "Require confirmation prior to executing recipe with a custom prompt."
+msgstr ""
+
+#: src/attributes.md:17
+msgid "`[confirm]`<sup>1.17.0</sup>"
+msgstr ""
+
+#: src/attributes.md:17
+msgid "Require confirmation prior to executing recipe."
+msgstr ""
+
+#: src/attributes.md:18
+msgid "`[continue(SIGNALS)]`<sup>1.54.0</sup>"
+msgstr ""
+
+#: src/attributes.md:18
+msgid ""
+"Continue execution normally if a command is interrupted by any of `SIGNALS` "
+"and exits successfully. Defaults to `SIGINT`."
+msgstr ""
+
+#: src/attributes.md:19
+msgid "`[default]`<sup>1.43.0</sup>"
+msgstr ""
+
+#: src/attributes.md:19
+msgid "Use recipe as module’s default recipe."
+msgstr ""
+
+#: src/attributes.md:20
+msgid "`[doc(DOC)]`<sup>1.27.0</sup>"
+msgstr ""
+
+#: src/attributes.md:20 src/attributes.md:26
+msgid "module, recipe"
+msgstr ""
+
+#: src/attributes.md:20
+msgid ""
+"Set recipe or module’s [documentation comment](documentation-comments.html) "
+"to `DOC`. May be a const expression<sup>1.56.0</sup>."
+msgstr ""
+
+#: src/attributes.md:21
+msgid "`[dragonfly]`<sup>1.47.0</sup>"
+msgstr ""
+
+#: src/attributes.md:21 src/attributes.md:25 src/attributes.md:27
+#: src/attributes.md:28 src/attributes.md:29 src/attributes.md:31
+#: src/attributes.md:35 src/attributes.md:44 src/attributes.md:45
+msgid "any<sup>1.56.0</sup>"
+msgstr ""
+
+#: src/attributes.md:21
+msgid "Enable item on DragonFly BSD."
+msgstr ""
+
+#: src/attributes.md:22
+msgid "`[env(NAME, VALUE)]` <sup>1.47.0</sup>"
+msgstr ""
+
+#: src/attributes.md:22
+msgid ""
+"Set environment variable `NAME` to `VALUE` for recipe. `NAME` and `VALUE` "
+"may be expressions<sup>1.51.0</sup>."
+msgstr ""
+
+#: src/attributes.md:23
+msgid "`[extension(EXT)]`<sup>1.32.0</sup>"
+msgstr ""
+
+#: src/attributes.md:23
+msgid ""
+"Set shebang recipe script’s file extension to `EXT`. `EXT` should include a "
+"period if one is desired."
+msgstr ""
+
+#: src/attributes.md:24
+msgid "`[exit-message]`<sup>1.39.0</sup>"
+msgstr ""
+
+#: src/attributes.md:24
+msgid ""
+"Print error message if recipe fails regardless of `set no-exit-message`."
+msgstr ""
+
+#: src/attributes.md:25
+msgid "`[freebsd]`<sup>1.47.0</sup>"
+msgstr ""
+
+#: src/attributes.md:25
+msgid "Enable item on FreeBSD."
+msgstr ""
+
+#: src/attributes.md:26
+msgid "`[group(NAME)]`<sup>1.27.0</sup>"
+msgstr ""
+
+#: src/attributes.md:26
+msgid "Put recipe or module in [group](groups.html) `NAME`."
+msgstr ""
+
+#: src/attributes.md:27
+msgid "`[android]`<sup>1.50.0</sup>"
+msgstr ""
+
+#: src/attributes.md:27
+msgid "Enable item on Android."
+msgstr ""
+
+#: src/attributes.md:28
+msgid "`[linux]`<sup>1.8.0</sup>"
+msgstr ""
+
+#: src/attributes.md:28
+msgid "Enable item on Linux."
+msgstr ""
+
+#: src/attributes.md:29
+msgid "`[macos]`<sup>1.8.0</sup>"
+msgstr ""
+
+#: src/attributes.md:29
+msgid "Enable item on macOS."
+msgstr ""
+
+#: src/attributes.md:30
+msgid "`[metadata(METADATA)]`<sup>1.42.0</sup>"
+msgstr ""
+
+#: src/attributes.md:30
+msgid "Attach `METADATA` to recipe."
+msgstr ""
+
+#: src/attributes.md:31
+msgid "`[netbsd]`<sup>1.47.0</sup>"
+msgstr ""
+
+#: src/attributes.md:31
+msgid "Enable item on NetBSD."
+msgstr ""
+
+#: src/attributes.md:32
+msgid "`[no-cd]`<sup>1.9.0</sup>"
+msgstr ""
+
+#: src/attributes.md:32
+msgid "Don’t change directory before executing recipe."
+msgstr ""
+
+#: src/attributes.md:33
+msgid "`[no-exit-message]`<sup>1.7.0</sup>"
+msgstr ""
+
+#: src/attributes.md:33
+msgid "Don’t print an error message if recipe fails."
+msgstr ""
+
+#: src/attributes.md:34
+msgid "`[no-quiet]`<sup>1.23.0</sup>"
+msgstr ""
+
+#: src/attributes.md:34
+msgid "Override globally quiet recipes and always echo out the recipe."
+msgstr ""
+
+#: src/attributes.md:35
+msgid "`[openbsd]`<sup>1.38.0</sup>"
+msgstr ""
+
+#: src/attributes.md:35
+msgid "Enable item on OpenBSD."
+msgstr ""
+
+#: src/attributes.md:36
+msgid "`[parallel]`<sup>1.42.0</sup>"
+msgstr ""
+
+#: src/attributes.md:36
+msgid "Run this recipe’s dependencies in parallel."
+msgstr ""
+
+#: src/attributes.md:37
+msgid "`[positional-arguments]`<sup>1.29.0</sup>"
+msgstr ""
+
+#: src/attributes.md:37
+msgid ""
+"Turn on [positional arguments](positional-arguments.html) for this recipe."
+msgstr ""
+
+#: src/attributes.md:38
+msgid "`[private]`<sup>1.10.0</sup>"
+msgstr ""
+
+#: src/attributes.md:38
+msgid "alias, recipe"
+msgstr ""
+
+#: src/attributes.md:38
+msgid ""
+"Make recipe, alias, or variable private. See [Private Recipes](private-"
+"recipes.html)."
+msgstr ""
+
+#: src/attributes.md:39
+msgid "`[script(COMMAND)]`<sup>1.32.0</sup>"
+msgstr ""
+
+#: src/attributes.md:39
+msgid ""
+"Execute recipe as a script interpreted by `COMMAND`. See [script recipes]"
+"(script-recipes.html) for more details."
+msgstr ""
+
+#: src/attributes.md:40
+msgid "`[script]`<sup>1.33.0</sup>"
+msgstr ""
+
+#: src/attributes.md:40
+msgid ""
+"Execute recipe as script. See [script recipes](script-recipes.html) for more "
+"details."
+msgstr ""
+
+#: src/attributes.md:41
+msgid "`[shell]`<sup>1.52.0</sup>"
+msgstr ""
+
+#: src/attributes.md:41
+msgid "Execute recipe as a shell recipe, overriding `set default-script`."
+msgstr ""
+
+#: src/attributes.md:42
+msgid "`[timestamp(FORMAT)]`<sup>1.58.0</sup>"
+msgstr ""
+
+#: src/attributes.md:42
+msgid ""
+"Print command timestamps with format `FORMAT`. `FORMAT` may be an expression."
+msgstr ""
+
+#: src/attributes.md:43
+msgid "`[timestamp]`<sup>1.58.0</sup>"
+msgstr ""
+
+#: src/attributes.md:43
+msgid "Print command timestamps."
+msgstr ""
+
+#: src/attributes.md:44
+msgid "`[unix]`<sup>1.8.0</sup>"
+msgstr ""
+
+#: src/attributes.md:44
+msgid "Enable item on unixes. (Includes macOS)."
+msgstr ""
+
+#: src/attributes.md:45
+msgid "`[windows]`<sup>1.8.0</sup>"
+msgstr ""
+
+#: src/attributes.md:45
+msgid "Enable item on Windows."
+msgstr ""
+
+#: src/attributes.md:46
+msgid "`[working-directory(PATH)]`<sup>1.38.0</sup>"
+msgstr ""
+
+#: src/attributes.md:46
+msgid ""
+"Set recipe working directory. `PATH` may be an expression<sup>1.51.0</sup> "
+"whose value is relative or absolute. If relative, it is interpreted relative "
+"to the default working directory."
+msgstr ""
+
+#: src/attributes.md:48
+msgid "A recipe can have multiple attributes, either on multiple lines:"
+msgstr ""
+
+#: src/attributes.md:50
+msgid ""
+"```just\n"
+"[no-cd]\n"
+"[private]\n"
+"foo:\n"
+"    echo \"foo\"\n"
+"```"
+msgstr ""
+
+#: src/attributes.md:57
+msgid "Or separated by commas on a single line<sup>1.14.0</sup>:"
+msgstr ""
+
+#: src/attributes.md:59
+msgid ""
+"```just\n"
+"[no-cd, private]\n"
+"foo:\n"
+"    echo \"foo\"\n"
+"```"
+msgstr ""
+
+#: src/attributes.md:65
+msgid "Attributes with a single argument may be written with a colon:"
+msgstr ""

@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/whats-the-relationship-between-just-and-cargo-build-scripts.md:1
+msgid "What’s the relationship between Just and Cargo build scripts?"
+msgstr ""
+
+#: src/whats-the-relationship-between-just-and-cargo-build-scripts.md:3
+msgid ""
+"[`cargo` build scripts](http://doc.crates.io/build-script.html) have a "
+"pretty specific use, which is to control how `cargo` builds your Rust "
+"project. This might include adding flags to `rustc` invocations, building an "
+"external dependency, or running some kind of codegen step."
+msgstr ""
+
+#: src/whats-the-relationship-between-just-and-cargo-build-scripts.md:8
+msgid ""
+"`just`, on the other hand, is for all the other miscellaneous commands you "
+"might run as part of development. Things like running tests in different "
+"configurations, linting your code, pushing build artifacts to a server, "
+"removing temporary files, and the like."
+msgstr ""
+
+#: src/whats-the-relationship-between-just-and-cargo-build-scripts.md:13
+msgid ""
+"Also, although `just` is written in Rust, it can be used regardless of the "
+"language or build system your project uses."
+msgstr ""

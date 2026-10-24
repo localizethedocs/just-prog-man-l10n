@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/cached-recipes.md:1
+msgid "Cached Recipes"
+msgstr ""
+
+#: src/cached-recipes.md:3
+msgid ""
+"`just` will skip invocations of recipes with the `[cache]` "
+"attribute<sup>1.54.0</sup> if it finds an entry matching the invocation in "
+"the cache. The `[cache]` attribute may only be used with script recipes and "
+"is currently unstable."
+msgstr ""
+
+#: src/cached-recipes.md:8
+msgid ""
+"For example, this recipe will be skipped if `image.jpg` exists and the "
+"contents of `image.png` and the output of `convert -version` haven’t changed "
+"since the last run:"
+msgstr ""
+
+#: src/cached-recipes.md:12
+msgid ""
+"```just\n"
+"set unstable\n"
+"\n"
+"[script]\n"
+"[cache(inputs = \"image.png\", outputs = \"image.jpg\", extra = `convert -"
+"version`)]\n"
+"convert:\n"
+"  convert image.png image.jpg\n"
+"```"
+msgstr ""
+
+#: src/cached-recipes.md:21
+msgid ""
+"Unlike many other features of `just`, which are, hopefully, well thought-out "
+"and user-friendly, cached recipes are inherently fragile. It is important to "
+"understand their limitations before relying on them. Please read this "
+"section thoroughly, including the friendly admonitions below."
+msgstr ""

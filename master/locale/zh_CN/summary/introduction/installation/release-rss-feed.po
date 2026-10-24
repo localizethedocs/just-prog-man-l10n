@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/release-rss-feed.md:1
+msgid "Release RSS Feed"
+msgstr ""
+
+#: src/release-rss-feed.md:3
+msgid ""
+"An [RSS feed](https://en.wikipedia.org/wiki/RSS) of `just` releases is "
+"available [here](https://github.com/casey/just/releases.atom)."
+msgstr ""

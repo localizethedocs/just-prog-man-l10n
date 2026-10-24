@@ -1,0 +1,61 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/invoking-justfiles-in-other-directories.md:1
+msgid "Invoking `justfile`s in Other Directories"
+msgstr ""
+
+#: src/invoking-justfiles-in-other-directories.md:3
+msgid ""
+"If the first argument passed to `just` contains a `/`, then the following "
+"occurs:"
+msgstr ""
+
+#: src/invoking-justfiles-in-other-directories.md:6
+msgid "The argument is split at the last `/`."
+msgstr ""
+
+#: src/invoking-justfiles-in-other-directories.md:8
+msgid ""
+"The part before the last `/` is treated as a directory. `just` will start "
+"its search for the `justfile` there, instead of in the current directory."
+msgstr ""
+
+#: src/invoking-justfiles-in-other-directories.md:11
+msgid ""
+"The part after the last slash is treated as a normal argument, or ignored if "
+"it is empty."
+msgstr ""
+
+#: src/invoking-justfiles-in-other-directories.md:14
+msgid ""
+"This may seem a little strange, but it’s useful if you wish to run a command "
+"in a `justfile` that is in a subdirectory."
+msgstr ""
+
+#: src/invoking-justfiles-in-other-directories.md:17
+msgid ""
+"For example, if you are in a directory which contains a subdirectory named "
+"`foo`, which contains a `justfile` with the recipe `build`, which is also "
+"the default recipe, the following are all equivalent:"
+msgstr ""
+
+#: src/invoking-justfiles-in-other-directories.md:27
+msgid ""
+"Additional recipes after the first are sought in the same `justfile`. For "
+"example, the following are both equivalent:"
+msgstr ""
+
+#: src/invoking-justfiles-in-other-directories.md:35
+msgid "And will both invoke recipes `a` and `b` in `foo/justfile`."
+msgstr ""

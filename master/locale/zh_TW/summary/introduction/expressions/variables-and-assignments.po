@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/variables-and-assignments.md:1
+msgid "Variables and Assignments"
+msgstr ""
+
+#: src/variables-and-assignments.md:3
+msgid ""
+"Module-level variables may be created by assigning them a value with `:=`:"
+msgstr ""
+
+#: src/variables-and-assignments.md:5
+msgid ""
+"```just\n"
+"foo := \"hello\"\n"
+"bar := \"world\"\n"
+"\n"
+"baz:\n"
+"  echo {{ foo + \" \" + bar }}\n"
+"```"
+msgstr ""
+
+#: src/variables-and-assignments.md:13
+msgid "All variables in a module may be printed:"
+msgstr ""
+
+#: src/variables-and-assignments.md:15
+msgid ""
+"```console\n"
+"$ just --evaluate\n"
+"bar := \"world\"\n"
+"foo := \"hello\"\n"
+"```"
+msgstr ""
+
+#: src/variables-and-assignments.md:21
+msgid "Or the value of a single variable:"
+msgstr ""
+
+#: src/variables-and-assignments.md:28
+msgid ""
+"All variables in a submodule or a single variable in a submodule may be "
+"printed with a path to the submodule or variable<sup>1.49.0</sup>:"
+msgstr ""
+
+#: src/variables-and-assignments.md:31
+msgid ""
+"```console\n"
+"$ just --evaluate bob::bar\n"
+"x := \"world\"\n"
+"y := \"hello\"\n"
+"$ just --evaluate bob::bar::y\n"
+"hello\n"
+"```"
+msgstr ""
+
+#: src/variables-and-assignments.md:39
+msgid ""
+"The format of exported variables may be controlled with `--evaluate-"
+"format`<sup>1.49.0</sup>:"
+msgstr ""
+
+#: src/variables-and-assignments.md:42
+msgid ""
+"```console\n"
+"$ just --evaluate --evaluate-format shell\n"
+"bar=\"world\"\n"
+"foo=\"hello\"\n"
+"```"
+msgstr ""
+
+#: src/variables-and-assignments.md:48
+msgid "The default format is `--evaluate-format just`:"
+msgstr ""
+
+#: src/variables-and-assignments.md:50
+msgid ""
+"```console\n"
+"$ just --evaluate --evaluate-format just\n"
+"bar := \"world\"\n"
+"foo := \"hello\"\n"
+"```"
+msgstr ""

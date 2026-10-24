@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/built-in-functions.md:1
+msgid "Built-in Functions"
+msgstr ""
+
+#: src/built-in-functions.md:3
+msgid ""
+"`just` provides many built-in functions for use in expressions, including "
+"recipe body `{{…}}` substitutions, assignments, and default parameter values."
+msgstr ""
+
+#: src/built-in-functions.md:6
+msgid ""
+"All functions ending in `_directory` can be abbreviated to `_dir`. So "
+"`home_directory()` can also be written as `home_dir()`. In addition, "
+"`invocation_directory_native()` can be abbreviated to "
+"`invocation_dir_native()`."
+msgstr ""

@@ -1,0 +1,220 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/strings.md:1
+msgid "Strings"
+msgstr ""
+
+#: src/strings.md:3
+msgid ""
+"`'single'`, `\"double\"`, and `'''triple'''` quoted string literals are "
+"supported. Unlike in recipe bodies, `{{…}}` interpolations are not supported "
+"inside strings."
+msgstr ""
+
+#: src/strings.md:7
+msgid "Double-quoted strings support escape sequences:"
+msgstr ""
+
+#: src/strings.md:9
+msgid ""
+"```just\n"
+"carriage-return   := \"\\r\"\n"
+"double-quote      := \"\\\"\"\n"
+"newline           := \"\\n\"\n"
+"no-newline        := \"\\\n"
+"\"\n"
+"slash             := \"\\\\\"\n"
+"tab               := \"\\t\"\n"
+"unicode-codepoint := \"\\u{1F916}\"\n"
+"```"
+msgstr ""
+
+#: src/strings.md:20
+msgid ""
+"```console\n"
+"$ just --evaluate\n"
+"\"arriage-return   := \"\n"
+"double-quote      := \"\"\"\n"
+"newline           := \"\n"
+"\"\n"
+"no-newline        := \"\"\n"
+"slash             := \"\\\"\n"
+"tab               := \"     \"\n"
+"unicode-codepoint := \"🤖\"\n"
+"```"
+msgstr ""
+
+#: src/strings.md:32
+msgid ""
+"The unicode character escape sequence `\\u{…}`<sup>1.36.0</sup> accepts up "
+"to six hex digits."
+msgstr ""
+
+#: src/strings.md:35
+msgid "Strings may contain line breaks:"
+msgstr ""
+
+#: src/strings.md:37
+msgid ""
+"```just\n"
+"single := '\n"
+"hello\n"
+"'\n"
+"\n"
+"double := \"\n"
+"goodbye\n"
+"\"\n"
+"```"
+msgstr ""
+
+#: src/strings.md:47
+msgid "Single-quoted strings do not recognize escape sequences:"
+msgstr ""
+
+#: src/strings.md:49
+msgid ""
+"```just\n"
+"escapes := '\\t\\n\\r\\\"\\\\'\n"
+"```"
+msgstr ""
+
+#: src/strings.md:53
+msgid ""
+"```console\n"
+"$ just --evaluate\n"
+"escapes := \"\\t\\n\\r\\\"\\\\\"\n"
+"```"
+msgstr ""
+
+#: src/strings.md:58
+msgid ""
+"Indented versions of both single- and double-quoted strings, delimited by "
+"triple single- or double-quotes, are supported. Indented string lines are "
+"stripped of a leading line break, and leading whitespace common to all non-"
+"blank lines:"
+msgstr ""
+
+#: src/strings.md:63
+msgid ""
+"```just\n"
+"# this string will evaluate to `foo\\nbar\\n`\n"
+"x := '''\n"
+"  foo\n"
+"  bar\n"
+"'''\n"
+"\n"
+"# this string will evaluate to `abc\\n  wuv\\nxyz\\n`\n"
+"y := \"\"\"\n"
+"  abc\n"
+"    wuv\n"
+"  xyz\n"
+"\"\"\"\n"
+"```"
+msgstr ""
+
+#: src/strings.md:78
+msgid ""
+"Similar to unindented strings, indented double-quoted strings process escape "
+"sequences, and indented single-quoted strings ignore escape sequences. "
+"Escape sequence processing takes place after unindentation. The "
+"unindentation algorithm does not take escape-sequence produced whitespace or "
+"newlines into account."
+msgstr ""
+
+#: src/strings.md:84
+msgid "Shell-expanded strings"
+msgstr ""
+
+#: src/strings.md:86
+msgid "Strings prefixed with `x` are shell expanded<sup>1.27.0</sup>:"
+msgstr ""
+
+#: src/strings.md:92
+msgid "Value"
+msgstr ""
+
+#: src/strings.md:92
+msgid "Replacement"
+msgstr ""
+
+#: src/strings.md:94
+msgid "`$VAR`"
+msgstr ""
+
+#: src/strings.md:94 src/strings.md:95
+msgid "value of environment variable `VAR`"
+msgstr ""
+
+#: src/strings.md:95
+msgid "`${VAR}`"
+msgstr ""
+
+#: src/strings.md:96
+msgid "`${VAR:-DEFAULT}`"
+msgstr ""
+
+#: src/strings.md:96
+msgid "value of environment variable `VAR`, or `DEFAULT` if `VAR` is not set"
+msgstr ""
+
+#: src/strings.md:97
+msgid "Leading `~`"
+msgstr ""
+
+#: src/strings.md:97
+msgid "path to current user’s home directory"
+msgstr ""
+
+#: src/strings.md:98
+msgid "Leading `~USER`"
+msgstr ""
+
+#: src/strings.md:98
+msgid "path to `USER`’s home directory"
+msgstr ""
+
+#: src/strings.md:100
+msgid ""
+"This expansion is performed at compile time, so variables from `.env` files "
+"and exported `just` variables cannot be used. However, this allows shell "
+"expanded strings to be used in places like settings and import paths, which "
+"cannot depend on `just` variables and `.env` files."
+msgstr ""
+
+#: src/strings.md:105
+msgid "Format strings"
+msgstr ""
+
+#: src/strings.md:107
+msgid "Strings prefixed with `f` are format strings<sup>1.44.0</sup>:"
+msgstr ""
+
+#: src/strings.md:109
+msgid ""
+"```justfile\n"
+"name := \"world\"\n"
+"message := f'Hello, {{name}}!'\n"
+"```"
+msgstr ""
+
+#: src/strings.md:114
+msgid ""
+"Format strings may contain interpolations delimited with `{{…}}` that "
+"contain expressions. Format strings evaluate to the concatenated string "
+"fragments and evaluated expressions."
+msgstr ""
+
+#: src/strings.md:118
+msgid "Use `{{{{` to include a literal `{{` in a format string:"
+msgstr ""

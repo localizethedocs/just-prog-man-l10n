@@ -1,0 +1,136 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/getting-and-setting-environment-variables.md:1
+msgid "Getting and Setting Environment Variables"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:3
+msgid "Exporting `just` Variables"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:5
+msgid ""
+"Assignments prefixed with the `export` keyword will be exported to recipes "
+"as environment variables:"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:8
+msgid ""
+"```just\n"
+"export RUST_BACKTRACE := \"1\"\n"
+"\n"
+"test:\n"
+"  # will print a stack trace if it crashes\n"
+"  cargo test\n"
+"```"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:16
+msgid ""
+"Parameters prefixed with a `$` will be exported as environment variables:"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:18
+msgid ""
+"```just\n"
+"test $RUST_BACKTRACE=\"1\":\n"
+"  # will print a stack trace if it crashes\n"
+"  cargo test\n"
+"```"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:24
+msgid ""
+"You can also use the `[env(NAME, VALUE)]` attribute to export environment "
+"variables to a specific recipe:"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:27
+msgid ""
+"```just\n"
+"[env(\"RUST_BACKTRACE\", \"1\")]\n"
+"test:\n"
+"  # will print a stack trace if it crashes\n"
+"  cargo test\n"
+"```"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:34
+msgid ""
+"Exported variables and parameters are not exported to backticks in the same "
+"scope."
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:36
+msgid ""
+"```just\n"
+"export WORLD := \"world\"\n"
+"# This backtick will fail with \"WORLD: unbound variable\"\n"
+"BAR := `echo hello $WORLD`\n"
+"```"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:42
+msgid ""
+"```just\n"
+"# Running `just a foo` will fail with \"A: unbound variable\"\n"
+"a $A $B=`echo $A`:\n"
+"  echo $A $B\n"
+"```"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:48
+msgid ""
+"When [export](export.html) is set, all `just` variables are exported as "
+"environment variables."
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:51
+msgid "Unexporting Environment Variables"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:53
+msgid ""
+"Environment variables can be unexported with the `unexport` "
+"keyword<sup>1.29.0</sup>:"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:69
+msgid "Getting Environment Variables from the Environment"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:71
+msgid ""
+"Environment variables from the environment are passed automatically to the "
+"recipes."
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:74
+msgid ""
+"```just\n"
+"print_home_folder:\n"
+"  @echo \"HOME is: '${HOME}'\"\n"
+"```"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:84
+msgid "Setting `just` Variables from Environment Variables"
+msgstr ""
+
+#: src/getting-and-setting-environment-variables.md:86
+msgid ""
+"Environment variables can be propagated to `just` variables using the "
+"`env()` function. See [environment-variables](functions.html#environment-"
+"variables)."
+msgstr ""

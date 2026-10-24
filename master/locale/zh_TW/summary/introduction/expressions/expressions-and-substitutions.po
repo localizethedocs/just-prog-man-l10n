@@ -1,0 +1,166 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/expressions-and-substitutions.md:1
+msgid "Expressions and Substitutions"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:3
+msgid ""
+"Various operators and function calls are supported in expressions, which may "
+"be used in assignments, default recipe arguments, and inside recipe body "
+"`{{…}}` substitutions."
+msgstr ""
+
+#: src/expressions-and-substitutions.md:7
+msgid ""
+"```just\n"
+"tmpdir  := `mktemp -d`\n"
+"version := \"0.2.7\"\n"
+"tardir  := tmpdir / \"awesomesauce-\" + version\n"
+"tarball := tardir + \".tar.gz\"\n"
+"config  := quote(config_dir() / \".project-config\")\n"
+"\n"
+"publish:\n"
+"  rm -f {{tarball}}\n"
+"  mkdir {{tardir}}\n"
+"  cp README.md *.c {{ config }} {{tardir}}\n"
+"  tar zcvf {{tarball}} {{tardir}}\n"
+"  scp {{tarball}} me@server.com:release/\n"
+"  rm -rf {{tarball}} {{tardir}}\n"
+"```"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:23
+msgid "Concatenation"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:25
+msgid ""
+"The `+` operator returns the left-hand argument concatenated with the right-"
+"hand argument:"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:32
+msgid "Logical Operators"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:34
+msgid ""
+"The logical operators `&&` and `||` can be used to coalesce "
+"values<sup>1.37.0</sup>, similar to Python’s `and` and `or`. The only false "
+"value is the empty list `[]`; every other value, including the empty string "
+"`''`, is true."
+msgstr ""
+
+#: src/expressions-and-substitutions.md:39
+msgid ""
+"These operators require `set lists`<sup>1.53.0</sup>, which is currently "
+"unstable."
+msgstr ""
+
+#: src/expressions-and-substitutions.md:42
+msgid ""
+"The `&&` operator returns the empty list if the left-hand argument is false, "
+"otherwise it returns the right-hand argument:"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:50
+msgid ""
+"The `||` operator returns the left-hand argument if it is true, otherwise it "
+"returns the right-hand argument:"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:58
+msgid "Joining Paths"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:60
+msgid "The `/` operator can be used to join two strings with a slash:"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:62
+msgid ""
+"```just\n"
+"foo := \"a\" / \"b\"\n"
+"```"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:71
+msgid "Note that a `/` is added even if one is already present:"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:73
+msgid ""
+"```just\n"
+"foo := \"a/\"\n"
+"bar := foo / \"b\"\n"
+"```"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:78
+msgid ""
+"```\n"
+"$ just --evaluate bar\n"
+"a//b\n"
+"```"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:83
+msgid "Absolute paths can also be constructed<sup>1.5.0</sup>:"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:85
+msgid ""
+"```just\n"
+"foo := / \"b\"\n"
+"```"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:94
+msgid ""
+"The `/` operator uses the `/` character, even on Windows. Thus, using the `/"
+"` operator should be avoided with paths that use universal naming convention "
+"(UNC), i.e., those that start with `\\\\`, since forward slashes are not "
+"supported with UNC paths."
+msgstr ""
+
+#: src/expressions-and-substitutions.md:99
+msgid "Escaping `{{`"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:101
+msgid "To write a recipe containing `{{`, use `{{{{`:"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:108
+msgid "(An unmatched `}}` is ignored, so it doesn’t need to be escaped.)"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:110
+msgid ""
+"Another option is to put all the text you’d like to escape inside of an "
+"interpolation:"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:118
+msgid "Yet another option is to use `{{ \"{{\" }}`:"
+msgstr ""
+
+#: src/expressions-and-substitutions.md:120
+msgid ""
+"```just\n"
+"braces:\n"
+"  echo 'I {{ \"{{\" }}LOVE}} curly braces!'\n"
+"```"
+msgstr ""

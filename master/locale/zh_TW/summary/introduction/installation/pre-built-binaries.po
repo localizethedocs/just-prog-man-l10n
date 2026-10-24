@@ -1,0 +1,89 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/pre-built-binaries.md:1
+msgid "Pre-Built Binaries"
+msgstr ""
+
+#: src/pre-built-binaries.md:3
+msgid ""
+"Pre-built binaries for Linux, macOS, and Windows can be found on [the "
+"releases page](https://github.com/casey/just/releases)."
+msgstr ""
+
+#: src/pre-built-binaries.md:6
+msgid ""
+"You can use the following command on Linux, macOS, or Windows to download "
+"the latest release, just replace `DEST` with the directory where you’d like "
+"to put `just`:"
+msgstr ""
+
+#: src/pre-built-binaries.md:10
+msgid ""
+"```console\n"
+"curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -"
+"s -- --to DEST\n"
+"```"
+msgstr ""
+
+#: src/pre-built-binaries.md:14
+msgid "For example, to install `just` to `~/bin`:"
+msgstr ""
+
+#: src/pre-built-binaries.md:16
+msgid ""
+"```console\n"
+"# create ~/bin\n"
+"mkdir -p ~/bin\n"
+"\n"
+"# download and extract just to ~/bin/just\n"
+"curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -"
+"s -- --to ~/bin\n"
+"\n"
+"# add `~/bin` to the paths that your shell searches for executables\n"
+"# this line should be added to your shell's initialization file,\n"
+"# e.g. `~/.bashrc` or `~/.zshrc`\n"
+"export PATH=\"$PATH:$HOME/bin\"\n"
+"\n"
+"# just should now be executable\n"
+"just --help\n"
+"```"
+msgstr ""
+
+#: src/pre-built-binaries.md:32
+msgid ""
+"Note that `install.sh` may fail on GitHub Actions, or in other environments "
+"where many machines share IP addresses. `install.sh` calls GitHub APIs in "
+"order to determine the latest version of `just` to install, and those API "
+"calls are rate-limited on a per-IP basis. To make `install.sh` more reliable "
+"in such circumstances, pass a specific tag to install with `--tag`."
+msgstr ""
+
+#: src/pre-built-binaries.md:38
+msgid ""
+"Another way to avoid rate-limiting is to pass a GitHub authentication token "
+"to `install.sh` as an environment variable named `GITHUB_TOKEN`, allowing it "
+"to authenticate its requests."
+msgstr ""
+
+#: src/pre-built-binaries.md:42
+msgid ""
+"[Releases](https://github.com/casey/just/releases) include a `SHA256SUM` "
+"file which can be used to verify the integrity of pre-built binary archives."
+msgstr ""
+
+#: src/pre-built-binaries.md:45
+msgid ""
+"To verify a release, download the pre-built binary archive along with the "
+"`SHA256SUM` file and run:"
+msgstr ""

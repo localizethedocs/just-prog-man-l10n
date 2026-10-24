@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/jetbrains-ides.md:1
+msgid "JetBrains IDEs"
+msgstr ""
+
+#: src/jetbrains-ides.md:3
+msgid ""
+"A plugin for JetBrains IDEs by [linux_china](https://github.com/linux-china) "
+"is [available here](https://plugins.jetbrains.com/plugin/18658-just)."
+msgstr ""

@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/multi-line-constructs.md:1
+msgid "Multi-Line Constructs"
+msgstr ""
+
+#: src/multi-line-constructs.md:3
+msgid ""
+"Recipes without an initial shebang are evaluated and run line-by-line, which "
+"means that multi-line constructs probably won’t do what you want."
+msgstr ""
+
+#: src/multi-line-constructs.md:6
+msgid "For example, with the following `justfile`:"
+msgstr ""
+
+#: src/multi-line-constructs.md:15
+msgid ""
+"The extra leading whitespace before the second line of the `conditional` "
+"recipe will produce a parse error:"
+msgstr ""
+
+#: src/multi-line-constructs.md:26
+msgid ""
+"To work around this, you can write conditionals on one line, escape newlines "
+"with slashes, or add a shebang to your recipe. Some examples of multi-line "
+"constructs are provided for reference."
+msgstr ""
+
+#: src/multi-line-constructs.md:30
+msgid "`if` statements"
+msgstr ""
+
+#: src/multi-line-constructs.md:52
+msgid "`for` loops"
+msgstr ""
+
+#: src/multi-line-constructs.md:74
+msgid "`while` loops"
+msgstr ""
+
+#: src/multi-line-constructs.md:96
+msgid "Outside Recipe Bodies"
+msgstr ""
+
+#: src/multi-line-constructs.md:98
+msgid "Parenthesized expressions can span multiple lines:"
+msgstr ""
+
+#: src/multi-line-constructs.md:122
+msgid ""
+"Lines ending with a backslash continue on to the next line as if the lines "
+"were joined by whitespace<sup>1.15.0</sup>:"
+msgstr ""
+
+#: src/multi-line-constructs.md:144
+msgid ""
+"Backslash line continuations can also be used in interpolations. The line "
+"following the backslash must be indented."
+msgstr ""
+
+#: src/multi-line-constructs.md:147
+msgid ""
+"```just\n"
+"recipe:\n"
+"  echo '{{ \\\n"
+"  \"This interpolation \" + \\\n"
+"    \"has a lot of text.\" \\\n"
+"  }}'\n"
+"  echo 'back to recipe body'\n"
+"```"
+msgstr ""

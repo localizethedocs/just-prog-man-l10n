@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/user-defined-functions.md:1
+msgid "User-defined functions"
+msgstr ""
+
+#: src/user-defined-functions.md:3
+msgid "New functions may be defined<sup>1.49.0</sup>:"
+msgstr ""
+
+#: src/user-defined-functions.md:5
+msgid ""
+"```just\n"
+"set unstable\n"
+"\n"
+"hello(name) := f\"Hello, {{ name }}!\"\n"
+"\n"
+"foo:\n"
+"  echo '{{ hello(\"World\") }}'\n"
+"```"
+msgstr ""
+
+#: src/user-defined-functions.md:14
+msgid "User-defined functions are currently unstable."
+msgstr ""
+
+#: src/user-defined-functions.md:16
+msgid "Functions may reference assignments in the same module:"
+msgstr ""
+
+#: src/user-defined-functions.md:18
+msgid ""
+"```just\n"
+"set unstable\n"
+"\n"
+"base := \"foo\"\n"
+"\n"
+"join(extension) := base + \".\" + extension\n"
+"\n"
+"create:\n"
+"  touch {{ join(\"c\") }}\n"
+"  touch {{ join(\"html\") }}\n"
+"  touch {{ join(\"txt\") }}\n"
+"```"
+msgstr ""

@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/requiring-confirmation-for-recipes.md:1
+msgid "Requiring Confirmation for Recipes"
+msgstr ""
+
+#: src/requiring-confirmation-for-recipes.md:3
+msgid ""
+"`just` normally executes all recipes unless there is an error. The "
+"`[confirm]` attribute<sup>1.17.0</sup> allows recipes to require "
+"confirmation in the terminal prior to running. This can be overridden by "
+"passing `--yes` to `just`, which will automatically confirm any recipes "
+"marked by this attribute."
+msgstr ""
+
+#: src/requiring-confirmation-for-recipes.md:8
+msgid ""
+"Recipes dependent on a recipe that requires confirmation will not be run if "
+"the relied upon recipe is not confirmed, as well as recipes passed after any "
+"recipe that requires confirmation."
+msgstr ""
+
+#: src/requiring-confirmation-for-recipes.md:18
+msgid "Custom Confirmation Prompt"
+msgstr ""
+
+#: src/requiring-confirmation-for-recipes.md:20
+msgid ""
+"The default confirmation prompt can be overridden with "
+"`[confirm(PROMPT)]`<sup>1.23.0</sup>:"
+msgstr ""
+
+#: src/requiring-confirmation-for-recipes.md:23
+msgid ""
+"```just\n"
+"[confirm(\"Are you sure you want to delete everything?\")]\n"
+"delete-everything:\n"
+"  rm -rf *\n"
+"```"
+msgstr ""
+
+#: src/requiring-confirmation-for-recipes.md:29
+msgid ""
+"The confirmation prompt may also be an expression<sup>1.49.0</sup> which may "
+"reference assignments or recipe arguments:"
+msgstr ""
+
+#: src/requiring-confirmation-for-recipes.md:32
+msgid ""
+"```just\n"
+"[confirm(\"Deploy to \" + env + \"?\")]\n"
+"deploy env:\n"
+"  echo 'Deploying to {{env}}...'\n"
+"```"
+msgstr ""

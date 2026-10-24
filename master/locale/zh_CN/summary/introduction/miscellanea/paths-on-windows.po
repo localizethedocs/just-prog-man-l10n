@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/paths-on-windows.md:1
+msgid "Paths on Windows"
+msgstr ""
+
+#: src/paths-on-windows.md:3
+msgid ""
+"On Windows, all functions that return paths, except "
+"`invocation_directory()`, will return `\\`\\-separated paths. When not using "
+"PowerShell or `cmd.exe`, these paths should be quoted to prevent the `\\`s "
+"from being interpreted as character escapes:"
+msgstr ""
+
+#: src/paths-on-windows.md:8
+msgid ""
+"```just\n"
+"ls:\n"
+"    echo '{{absolute_path(\".\")}}'\n"
+"```"
+msgstr ""
+
+#: src/paths-on-windows.md:13
+msgid ""
+"`cygpath.exe` is an executable included in some distributions of Unix "
+"userlands for Windows, including [Cygwin](https://www.cygwin.com/) and [Git]"
+"(https://git-scm.com/downloads) for Windows."
+msgstr ""
+
+#: src/paths-on-windows.md:17
+msgid "`just` uses `cygpath.exe` in two places:"
+msgstr ""
+
+#: src/paths-on-windows.md:19
+msgid ""
+"For backwards compatibility, `invocation_directory()`, uses `cygpath.exe` to "
+"convert the invocation directory into a unix-style `/`\\-separated path. Use "
+"`invocation_directory_native()` to get the native, Windows-style path. On "
+"unix, `invocation_directory()` and `invocation_directory_native()` both "
+"return the same unix-style path."
+msgstr ""
+
+#: src/paths-on-windows.md:25
+msgid ""
+"`cygpath.exe` is also used to convert Unix-style shebang lines into Windows "
+"paths. As an alternative, the `[script]` attribute can be used, which does "
+"not depend on `cygpath.exe`."
+msgstr ""
+
+#: src/paths-on-windows.md:29
+msgid ""
+"If `cygpath.exe` is available, you can use it to convert between path styles:"
+msgstr ""

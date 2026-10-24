@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/further-ramblings.md:1
+msgid "Further Ramblings"
+msgstr ""
+
+#: src/further-ramblings.md:3
+msgid ""
+"I personally find it very useful to write a `justfile` for almost every "
+"project, big or small."
+msgstr ""
+
+#: src/further-ramblings.md:6
+msgid ""
+"On a big project with multiple contributors, it’s very useful to have a file "
+"with all the commands needed to work on the project close at hand."
+msgstr ""
+
+#: src/further-ramblings.md:9
+msgid ""
+"There are probably different commands to test, build, lint, deploy, and the "
+"like, and having them all in one place is useful and cuts down on the time "
+"you have to spend telling people which commands to run and how to type them."
+msgstr ""
+
+#: src/further-ramblings.md:13
+msgid ""
+"And, with an easy place to put commands, it’s likely that you’ll come up "
+"with other useful things which are part of the project’s collective wisdom, "
+"but which aren’t written down anywhere, like the arcane commands needed for "
+"some part of your revision control workflow, to install all your project’s "
+"dependencies, or all the random flags you might need to pass to the build "
+"system."
+msgstr ""
+
+#: src/further-ramblings.md:20
+msgid "Some ideas for recipes:"
+msgstr ""
+
+#: src/further-ramblings.md:22
+msgid "Deploying/publishing the project"
+msgstr ""
+
+#: src/further-ramblings.md:24
+msgid "Building in release mode vs debug mode"
+msgstr ""
+
+#: src/further-ramblings.md:26
+msgid "Running in debug mode or with logging enabled"
+msgstr ""
+
+#: src/further-ramblings.md:28
+msgid "Complex git workflows"
+msgstr ""
+
+#: src/further-ramblings.md:30
+msgid "Updating dependencies"
+msgstr ""
+
+#: src/further-ramblings.md:32
+msgid ""
+"Running different sets of tests, for example fast tests vs slow tests, or "
+"running them with verbose output"
+msgstr ""
+
+#: src/further-ramblings.md:35
+msgid ""
+"Any complex set of commands that you really should write down somewhere, if "
+"only to be able to remember them"
+msgstr ""
+
+#: src/further-ramblings.md:38
+msgid ""
+"Even for small, personal projects it’s nice to be able to remember commands "
+"by name instead of ^Reverse searching your shell history, and it’s a huge "
+"boon to be able to go into an old project written in a random language with "
+"a mysterious build system and know that all the commands you need to do "
+"whatever you need to do are in the `justfile`, and that if you type `just` "
+"something useful (or at least interesting!) will probably happen."
+msgstr ""
+
+#: src/further-ramblings.md:45
+msgid ""
+"For ideas for recipes, check out [this project’s `justfile`](https://github."
+"com/casey/just/blob/master/justfile), or some of the `justfile`s [out in the "
+"wild](https://github.com/search?q=path%3A**%2Fjustfile&type=code)."
+msgstr ""
+
+#: src/further-ramblings.md:51
+msgid ""
+"Anyways, I think that’s about it for this incredibly long-winded README."
+msgstr ""
+
+#: src/further-ramblings.md:53
+msgid ""
+"I hope you enjoy using `just` and find great success and satisfaction in all "
+"your computational endeavors!"
+msgstr ""
+
+#: src/further-ramblings.md:56
+msgid "😸"
+msgstr ""
+
+#: src/further-ramblings.md:58
+msgid "[🔼 Back to the top!](#just)"
+msgstr ""

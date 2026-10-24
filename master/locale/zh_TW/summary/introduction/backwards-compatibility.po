@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/backwards-compatibility.md:1
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: src/backwards-compatibility.md:3
+msgid ""
+"With the release of version 1.0, `just` features a strong commitment to "
+"backwards compatibility and stability."
+msgstr ""
+
+#: src/backwards-compatibility.md:6
+msgid ""
+"Future releases will not introduce backwards incompatible changes that make "
+"existing `justfile`s stop working, or break working invocations of the "
+"command-line interface."
+msgstr ""
+
+#: src/backwards-compatibility.md:10
+msgid ""
+"This does not, however, preclude fixing outright bugs, even if doing so "
+"might break `justfiles` that rely on their behavior."
+msgstr ""
+
+#: src/backwards-compatibility.md:13
+msgid ""
+"There will never be a `just` 2.0. Any desirable backwards-incompatible "
+"changes will be opt-in on a per-`justfile` basis, so users may migrate at "
+"their leisure."
+msgstr ""
+
+#: src/backwards-compatibility.md:17
+msgid ""
+"Features that aren’t yet ready for stabilization are marked as unstable and "
+"may be changed or removed at any time. Using unstable features produces an "
+"error by default, which can be suppressed by passing the `--unstable` flag, "
+"`set unstable`, or setting the environment variable `JUST_UNSTABLE` to any "
+"value other than `false`, `0`, or the empty string."
+msgstr ""

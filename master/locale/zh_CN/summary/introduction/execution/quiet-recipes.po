@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/quiet-recipes.md:1
+msgid "Quiet Recipes"
+msgstr ""
+
+#: src/quiet-recipes.md:3
+msgid ""
+"A recipe name may be prefixed with `@` to invert the meaning of `@` before "
+"each line:"
+msgstr ""
+
+#: src/quiet-recipes.md:13
+msgid "Now only the lines starting with `@` will be echoed:"
+msgstr ""
+
+#: src/quiet-recipes.md:22
+msgid "All recipes in a justfile can be made quiet with `set quiet`:"
+msgstr ""
+
+#: src/quiet-recipes.md:24
+msgid ""
+"```just\n"
+"set quiet\n"
+"\n"
+"foo:\n"
+"  echo \"This is quiet\"\n"
+"\n"
+"@foo2:\n"
+"  echo \"This is also quiet\"\n"
+"```"
+msgstr ""
+
+#: src/quiet-recipes.md:34
+msgid "The `[no-quiet]` attribute overrides this setting:"
+msgstr ""
+
+#: src/quiet-recipes.md:36
+msgid ""
+"```just\n"
+"set quiet\n"
+"\n"
+"foo:\n"
+"  echo \"This is quiet\"\n"
+"\n"
+"[no-quiet]\n"
+"foo2:\n"
+"  echo \"This is not quiet\"\n"
+"```"
+msgstr ""
+
+#: src/quiet-recipes.md:47
+msgid "Shebang recipes are quiet by default:"
+msgstr ""
+
+#: src/quiet-recipes.md:60
+msgid ""
+"Adding `@` to a shebang recipe name makes `just` print the recipe before "
+"executing it:"
+msgstr ""
+
+#: src/quiet-recipes.md:76
+msgid ""
+"`just` normally prints error messages when a recipe line fails. These error "
+"messages can be suppressed using the `[no-exit-message]`<sup>1.7.0</sup> "
+"attribute on individual recipes, or module-wide with `set no-exit-"
+"message`<sup>1.39.0</sup>. You may find this especially useful with a recipe "
+"that wraps a tool:"
+msgstr ""
+
+#: src/quiet-recipes.md:93
+msgid ""
+"Add the attribute to suppress the exit error message when the tool exits "
+"with a non-zero code:"
+msgstr ""

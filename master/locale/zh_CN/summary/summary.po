@@ -1,0 +1,544 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/SUMMARY.md:1
+msgid "Introduction"
+msgstr ""
+
+#: src/SUMMARY.md:2
+msgid "Installation"
+msgstr ""
+
+#: src/SUMMARY.md:3
+msgid "Prerequisites"
+msgstr ""
+
+#: src/SUMMARY.md:4
+msgid "Packages"
+msgstr ""
+
+#: src/SUMMARY.md:5
+msgid "Pre-Built Binaries"
+msgstr ""
+
+#: src/SUMMARY.md:6
+msgid "GitHub Actions"
+msgstr ""
+
+#: src/SUMMARY.md:7
+msgid "Docker"
+msgstr ""
+
+#: src/SUMMARY.md:8
+msgid "Release RSS Feed"
+msgstr ""
+
+#: src/SUMMARY.md:9
+msgid "Node.js Installation"
+msgstr ""
+
+#: src/SUMMARY.md:10
+msgid "Nix Flake"
+msgstr ""
+
+#: src/SUMMARY.md:11
+msgid "Backwards Compatibility"
+msgstr ""
+
+#: src/SUMMARY.md:12
+msgid "Requiring a Minimum Just Version"
+msgstr ""
+
+#: src/SUMMARY.md:13
+msgid "Editor Support"
+msgstr ""
+
+#: src/SUMMARY.md:14
+msgid "Vim and Neovim"
+msgstr ""
+
+#: src/SUMMARY.md:15
+msgid "Emacs"
+msgstr ""
+
+#: src/SUMMARY.md:16
+msgid "Visual Studio Code"
+msgstr ""
+
+#: src/SUMMARY.md:17
+msgid "JetBrains IDEs"
+msgstr ""
+
+#: src/SUMMARY.md:18
+msgid "Kakoune"
+msgstr ""
+
+#: src/SUMMARY.md:19
+msgid "Helix"
+msgstr ""
+
+#: src/SUMMARY.md:20
+msgid "Sublime Text"
+msgstr ""
+
+#: src/SUMMARY.md:21
+msgid "Micro"
+msgstr ""
+
+#: src/SUMMARY.md:22
+msgid "Zed"
+msgstr ""
+
+#: src/SUMMARY.md:23
+msgid "Other Editors"
+msgstr ""
+
+#: src/SUMMARY.md:24
+msgid "Language Server Protocol"
+msgstr ""
+
+#: src/SUMMARY.md:25
+msgid "Model Context Protocol"
+msgstr ""
+
+#: src/SUMMARY.md:26
+msgid "Quick Start"
+msgstr ""
+
+#: src/SUMMARY.md:27
+msgid "Examples"
+msgstr ""
+
+#: src/SUMMARY.md:28
+msgid "Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:29
+msgid "The Default Recipe"
+msgstr ""
+
+#: src/SUMMARY.md:30
+msgid "Recipe Parameters"
+msgstr ""
+
+#: src/SUMMARY.md:31
+msgid "Avoiding Argument Splitting"
+msgstr ""
+
+#: src/SUMMARY.md:32
+msgid "Positional Arguments"
+msgstr ""
+
+#: src/SUMMARY.md:33
+msgid "Dependencies"
+msgstr ""
+
+#: src/SUMMARY.md:34
+msgid "Parallelism"
+msgstr ""
+
+#: src/SUMMARY.md:35
+msgid "Documentation Comments"
+msgstr ""
+
+#: src/SUMMARY.md:36
+msgid "Groups"
+msgstr ""
+
+#: src/SUMMARY.md:37
+msgid "Aliases"
+msgstr ""
+
+#: src/SUMMARY.md:38
+msgid "Private Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:39
+msgid "Enabling and Disabling Items"
+msgstr ""
+
+#: src/SUMMARY.md:40
+msgid "Allow Duplicate Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:41
+msgid "Expressions"
+msgstr ""
+
+#: src/SUMMARY.md:42
+msgid "Variables and Assignments"
+msgstr ""
+
+#: src/SUMMARY.md:43
+msgid "Allow Duplicate Variables"
+msgstr ""
+
+#: src/SUMMARY.md:44
+msgid "Lazy"
+msgstr ""
+
+#: src/SUMMARY.md:45
+msgid "Expressions and Substitutions"
+msgstr ""
+
+#: src/SUMMARY.md:46
+msgid "Strings"
+msgstr ""
+
+#: src/SUMMARY.md:47
+msgid "Lists"
+msgstr ""
+
+#: src/SUMMARY.md:48
+msgid "Conditional Expressions"
+msgstr ""
+
+#: src/SUMMARY.md:49
+msgid "Command Evaluation Using Backticks"
+msgstr ""
+
+#: src/SUMMARY.md:50
+msgid "Stopping execution with error"
+msgstr ""
+
+#: src/SUMMARY.md:51
+msgid "Built-in Functions"
+msgstr ""
+
+#: src/SUMMARY.md:52
+msgid "User-defined functions"
+msgstr ""
+
+#: src/SUMMARY.md:53
+msgid "Execution"
+msgstr ""
+
+#: src/SUMMARY.md:54
+msgid "Sigils"
+msgstr ""
+
+#: src/SUMMARY.md:55
+msgid "Quiet Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:56
+msgid "Shebang Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:57
+msgid "Script Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:58
+msgid "Script and Shebang Recipe Temporary Files"
+msgstr ""
+
+#: src/SUMMARY.md:59
+msgid "Safer Bash Shebang Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:60
+msgid "Indentation"
+msgstr ""
+
+#: src/SUMMARY.md:61
+msgid "Multi-Line Constructs"
+msgstr ""
+
+#: src/SUMMARY.md:62
+msgid "Setting Variables in a Recipe"
+msgstr ""
+
+#: src/SUMMARY.md:63
+msgid "Configuring the Shell"
+msgstr ""
+
+#: src/SUMMARY.md:64
+msgid "Shell"
+msgstr ""
+
+#: src/SUMMARY.md:65
+msgid "Environment Variables"
+msgstr ""
+
+#: src/SUMMARY.md:66
+msgid "Getting and Setting Environment Variables"
+msgstr ""
+
+#: src/SUMMARY.md:67
+msgid "Dotenv Settings"
+msgstr ""
+
+#: src/SUMMARY.md:68
+msgid "Export"
+msgstr ""
+
+#: src/SUMMARY.md:69
+msgid "Sharing Environment Variables Between Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:70
+msgid "Working Directory"
+msgstr ""
+
+#: src/SUMMARY.md:71
+msgid "Changing the Working Directory in a Recipe"
+msgstr ""
+
+#: src/SUMMARY.md:72
+msgid "Disabling Changing Directory"
+msgstr ""
+
+#: src/SUMMARY.md:73
+msgid "Organization"
+msgstr ""
+
+#: src/SUMMARY.md:74
+msgid "Imports"
+msgstr ""
+
+#: src/SUMMARY.md:75
+msgid "Modules"
+msgstr ""
+
+#: src/SUMMARY.md:76
+msgid "Invoking justfiles in Other Directories"
+msgstr ""
+
+#: src/SUMMARY.md:77
+msgid "Fallback to parent justfiles"
+msgstr ""
+
+#: src/SUMMARY.md:78
+msgid "Global Fallback Justfile"
+msgstr ""
+
+#: src/SUMMARY.md:79
+msgid "Remote Justfiles"
+msgstr ""
+
+#: src/SUMMARY.md:80
+msgid "Global and User justfiles"
+msgstr ""
+
+#: src/SUMMARY.md:81
+msgid "Markdown justfiles"
+msgstr ""
+
+#: src/SUMMARY.md:82
+msgid "Just Scripts"
+msgstr ""
+
+#: src/SUMMARY.md:83
+msgid "Hiding justfiles"
+msgstr ""
+
+#: src/SUMMARY.md:84
+msgid "Command Line"
+msgstr ""
+
+#: src/SUMMARY.md:85
+msgid "Listing Available Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:86
+msgid "Invoking Multiple Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:87
+msgid "Setting Variables from the Command Line"
+msgstr ""
+
+#: src/SUMMARY.md:88
+msgid "Command-line Options"
+msgstr ""
+
+#: src/SUMMARY.md:89
+msgid "Selecting Recipes to Run With an Interactive Chooser"
+msgstr ""
+
+#: src/SUMMARY.md:90
+msgid "Requiring Confirmation for Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:91
+msgid "Timestamps"
+msgstr ""
+
+#: src/SUMMARY.md:92
+msgid "Signal Handling"
+msgstr ""
+
+#: src/SUMMARY.md:93
+msgid "Shell Completion Scripts"
+msgstr ""
+
+#: src/SUMMARY.md:94
+msgid "Man Page"
+msgstr ""
+
+#: src/SUMMARY.md:95
+msgid "Formatting and dumping justfiles"
+msgstr ""
+
+#: src/SUMMARY.md:96
+msgid "Cached Recipes"
+msgstr ""
+
+#: src/SUMMARY.md:97
+msgid "Friendly Admonitions"
+msgstr ""
+
+#: src/SUMMARY.md:98
+msgid "Implementation"
+msgstr ""
+
+#: src/SUMMARY.md:99
+msgid "Clearing the Cache"
+msgstr ""
+
+#: src/SUMMARY.md:100
+msgid "Adding and Removing Environment Variables"
+msgstr ""
+
+#: src/SUMMARY.md:101
+msgid "Input Files"
+msgstr ""
+
+#: src/SUMMARY.md:102
+msgid "Output Files"
+msgstr ""
+
+#: src/SUMMARY.md:103
+msgid "Reference"
+msgstr ""
+
+#: src/SUMMARY.md:104
+msgid "Attributes"
+msgstr ""
+
+#: src/SUMMARY.md:105
+msgid "Settings"
+msgstr ""
+
+#: src/SUMMARY.md:106
+msgid "Functions"
+msgstr ""
+
+#: src/SUMMARY.md:107
+msgid "Constants"
+msgstr ""
+
+#: src/SUMMARY.md:108
+msgid "Changelog"
+msgstr ""
+
+#: src/SUMMARY.md:109
+msgid "Miscellanea"
+msgstr ""
+
+#: src/SUMMARY.md:110
+msgid "Re-running recipes when files change"
+msgstr ""
+
+#: src/SUMMARY.md:111
+msgid "Shell Alias"
+msgstr ""
+
+#: src/SUMMARY.md:112
+msgid "Grammar"
+msgstr ""
+
+#: src/SUMMARY.md:113
+msgid "just.sh"
+msgstr ""
+
+#: src/SUMMARY.md:114
+msgid "Node.js package.json Script Compatibility"
+msgstr ""
+
+#: src/SUMMARY.md:115
+msgid "Paths on Windows"
+msgstr ""
+
+#: src/SUMMARY.md:116
+msgid "Printing Complex Strings"
+msgstr ""
+
+#: src/SUMMARY.md:117
+msgid "Skill for Agents"
+msgstr ""
+
+#: src/SUMMARY.md:118
+msgid "Alternatives and Prior Art"
+msgstr ""
+
+#: src/SUMMARY.md:119
+msgid "Metadata"
+msgstr ""
+
+#: src/SUMMARY.md:120
+msgid "Python Recipes with uv"
+msgstr ""
+
+#: src/SUMMARY.md:121
+msgid "Integrating with mise"
+msgstr ""
+
+#: src/SUMMARY.md:122
+msgid "Activating Environments"
+msgstr ""
+
+#: src/SUMMARY.md:123
+msgid "Contributing"
+msgstr ""
+
+#: src/SUMMARY.md:124
+msgid "Getting Started"
+msgstr ""
+
+#: src/SUMMARY.md:125
+msgid "Contribution Workflow"
+msgstr ""
+
+#: src/SUMMARY.md:126
+msgid "Hints"
+msgstr ""
+
+#: src/SUMMARY.md:127
+msgid "Janus"
+msgstr ""
+
+#: src/SUMMARY.md:128
+msgid "Minimum Supported Rust Version"
+msgstr ""
+
+#: src/SUMMARY.md:129
+msgid "New Releases"
+msgstr ""
+
+#: src/SUMMARY.md:130
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: src/SUMMARY.md:131
+msgid "What are the idiosyncrasies of Make that Just avoids?"
+msgstr ""
+
+#: src/SUMMARY.md:132
+msgid "What’s the relationship between Just and Cargo build scripts?"
+msgstr ""
+
+#: src/SUMMARY.md:133
+msgid "Further Ramblings"
+msgstr ""

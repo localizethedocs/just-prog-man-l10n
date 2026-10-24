@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/vim-and-neovim.md:1
+msgid "Vim and Neovim"
+msgstr ""
+
+#: src/vim-and-neovim.md:3
+msgid ""
+"Vim version 9.1.1042 or better and Neovim version 0.11 or better support "
+"Justfile syntax highlighting out of the box, thanks to [pbnj](https://github."
+"com/pbnj)."
+msgstr ""
+
+#: src/vim-and-neovim.md:7
+msgid "`vim-just`"
+msgstr ""
+
+#: src/vim-and-neovim.md:9
+msgid ""
+"The [vim-just](https://github.com/NoahTheDuke/vim-just) plugin provides "
+"syntax highlighting for `justfile`s."
+msgstr ""
+
+#: src/vim-and-neovim.md:12
+msgid ""
+"Install it with your favorite package manager, like [Plug](https://github."
+"com/junegunn/vim-plug):"
+msgstr ""
+
+#: src/vim-and-neovim.md:23
+msgid "Or with Vim’s built-in package support:"
+msgstr ""
+
+#: src/vim-and-neovim.md:25
+msgid ""
+"```console\n"
+"mkdir -p ~/.vim/pack/vendor/start\n"
+"cd ~/.vim/pack/vendor/start\n"
+"git clone https://github.com/NoahTheDuke/vim-just.git\n"
+"```"
+msgstr ""
+
+#: src/vim-and-neovim.md:31
+msgid "`tree-sitter-just`"
+msgstr ""
+
+#: src/vim-and-neovim.md:33
+msgid ""
+"[tree-sitter-just](https://github.com/IndianBoy42/tree-sitter-just) is an "
+"[Nvim Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) plugin "
+"for Neovim."
+msgstr ""

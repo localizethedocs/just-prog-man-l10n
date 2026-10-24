@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/activating-environments.md:1
+msgid "Activating Environments"
+msgstr ""
+
+#: src/activating-environments.md:3
+msgid ""
+"Some tools require an activation step, such as Python virtual environments:"
+msgstr ""
+
+#: src/activating-environments.md:9
+msgid ""
+"Because these tools modify the environment of a running shell, it is not "
+"possible for `just` to perform this activation step for you. However, there "
+"are some workarounds."
+msgstr ""
+
+#: src/activating-environments.md:13
+msgid ""
+"The best workaround for Python environment management is to switch to [`uv`]"
+"(https://docs.astral.sh/uv/). `uv` sets up the correct environment for each "
+"command, so no activation step is needed."
+msgstr ""
+
+#: src/activating-environments.md:17
+msgid ""
+"If that isn’t possible, and for other tools, you can create a shared prelude "
+"and include it in script recipes that need it. It can span multiple lines "
+"and include any number of steps:"
+msgstr ""
+
+#: src/activating-environments.md:33
+msgid ""
+"This workaround doesn’t work with shell recipes, which spawn a new shell for "
+"each command."
+msgstr ""

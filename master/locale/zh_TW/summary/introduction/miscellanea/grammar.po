@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/grammar.md:1
+msgid "Grammar"
+msgstr ""
+
+#: src/grammar.md:3
+msgid ""
+"A non-normative grammar of `justfile`s can be found in [GRAMMAR.md](https://"
+"github.com/casey/just/blob/master/GRAMMAR.md)."
+msgstr ""

@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/alternatives-and-prior-art.md:1
+msgid "Alternatives and Prior Art"
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:3
+msgid ""
+"There is no shortage of command runners! Some more or less similar "
+"alternatives to `just` include:"
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:6
+msgid ""
+"[make](https://en.wikipedia.org/wiki/Make_(software)): The Unix build tool "
+"that inspired `just`. There are a few different modern day descendants of "
+"the original `make`, including [FreeBSD Make](https://www.freebsd.org/cgi/"
+"man.cgi?make(1)) and [GNU Make](https://www.gnu.org/software/make/)."
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:11
+msgid ""
+"[task](https://github.com/go-task/task): A YAML-based command runner written "
+"in Go."
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:13
+msgid ""
+"[maid](https://github.com/egoist/maid): A Markdown-based command runner "
+"written in JavaScript."
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:15
+msgid ""
+"[microsoft/just](https://github.com/microsoft/just): A JavaScript-based "
+"command runner written in JavaScript."
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:17
+msgid ""
+"[cargo-make](https://github.com/sagiegurari/cargo-make): A command runner "
+"for Rust projects."
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:19
+msgid ""
+"[mmake](https://github.com/tj/mmake): A wrapper around `make` with a number "
+"of improvements, including remote includes."
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:21
+msgid ""
+"[robo](https://github.com/tj/robo): A YAML-based command runner written in "
+"Go."
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:23
+msgid ""
+"[mask](https://github.com/jakedeichert/mask): A Markdown-based command "
+"runner written in Rust."
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:25
+msgid ""
+"[makesure](https://github.com/xonixx/makesure): A simple and portable "
+"command runner written in AWK and shell."
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:27
+msgid ""
+"[haku](https://github.com/VladimirMarkelov/haku): A make-like command runner "
+"written in Rust."
+msgstr ""
+
+#: src/alternatives-and-prior-art.md:29
+msgid ""
+"[mise](https://mise.jdx.dev/): A development environment tool manager "
+"written in Rust supporting tasks in TOML files and standalone scripts."
+msgstr ""

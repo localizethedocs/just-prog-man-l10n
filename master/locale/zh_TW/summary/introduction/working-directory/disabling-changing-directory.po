@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/disabling-changing-directory.md:1
+msgid "Disabling Changing Directory"
+msgstr ""
+
+#: src/disabling-changing-directory.md:3
+msgid ""
+"`just` normally executes recipes with the current directory set to the "
+"directory that contains the `justfile`. This can be disabled using the `[no-"
+"cd]` attribute<sup>1.9.0</sup>. This can be used to create recipes which use "
+"paths relative to the invocation directory, or which operate on the current "
+"directory."
+msgstr ""
+
+#: src/disabling-changing-directory.md:9
+msgid "For example, this `commit` recipe:"
+msgstr ""
+
+#: src/disabling-changing-directory.md:18
+msgid ""
+"Can be used with paths that are relative to the current directory, because "
+"`[no-cd]` prevents `just` from changing the current directory when executing "
+"`commit`."
+msgstr ""
+
+#: src/disabling-changing-directory.md:22
+msgid ""
+"Note that this does not affect dotenv file search, or the working directory "
+"of backtick and `shell()` invocations."
+msgstr ""

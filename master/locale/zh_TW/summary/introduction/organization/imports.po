@@ -1,0 +1,112 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/imports.md:1
+msgid "Imports"
+msgstr ""
+
+#: src/imports.md:3
+msgid ""
+"One `justfile` can include the contents of another using `import` statements."
+msgstr ""
+
+#: src/imports.md:5
+msgid "If you have the following `justfile`:"
+msgstr ""
+
+#: src/imports.md:14
+msgid "And the following text in `foo/bar.just`:"
+msgstr ""
+
+#: src/imports.md:21
+msgid ""
+"`foo/bar.just` will be included in `justfile` and recipe `b` will be defined:"
+msgstr ""
+
+#: src/imports.md:31
+msgid ""
+"The `import` path can be absolute or relative to the location of the "
+"justfile containing it. A leading `~/` in the import path is replaced with "
+"the current user’s home directory."
+msgstr ""
+
+#: src/imports.md:35
+msgid ""
+"Justfiles are insensitive to order, so included files can reference "
+"variables and recipes defined after the `import` statement."
+msgstr ""
+
+#: src/imports.md:38
+msgid ""
+"Imported files can themselves contain `import`s, which are processed "
+"recursively."
+msgstr ""
+
+#: src/imports.md:41
+msgid ""
+"`allow-duplicate-recipes` and `allow-duplicate-variables` allow duplicate "
+"recipes and variables, respectively, to override each other, instead of "
+"producing an error."
+msgstr ""
+
+#: src/imports.md:45
+msgid "Within a module, later definitions override earlier definitions:"
+msgstr ""
+
+#: src/imports.md:56
+msgid ""
+"When `import`s are involved, things unfortunately get much more complicated "
+"and hard to explain."
+msgstr ""
+
+#: src/imports.md:59
+msgid ""
+"Shallower definitions always override deeper definitions, so recipes at the "
+"top level will override recipes in imports, and recipes in an import will "
+"override recipes in an import which itself imports those recipes."
+msgstr ""
+
+#: src/imports.md:63
+msgid ""
+"When two duplicate definitions are imported and are at the same depth, the "
+"one from the earlier import will override the one from the later import."
+msgstr ""
+
+#: src/imports.md:66
+msgid ""
+"This is because `just` uses a stack when processing imports, pushing imports "
+"onto the stack in source-order, and always processing the top of the stack "
+"next, so earlier imports are actually handled later by the compiler."
+msgstr ""
+
+#: src/imports.md:70
+msgid ""
+"This is definitely a bug, but since `just` has very strong backwards "
+"compatibility guarantees and we take enormous pains not to break anyone’s "
+"`justfile`, see issue [\\#2540](https://github.com/casey/just/issues/2540) "
+"for discussion on whether or not we can actually fix it."
+msgstr ""
+
+#: src/imports.md:75
+msgid ""
+"Imports may be made optional by putting a `?` after the `import` keyword:"
+msgstr ""
+
+#: src/imports.md:81
+msgid ""
+"Importing the same source file multiple times is not an error<sup>1.37.0</"
+"sup>. This allows importing multiple justfiles, for example `foo.just` and "
+"`bar.just`, which both import a third justfile containing shared recipes, "
+"for example `baz.just`, without the duplicate import of `baz.just` being an "
+"error:"
+msgstr ""
