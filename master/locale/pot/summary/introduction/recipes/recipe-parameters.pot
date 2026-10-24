@@ -1,0 +1,413 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/recipe-parameters.md:1
+msgid "Recipe Parameters"
+msgstr ""
+
+#: src/recipe-parameters.md:3
+msgid ""
+"Recipes may have parameters. Here recipe `build` has a parameter called "
+"`target`:"
+msgstr ""
+
+#: src/recipe-parameters.md:12
+msgid "To pass arguments on the command line, put them after the recipe name:"
+msgstr ""
+
+#: src/recipe-parameters.md:20
+msgid ""
+"To pass arguments to a dependency, put the dependency in parentheses along "
+"with the arguments:"
+msgstr ""
+
+#: src/recipe-parameters.md:23
+msgid ""
+"```just\n"
+"default: (build \"main\")\n"
+"\n"
+"build target:\n"
+"  @echo 'Building {{target}}…'\n"
+"  cd {{target}} && make\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:31
+msgid "Variables can also be passed as arguments to dependencies:"
+msgstr ""
+
+#: src/recipe-parameters.md:33
+msgid ""
+"```just\n"
+"target := \"main\"\n"
+"\n"
+"_build version:\n"
+"  @echo 'Building {{version}}…'\n"
+"  cd {{version}} && make\n"
+"\n"
+"build: (_build target)\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:43
+msgid ""
+"A command’s arguments can be passed to a dependency by putting the "
+"dependency in parentheses along with the arguments:"
+msgstr ""
+
+#: src/recipe-parameters.md:46
+msgid ""
+"```just\n"
+"build target:\n"
+"  @echo \"Building {{target}}…\"\n"
+"\n"
+"push target: (build target)\n"
+"  @echo 'Pushing {{target}}…'\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:54
+msgid "Parameters may have default values:"
+msgstr ""
+
+#: src/recipe-parameters.md:64
+msgid "Parameters with default values may be omitted:"
+msgstr ""
+
+#: src/recipe-parameters.md:72
+msgid "Or supplied:"
+msgstr ""
+
+#: src/recipe-parameters.md:80
+msgid ""
+"Default values may be arbitrary expressions, but expressions containing the "
+"`+`, `&&`, `||`, or `/` operators must be parenthesized:"
+msgstr ""
+
+#: src/recipe-parameters.md:83
+msgid ""
+"```just\n"
+"arch := \"wasm\"\n"
+"\n"
+"test triple=(arch + \"-unknown-unknown\") input=(arch / \"input.dat\"):\n"
+"  ./test {{triple}}\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:90
+msgid ""
+"The last parameter of a recipe may be variadic, indicated with either a `+` "
+"or a `*` before the argument name:"
+msgstr ""
+
+#: src/recipe-parameters.md:98
+msgid ""
+"Variadic parameters prefixed with `+` accept _one or more_ arguments and "
+"expand to a string containing those arguments separated by spaces:"
+msgstr ""
+
+#: src/recipe-parameters.md:108
+msgid ""
+"Variadic parameters prefixed with `*` accept _zero or more_ arguments and "
+"expand to a string containing those arguments separated by spaces, or an "
+"empty string if no arguments are present:"
+msgstr ""
+
+#: src/recipe-parameters.md:112
+msgid ""
+"```just\n"
+"commit MESSAGE *FLAGS:\n"
+"  git commit {{FLAGS}} -m \"{{MESSAGE}}\"\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:117
+msgid ""
+"Variadic parameters can be assigned default values. These are overridden by "
+"arguments passed on the command line:"
+msgstr ""
+
+#: src/recipe-parameters.md:125
+msgid ""
+"The number of arguments a variadic parameter accepts may be limited with the "
+"`[arg(ARG, min=MIN)]` and `[arg(ARG, max=MAX)]` attributes<sup>1.56.0</sup>, "
+"which require lists to be enabled:"
+msgstr ""
+
+#: src/recipe-parameters.md:138
+msgid "`min` and `max` also apply to default values."
+msgstr ""
+
+#: src/recipe-parameters.md:140
+msgid ""
+"`{{…}}` substitutions may need to be quoted if they contain spaces. For "
+"example, if you have the following recipe:"
+msgstr ""
+
+#: src/recipe-parameters.md:143
+msgid ""
+"```just\n"
+"search QUERY:\n"
+"  lynx https://www.google.com/?q={{QUERY}}\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:148
+msgid "And you type:"
+msgstr ""
+
+#: src/recipe-parameters.md:150
+msgid ""
+"```console\n"
+"$ just search \"cat toupee\"\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:154
+msgid ""
+"`just` will run the command `lynx https://www.google.com/?q=cat toupee`, "
+"which will get parsed by `sh` as `lynx`, `https://www.google.com/?q=cat`, "
+"and `toupee`, and not the intended `lynx` and `https://www.google.com/?q=cat "
+"toupee`."
+msgstr ""
+
+#: src/recipe-parameters.md:158
+msgid "You can fix this by adding quotes:"
+msgstr ""
+
+#: src/recipe-parameters.md:160
+msgid ""
+"```just\n"
+"search QUERY:\n"
+"  lynx 'https://www.google.com/?q={{QUERY}}'\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:165
+msgid ""
+"Parameters prefixed with a `$` will be exported as environment variables:"
+msgstr ""
+
+#: src/recipe-parameters.md:172
+msgid ""
+"Parameters may be constrained to match regular expression patterns using the "
+"`[arg(\"name\", pattern=PATTERN)]` attribute<sup>1.45.0</sup>:"
+msgstr ""
+
+#: src/recipe-parameters.md:181
+msgid "The value of `pattern` may be a const expression<sup>1.55.0</sup>."
+msgstr ""
+
+#: src/recipe-parameters.md:183
+msgid ""
+"A leading `^` and trailing `$` are added to the pattern, so it must match "
+"the entire argument value."
+msgstr ""
+
+#: src/recipe-parameters.md:186
+msgid ""
+"You may constrain the pattern to a number of alternatives using the `|` "
+"operator:"
+msgstr ""
+
+#: src/recipe-parameters.md:195
+msgid ""
+"Regular expressions are provided by the [Rust `regex` crate](https://docs.rs/"
+"regex/latest/regex/). See the [syntax documentation](https://docs.rs/regex/"
+"latest/regex/#syntax) for usage examples."
+msgstr ""
+
+#: src/recipe-parameters.md:200
+msgid ""
+"Usage information for a recipe may be printed with the `--usage` "
+"subcommand<sup>1.46.0</sup>:"
+msgstr ""
+
+#: src/recipe-parameters.md:211
+msgid ""
+"Help strings may be added to arguments using the `[arg(ARG, help=HELP)]` "
+"attribute:"
+msgstr ""
+
+#: src/recipe-parameters.md:213
+msgid ""
+"```just\n"
+"[arg(\"bar\", help=\"hello\")]\n"
+"foo bar:\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:218
+msgid "The value `help` may be a const expression<sup>1.55.0</sup>."
+msgstr ""
+
+#: src/recipe-parameters.md:228
+msgid "Recipe Flags and Options"
+msgstr ""
+
+#: src/recipe-parameters.md:230
+msgid "Recipe parameters are positional by default."
+msgstr ""
+
+#: src/recipe-parameters.md:232 src/recipe-parameters.md:249
+#: src/recipe-parameters.md:282 src/recipe-parameters.md:332
+msgid "In this `justfile`:"
+msgstr ""
+
+#: src/recipe-parameters.md:239
+msgid "The parameter `bar` is positional:"
+msgstr ""
+
+#: src/recipe-parameters.md:246
+msgid ""
+"The `[arg(ARG, long=OPTION)]`<sup>1.46.0</sup> attribute can be used to make "
+"a parameter a long option."
+msgstr ""
+
+#: src/recipe-parameters.md:251
+msgid ""
+"```just\n"
+"[arg(\"bar\", long=\"bar\")]\n"
+"foo bar:\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:256
+msgid "The parameter `bar` is given with the `--bar` option:"
+msgstr ""
+
+#: src/recipe-parameters.md:263
+msgid "Options may also be passed with `--name=value` syntax:"
+msgstr ""
+
+#: src/recipe-parameters.md:270
+msgid ""
+"The value of `long` may be omitted, in which case the option defaults to the "
+"name of the parameter. With the following justfile, `bar` may be passed with "
+"`--bar`:"
+msgstr ""
+
+#: src/recipe-parameters.md:274
+msgid ""
+"```just\n"
+"[arg(\"bar\", long)]\n"
+"foo bar:\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:279
+msgid ""
+"The `[arg(ARG, short=OPTION)]`<sup>1.46.0</sup> attribute can be used to "
+"make a parameter a short option."
+msgstr ""
+
+#: src/recipe-parameters.md:284
+msgid ""
+"```just\n"
+"[arg(\"bar\", short=\"b\")]\n"
+"foo bar:\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:289
+msgid "The parameter `bar` is given with the `-b` option:"
+msgstr ""
+
+#: src/recipe-parameters.md:296
+msgid ""
+"The value of `short` may be omitted, in which case the option defaults to "
+"the first character of the name of the parameter. With the following "
+"justfile, `bar` may be passed with `-b`:"
+msgstr ""
+
+#: src/recipe-parameters.md:300
+msgid ""
+"```just\n"
+"[arg(\"bar\", short)]\n"
+"foo bar:\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:305
+msgid ""
+"If a parameter has both a long and short option, it may be passed using "
+"either."
+msgstr ""
+
+#: src/recipe-parameters.md:307
+msgid ""
+"Multiple short options may be combined<sup>1.55.0</sup>, for example `-abc` "
+"is equivalent to `-a -b -c`. A short option which takes a value may appear "
+"last, for example `-abcd VALUE`."
+msgstr ""
+
+#: src/recipe-parameters.md:311
+msgid ""
+"Variadic `*` and `+` parameters may be options, in which case the option is "
+"repeatable, with each occurrence contributing one value:"
+msgstr ""
+
+#: src/recipe-parameters.md:325
+msgid ""
+"As with positional variadic parameters, `+` options must be passed at least "
+"once, whereas `*` options may be omitted."
+msgstr ""
+
+#: src/recipe-parameters.md:328
+msgid ""
+"The `[arg(ARG, value=VALUE, …)]`<sup>1.46.0</sup> attribute can be used with "
+"`long` or `short` to make a parameter a flag which does not take a value. "
+"`VALUE` may be an expression<sup>1.54.0</sup>."
+msgstr ""
+
+#: src/recipe-parameters.md:334
+msgid ""
+"```just\n"
+"[arg(\"bar\", long=\"bar\", value=\"hello\")]\n"
+"foo bar:\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:339
+msgid ""
+"The parameter `bar` is given with the `--bar` option, but does not take a "
+"value, and instead takes the value given in the `[arg]` attribute:"
+msgstr ""
+
+#: src/recipe-parameters.md:347
+msgid ""
+"This is useful for unconditionally requiring a flag like `--force` on "
+"dangerous commands."
+msgstr ""
+
+#: src/recipe-parameters.md:350
+msgid "A flag is optional if its parameter has a default:"
+msgstr ""
+
+#: src/recipe-parameters.md:352
+msgid ""
+"```just\n"
+"[arg(\"bar\", long=\"bar\", value=\"hello\")]\n"
+"foo bar=\"goodbye\":\n"
+"```"
+msgstr ""
+
+#: src/recipe-parameters.md:357
+msgid "Causing it to receive the default when not passed in the invocation:"
+msgstr ""
+
+#: src/recipe-parameters.md:364
+msgid ""
+"If `--help` or `-h` is passed to a recipe that does not define that option, "
+"the recipe’s help string is printed and execution stops<sup>master</sup>."
+msgstr ""

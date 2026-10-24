@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/timestamps.md:1
+msgid "Timestamps"
+msgstr ""
+
+#: src/timestamps.md:3
+msgid "`just` can print timestamps before each recipe command:"
+msgstr ""
+
+#: src/timestamps.md:21
+msgid ""
+"By default, timestamps are formatted as `HH:MM:SS`. The format can be "
+"changed with `--timestamp-format`:"
+msgstr ""
+
+#: src/timestamps.md:33
+msgid ""
+"The argument to `--timestamp-format` is a `strftime`\\-style format string, "
+"see the [`chrono` library docs](https://docs.rs/chrono/latest/chrono/format/"
+"strftime/index.html) for details."
+msgstr ""
+
+#: src/timestamps.md:38
+msgid ""
+"The `[timestamp]` attribute<sup>1.58.0</sup> can be used to enable "
+"timestamps for a specific recipe:"
+msgstr ""
+
+#: src/timestamps.md:53
+msgid "Which may include a format string:"
+msgstr ""

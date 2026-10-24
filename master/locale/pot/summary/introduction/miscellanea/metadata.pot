@@ -1,0 +1,34 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/metadata.md:1
+msgid "Metadata"
+msgstr ""
+
+#: src/metadata.md:3
+msgid ""
+"Metadata in the form of lists of strings may be attached to recipes with the "
+"`[metadata(METADATA)]` attribute<sup>1.42.0</sup>:"
+msgstr ""
+
+#: src/metadata.md:6
+msgid ""
+"```just\n"
+"[metadata(\"hello\", \"goodbye\")]\n"
+"foo:\n"
+"```"
+msgstr ""
+
+#: src/metadata.md:11
+msgid "Metadata can be read using `just --dump --dump-format json`."
+msgstr ""
