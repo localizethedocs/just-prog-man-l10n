@@ -92,9 +92,9 @@ msgstr ""
 
 #: src/further-ramblings.md:45
 msgid ""
-"For ideas for recipes, check out [this project’s `justfile`](https://github."
-"com/casey/just/blob/master/justfile), or some of the `justfile`s [out in the "
-"wild](https://github.com/search?q=path%3A**%2Fjustfile&type=code)."
+"For ideas for recipes, check out [this project’s `justfile`](https://"
+"github.com/casey/just/blob/master/justfile), or some of the `justfile`s [out "
+"in the wild](https://github.com/search?q=path%3A**%2Fjustfile&type=code)."
 msgstr ""
 
 #: src/further-ramblings.md:51

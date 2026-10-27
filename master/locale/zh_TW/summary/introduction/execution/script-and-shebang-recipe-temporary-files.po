@@ -46,6 +46,6 @@ msgstr ""
 
 #: src/script-and-shebang-recipe-temporary-files.md:19
 msgid ""
-"Falling back to the directory returned by [std::env::temp_dir](https://doc."
-"rust-lang.org/std/env/fn.temp_dir.html)."
+"Falling back to the directory returned by [std::env::temp_dir](https://"
+"doc.rust-lang.org/std/env/fn.temp_dir.html)."
 msgstr ""

@@ -27,8 +27,8 @@ msgstr ""
 
 #: src/sharing-environment-variables-between-recipes.md:8
 msgid ""
-"Some tools, like [Python’s venv](https://docs.python.org/3/library/venv."
-"html), require loading environment variables in order to work, making them "
-"challenging to use with `just`. As a workaround, you can execute the virtual "
-"environment binaries directly:"
+"Some tools, like [Python’s venv](https://docs.python.org/3/library/"
+"venv.html), require loading environment variables in order to work, making "
+"them challenging to use with `just`. As a workaround, you can execute the "
+"virtual environment binaries directly:"
 msgstr ""

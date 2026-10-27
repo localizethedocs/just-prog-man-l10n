@@ -24,6 +24,6 @@ msgstr ""
 #: src/visual-studio-code.md:5
 msgid ""
 "Unmaintained VS Code extensions include [skellock/vscode-just](https://"
-"github.com/skellock/vscode-just) and [sclu1034/vscode-just](https://github."
-"com/sclu1034/vscode-just)."
+"github.com/skellock/vscode-just) and [sclu1034/vscode-just](https://"
+"github.com/sclu1034/vscode-just)."
 msgstr ""

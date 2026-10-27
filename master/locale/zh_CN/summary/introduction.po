@@ -24,8 +24,8 @@ msgstr ""
 
 #: src/introduction.md:28
 msgid ""
-"(中文文档在 [这里](https://github.com/casey/just/blob/master/README.中文."
-"md), 快看过来!)"
+"(中文文档在 [这里](https://github.com/casey/just/blob/master/README.中"
+"文.md), 快看过来!)"
 msgstr ""
 
 #: src/introduction.md:31
@@ -95,8 +95,8 @@ msgstr ""
 
 #: src/introduction.md:70
 msgid ""
-"Recipes can be [listed from the command line](listing-available-recipes."
-"html)."
+"Recipes can be [listed from the command line](listing-available-"
+"recipes.html)."
 msgstr ""
 
 #: src/introduction.md:72
@@ -119,8 +119,8 @@ msgstr ""
 
 #: src/introduction.md:81
 msgid ""
-"`justfiles` can be organized into multiple files using [modules](modules."
-"html) and [imports](imports.html)."
+"`justfiles` can be organized into multiple files using [modules]"
+"(modules.html) and [imports](imports.html)."
 msgstr ""
 
 #: src/introduction.md:84

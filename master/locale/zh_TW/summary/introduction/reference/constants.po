@@ -269,8 +269,8 @@ msgstr ""
 
 #: src/constants.md:47
 msgid ""
-"Constants starting with `\\e` are [ANSI escape sequences](https://en."
-"wikipedia.org/wiki/ANSI_escape_code)."
+"Constants starting with `\\e` are [ANSI escape sequences](https://"
+"en.wikipedia.org/wiki/ANSI_escape_code)."
 msgstr ""
 
 #: src/constants.md:50

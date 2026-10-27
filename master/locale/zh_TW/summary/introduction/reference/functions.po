@@ -60,9 +60,9 @@ msgstr ""
 #: src/functions.md:28
 msgid ""
 "The `os_family()` function can be used to create cross-platform `justfile`s "
-"that work on various operating systems. For an example, see [cross-platform."
-"just](https://github.com/casey/just/blob/master/examples/cross-platform."
-"just) file."
+"that work on various operating systems. For an example, see [cross-"
+"platform.just](https://github.com/casey/just/blob/master/examples/cross-"
+"platform.just) file."
 msgstr ""
 
 #: src/functions.md:33
@@ -235,8 +235,8 @@ msgstr ""
 
 #: src/functions.md:153
 msgid ""
-"For example, to call `rustfmt` on files just under the “current "
-"directory” (from the user/invoker’s perspective), use the following recipe:"
+"For example, to call `rustfmt` on files just under the “current directory” "
+"(from the user/invoker’s perspective), use the following recipe:"
 msgstr ""
 
 #: src/functions.md:161
@@ -384,8 +384,8 @@ msgid ""
 "`regex` crate](https://docs.rs/regex/latest/regex/). See the [syntax "
 "documentation](https://docs.rs/regex/latest/regex/#syntax) for usage "
 "examples. Capture groups are supported. The `replacement` string uses "
-"[Replacement string syntax](https://docs.rs/regex/latest/regex/struct.Regex."
-"html#replacement-string-syntax)."
+"[Replacement string syntax](https://docs.rs/regex/latest/regex/"
+"struct.Regex.html#replacement-string-syntax)."
 msgstr ""
 
 #: src/functions.md:257
@@ -481,8 +481,8 @@ msgstr ""
 #: src/functions.md:285
 msgid ""
 "`absolute_path(path)` - Absolute path to relative `path` in the working "
-"directory. `absolute_path(\"./bar.txt\")` in directory `/foo` is `/foo/bar."
-"txt`."
+"directory. `absolute_path(\"./bar.txt\")` in directory `/foo` is `/foo/"
+"bar.txt`."
 msgstr ""
 
 #: src/functions.md:288
@@ -825,8 +825,8 @@ msgstr ""
 #: src/functions.md:439
 msgid ""
 "On Unix, these functions follow the [XDG Base Directory Specification]"
-"(https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest."
-"html)."
+"(https://specifications.freedesktop.org/basedir-spec/basedir-spec-"
+"latest.html)."
 msgstr ""
 
 #: src/functions.md:442

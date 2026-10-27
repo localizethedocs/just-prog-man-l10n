@@ -27,8 +27,8 @@ msgstr ""
 
 #: src/introduction.md:28
 msgid ""
-"(中文文档在 [这里](https://github.com/casey/just/blob/master/README.中文."
-"md), 快看过来!)"
+"(中文文档在 [这里](https://github.com/casey/just/blob/master/README.中"
+"文.md), 快看过来!)"
 msgstr ""
 
 #: src/introduction.md:31
@@ -58,8 +58,8 @@ msgid ""
 "that-just-avoids.html). No need for `.PHONY` recipes!"
 msgstr ""
 "`just` 是命令執行器，不是建置系統，因此避開了 [`make` 的許多複雜性與特殊之處]"
-"(what-are-the-idiosyncrasies-of-make-that-just-avoids.html)。無須撰寫 `."
-"PHONY` 配方！"
+"(what-are-the-idiosyncrasies-of-make-that-just-avoids.html)。無須撰寫 "
+"`.PHONY` 配方！"
 
 #: src/introduction.md:51
 msgid ""
@@ -103,8 +103,8 @@ msgstr "`just` [會載入 `.env` 檔案](dotenv-settings.html)，方便填寫環
 
 #: src/introduction.md:70
 msgid ""
-"Recipes can be [listed from the command line](listing-available-recipes."
-"html)."
+"Recipes can be [listed from the command line](listing-available-"
+"recipes.html)."
 msgstr ""
 
 #: src/introduction.md:72
@@ -128,8 +128,8 @@ msgstr "`just` 可在任何子目錄中呼叫，不限於包含 `justfile` 的�
 
 #: src/introduction.md:81
 msgid ""
-"`justfiles` can be organized into multiple files using [modules](modules."
-"html) and [imports](imports.html)."
+"`justfiles` can be organized into multiple files using [modules]"
+"(modules.html) and [imports](imports.html)."
 msgstr ""
 
 #: src/introduction.md:84

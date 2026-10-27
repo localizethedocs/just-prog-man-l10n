@@ -18,8 +18,8 @@ msgstr ""
 #: src/vim-and-neovim.md:3
 msgid ""
 "Vim version 9.1.1042 or better and Neovim version 0.11 or better support "
-"Justfile syntax highlighting out of the box, thanks to [pbnj](https://github."
-"com/pbnj)."
+"Justfile syntax highlighting out of the box, thanks to [pbnj](https://"
+"github.com/pbnj)."
 msgstr ""
 
 #: src/vim-and-neovim.md:7
@@ -34,8 +34,8 @@ msgstr ""
 
 #: src/vim-and-neovim.md:12
 msgid ""
-"Install it with your favorite package manager, like [Plug](https://github."
-"com/junegunn/vim-plug):"
+"Install it with your favorite package manager, like [Plug](https://"
+"github.com/junegunn/vim-plug):"
 msgstr ""
 
 #: src/vim-and-neovim.md:23

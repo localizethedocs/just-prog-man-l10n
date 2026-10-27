@@ -33,8 +33,9 @@ msgstr ""
 #: src/avoiding-argument-splitting.md:16
 msgid ""
 "The user’s shell will parse `\"some argument.txt\"` as a single argument, "
-"but when `just` replaces `touch {{argument}}` with `touch some argument."
-"txt`, the quotes are not preserved, and `touch` will receive two arguments."
+"but when `just` replaces `touch {{argument}}` with `touch some "
+"argument.txt`, the quotes are not preserved, and `touch` will receive two "
+"arguments."
 msgstr ""
 
 #: src/avoiding-argument-splitting.md:20

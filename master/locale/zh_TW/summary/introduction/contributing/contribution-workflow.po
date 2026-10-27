@@ -40,9 +40,9 @@ msgstr ""
 msgid ""
 "Clone `just` and start hacking. The best workflow is to have the code you’re "
 "working on in an editor alongside a job that re-runs tests whenever a file "
-"changes. You can run such a job by installing [cargo-watch](https://github."
-"com/watchexec/cargo-watch) with `cargo install cargo-watch` and running "
-"`just watch test`."
+"changes. You can run such a job by installing [cargo-watch](https://"
+"github.com/watchexec/cargo-watch) with `cargo install cargo-watch` and "
+"running `just watch test`."
 msgstr ""
 
 #: src/contribution-workflow.md:21
