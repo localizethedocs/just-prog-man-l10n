@@ -1,0 +1,137 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/signal-handling.md:1
+msgid "Signal Handling"
+msgstr ""
+
+#: src/signal-handling.md:3
+msgid ""
+"[Signals](https://en.wikipedia.org/wiki/Signal_(IPC)) are messages sent to "
+"running programs to trigger specific behavior. For example, `SIGINT` is sent "
+"to all processes in the terminal foreground process group when `ctrl-c` is "
+"pressed."
+msgstr ""
+
+#: src/signal-handling.md:7
+msgid ""
+"`just` tries to exit when requested by a signal, but it also tries to avoid "
+"leaving behind running child processes, two goals which are somewhat in "
+"conflict."
+msgstr ""
+
+#: src/signal-handling.md:11
+msgid ""
+"If `just` exits leaving behind child processes, the user will have no "
+"recourse but to `ps aux | grep` for the children and manually `kill` them, a "
+"tedious endeavor."
+msgstr ""
+
+#: src/signal-handling.md:15
+msgid "Fatal Signals"
+msgstr ""
+
+#: src/signal-handling.md:17
+msgid ""
+"`SIGHUP`, `SIGINT`, and `SIGQUIT` are generated when the user closes the "
+"terminal, types `ctrl-c`, or types `ctrl-\\`, respectively, and are sent to "
+"all processes in the foreground process group."
+msgstr ""
+
+#: src/signal-handling.md:21
+msgid ""
+"`SIGTERM` is the default signal sent by the `kill` command, and is delivered "
+"only to its intended victim."
+msgstr ""
+
+#: src/signal-handling.md:24
+msgid ""
+"When a child process is not running, `just` will exit immediately on receipt "
+"of any of the above signals."
+msgstr ""
+
+#: src/signal-handling.md:27
+msgid ""
+"When a child process _is_ running, `just` will wait until it terminates, to "
+"avoid leaving it behind."
+msgstr ""
+
+#: src/signal-handling.md:30
+msgid ""
+"Additionally, on receipt of `SIGTERM`, `just` will forward `SIGTERM` to any "
+"running children<sup>1.41.0</sup>, since unlike other fatal signals, "
+"`SIGTERM`, was likely sent to `just` alone."
+msgstr ""
+
+#: src/signal-handling.md:34
+msgid ""
+"Regardless of whether a child process terminates successfully after `just` "
+"receives a fatal signal, `just` halts execution."
+msgstr ""
+
+#: src/signal-handling.md:37
+msgid "Continuing Execution"
+msgstr ""
+
+#: src/signal-handling.md:39
+msgid ""
+"The `[continue]`<sup>1.54.0</sup> attribute can be used to make `just` "
+"continue execution even if it receives a fatal signal as long as the child "
+"process it’s running exits successfully."
+msgstr ""
+
+#: src/signal-handling.md:43
+msgid ""
+"With no arguments, `[continue]` handles `SIGINT` (`ctrl-c`) so `SIGQUIT` "
+"(`ctrl-\\`) can still be used to stop execution."
+msgstr ""
+
+#: src/signal-handling.md:46
+msgid ""
+"With arguments, one or more signals to handle may be given explicitly, as "
+"`\"SIGHUP\"`, `\"SIGINT\"`, and `\"SIGQUIT\"`."
+msgstr ""
+
+#: src/signal-handling.md:49
+msgid ""
+"In this example, if `main.py` catches `SIGINT` and exits successfully, "
+"`cleanup` will still run and `just` will exit successfully:"
+msgstr ""
+
+#: src/signal-handling.md:61
+msgid "`SIGINFO`"
+msgstr ""
+
+#: src/signal-handling.md:63
+msgid ""
+"`SIGINFO` is sent to all processes in the foreground process group when the "
+"user types `ctrl-t` on [BSD](https://en.wikipedia.org/wiki/"
+"Berkeley_Software_Distribution)\\-derived operating systems, including "
+"macOS, but not Linux."
+msgstr ""
+
+#: src/signal-handling.md:68
+msgid ""
+"`just` responds by printing a list of all child process IDs and "
+"commands<sup>1.41.0</sup>."
+msgstr ""
+
+#: src/signal-handling.md:71
+msgid "Windows"
+msgstr ""
+
+#: src/signal-handling.md:73
+msgid ""
+"On Windows, `just` behaves as if it had received `SIGINT` when the user "
+"types `ctrl-c`. Other signals are unsupported."
+msgstr ""

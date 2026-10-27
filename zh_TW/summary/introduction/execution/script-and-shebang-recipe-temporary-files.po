@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/script-and-shebang-recipe-temporary-files.md:1
+msgid "Script and Shebang Recipe Temporary Files"
+msgstr ""
+
+#: src/script-and-shebang-recipe-temporary-files.md:3
+msgid ""
+"Both script and shebang recipes write the recipe body to a temporary file "
+"for execution. Script recipes execute that file by passing it to a command, "
+"while shebang recipes execute the file directly. Shebang recipe execution "
+"will fail if the filesystem containing the temporary file is mounted with "
+"`noexec` or is otherwise non-executable."
+msgstr ""
+
+#: src/script-and-shebang-recipe-temporary-files.md:9
+msgid ""
+"The directory that `just` writes temporary files to may be configured in a "
+"number of ways, from highest to lowest precedence:"
+msgstr ""
+
+#: src/script-and-shebang-recipe-temporary-files.md:12
+msgid ""
+"Globally with the `--tempdir` command-line option or the `JUST_TEMPDIR` "
+"environment variable<sup>1.41.0</sup>."
+msgstr ""
+
+#: src/script-and-shebang-recipe-temporary-files.md:15
+msgid "On a per-module basis with the `tempdir` setting."
+msgstr ""
+
+#: src/script-and-shebang-recipe-temporary-files.md:17
+msgid "Globally on Linux with the `XDG_RUNTIME_DIR` environment variable."
+msgstr ""
+
+#: src/script-and-shebang-recipe-temporary-files.md:19
+msgid ""
+"Falling back to the directory returned by [std::env::temp_dir](https://"
+"doc.rust-lang.org/std/env/fn.temp_dir.html)."
+msgstr ""

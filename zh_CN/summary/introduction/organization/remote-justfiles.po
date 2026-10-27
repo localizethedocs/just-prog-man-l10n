@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/remote-justfiles.md:1
+msgid "Remote Justfiles"
+msgstr ""
+
+#: src/remote-justfiles.md:3
+msgid ""
+"If you wish to include a `mod` or `import` source file in many `justfiles` "
+"without needing to duplicate it, you can use an optional `mod` or `import`, "
+"along with a recipe to fetch the module source:"
+msgstr ""
+
+#: src/remote-justfiles.md:7
+msgid ""
+"```just\n"
+"import? 'foo.just'\n"
+"\n"
+"fetch:\n"
+"  curl https://raw.githubusercontent.com/casey/just/master/justfile > "
+"foo.just\n"
+"```"
+msgstr ""
+
+#: src/remote-justfiles.md:14
+msgid ""
+"Given the above `justfile`, after running `just fetch`, the recipes in "
+"`foo.just` will be available."
+msgstr ""

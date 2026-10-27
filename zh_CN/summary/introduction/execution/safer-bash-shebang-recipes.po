@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/safer-bash-shebang-recipes.md:1
+msgid "Safer Bash Shebang Recipes"
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:3
+msgid ""
+"If you’re writing a `bash` shebang recipe, consider adding `set -euxo "
+"pipefail`:"
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:5
+msgid ""
+"```just\n"
+"foo:\n"
+"  #!/usr/bin/env bash\n"
+"  set -euxo pipefail\n"
+"  hello='Yo'\n"
+"  echo \"$hello from Bash!\"\n"
+"```"
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:13
+msgid ""
+"It isn’t strictly necessary, but `set -euxo pipefail` turns on a few useful "
+"features that make `bash` shebang recipes behave more like normal, shell "
+"`just` recipes:"
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:17
+msgid "`set -e` makes `bash` exit if a command fails."
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:19
+msgid "`set -u` makes `bash` exit if a variable is undefined."
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:21
+msgid "`set -x` makes `bash` print each script line before it’s run."
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:23
+msgid ""
+"`set -o pipefail` makes `bash` exit if a command in a pipeline fails. This "
+"is `bash`\\-specific, so isn’t turned on in normal shell `just` recipes."
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:26
+msgid "Together, these avoid a lot of shell scripting gotchas."
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:28
+msgid "Shebang Recipe Execution on Windows"
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:30
+msgid ""
+"On Windows, shebang interpreter paths containing a `/` are translated from "
+"Unix-style paths to Windows-style paths using `cygpath`, a utility that "
+"ships with [Cygwin](http://www.cygwin.com)."
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:34
+msgid "For example, to execute this recipe on Windows:"
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:36
+msgid ""
+"```just\n"
+"echo:\n"
+"  #!/bin/sh\n"
+"  echo \"Hello!\"\n"
+"```"
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:42
+msgid ""
+"The interpreter path `/bin/sh` will be translated to a Windows-style path "
+"using `cygpath` before being executed."
+msgstr ""
+
+#: src/safer-bash-shebang-recipes.md:45
+msgid ""
+"If the interpreter path does not contain a `/` it will be executed without "
+"being translated. This is useful if `cygpath` is not available, or you wish "
+"to pass a Windows-style path to the interpreter."
+msgstr ""

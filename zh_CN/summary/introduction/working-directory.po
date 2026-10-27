@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/working-directory.md:1
+msgid "Working Directory"
+msgstr ""
+
+#: src/working-directory.md:3
+msgid ""
+"By default, recipes run with the working directory set to the directory that "
+"contains the `justfile`."
+msgstr ""
+
+#: src/working-directory.md:6
+msgid ""
+"The `[no-cd]` attribute can be used to make recipes run with the working "
+"directory set to the directory in which `just` was invoked."
+msgstr ""
+
+#: src/working-directory.md:26
+msgid ""
+"Note that this does not affect dotenv file search, or the working directory "
+"of backtick and `shell()` invocations."
+msgstr ""
+
+#: src/working-directory.md:29
+msgid ""
+"Use `set no-cd`<sup>1.51.0</sup> to make all recipes in the current module "
+"default to the same behavior."
+msgstr ""
+
+#: src/working-directory.md:32
+msgid ""
+"`set no-cd` and `set working-directory` can be overridden on a per-recipe "
+"basis with the `[no-cd]` and `[working-directory]` attributes."
+msgstr ""
+
+#: src/working-directory.md:35
+msgid ""
+"You can override the working directory for all recipes with `set working-"
+"directory := '…'`:"
+msgstr ""
+
+#: src/working-directory.md:52
+msgid ""
+"You can override the working directory for a specific recipe with the "
+"`working-directory` attribute<sup>1.38.0</sup>:"
+msgstr ""
+
+#: src/working-directory.md:68
+msgid ""
+"The argument to the `working-directory` setting or `working-directory` "
+"attribute may be an expression<sup>1.51.0</sup> whose value is absolute or "
+"relative. If it is relative it is interpreted relative to the default "
+"working directory."
+msgstr ""

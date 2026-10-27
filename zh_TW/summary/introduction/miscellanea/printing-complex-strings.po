@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/printing-complex-strings.md:1
+msgid "Printing Complex Strings"
+msgstr ""
+
+#: src/printing-complex-strings.md:3
+msgid ""
+"`echo` can be used to print strings, but because it processes escape "
+"sequences, like `\\n`, and different implementations of `echo` recognize "
+"different escape sequences, using `printf` is often a better choice."
+msgstr ""
+
+#: src/printing-complex-strings.md:7
+msgid ""
+"`printf` takes a C-style format string and any number of arguments, which "
+"are interpolated into the format string."
+msgstr ""
+
+#: src/printing-complex-strings.md:10
+msgid ""
+"This can be combined with indented, triple quoted strings to emulate shell "
+"heredocs."
+msgstr ""
+
+#: src/printing-complex-strings.md:13
+msgid ""
+"Substituting complex strings into recipe bodies with `{{…}}` can also lead "
+"to trouble as it may be split by the shell into multiple arguments depending "
+"on the presence of whitespace and quotes. Exporting complex strings as "
+"environment variables and referring to them with `\"$NAME\"`, note the "
+"double quotes, can also help."
+msgstr ""
+
+#: src/printing-complex-strings.md:19
+msgid ""
+"Putting all this together, to print a string verbatim to standard output, "
+"with all its various escape sequences and quotes undisturbed:"
+msgstr ""
+
+#: src/printing-complex-strings.md:22
+msgid ""
+"```just\n"
+"export FOO := '''\n"
+"  a complicated string with\n"
+"  some dis\\tur\\bi\\ng escape sequences\n"
+"  and \"quotes\" of 'different' kinds\n"
+"'''\n"
+"\n"
+"bar:\n"
+"  printf %s \"$FOO\"\n"
+"```"
+msgstr ""

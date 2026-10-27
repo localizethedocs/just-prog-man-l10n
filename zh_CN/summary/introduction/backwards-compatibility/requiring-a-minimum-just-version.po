@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/requiring-a-minimum-just-version.md:1
+msgid "Requiring a Minimum Just Version"
+msgstr ""
+
+#: src/requiring-a-minimum-just-version.md:3
+msgid ""
+"If you use features of `just` which require a particular version, you may "
+"use the `minimum-version`<sup>1.55.0</sup> setting to make it an error to "
+"use older versions of `just`:"
+msgstr ""
+
+#: src/requiring-a-minimum-just-version.md:11
+msgid ""
+"If `just` encounters a minimum version greater than its own version, it will "
+"print an error message with the required version, which is hopefully better "
+"than the confused error message it would have otherwise produced."
+msgstr ""
+
+#: src/requiring-a-minimum-just-version.md:15
+msgid ""
+"The `minimum-version` setting should be placed at the top of the `justfile`, "
+"before any usage of the new feature that it guards."
+msgstr ""
+
+#: src/requiring-a-minimum-just-version.md:18
+msgid ""
+"Any features which change the lexer in forward-incompatible ways will still "
+"produce an unhelpful error message, as the minimum version check is "
+"implemented in the parser, which runs after the lexer."
+msgstr ""
