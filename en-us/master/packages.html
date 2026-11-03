@@ -1,0 +1,454 @@
+<!DOCTYPE HTML>
+<html lang="en_US" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Packages - Just Programmer&#x27;s Manual</title>
+
+
+        <!-- Custom HTML head -->
+        <script type="text/javascript" src="ltd-provenance.js"></script>
+        <script type="text/javascript" src="ltd-current.js"></script>
+        <script type="text/javascript" src="../../ltd-config.js"></script>
+        <script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Just Programmer&#x27;s Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/casey/just" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="packages"><a class="header" href="#packages">Packages</a></h3>
+<h4 id="cross-platform"><a class="header" href="#cross-platform">Cross-platform</a></h4>
+<table>
+  <thead>
+    <tr>
+      <th>Package Manager</th>
+      <th>Package</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href=https://github.com/alexellis/arkade>arkade</a></td>
+      <td>just</td>
+      <td><code>arkade get just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://asdf-vm.com>asdf</a></td>
+      <td><a href=https://github.com/olofvndrhr/asdf-just>just</a></td>
+      <td>
+        <code>asdf plugin add just</code><br>
+        <code>asdf install just &lt;version&gt;</code>
+      </td>
+    </tr>
+    <tr>
+      <td><a href=https://www.rust-lang.org>Cargo</a></td>
+      <td><a href=https://crates.io/crates/just>just</a></td>
+      <td><code>cargo install just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://github.com/cargo-bins/cargo-binstall>Cargo Binstall</a></td>
+      <td><a href=https://crates.io/crates/just>just</a></td>
+      <td><code>cargo binstall just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://docs.conda.io/projects/conda/en/latest/index.html>Conda</a></td>
+      <td><a href=https://anaconda.org/conda-forge/just>just</a></td>
+      <td><code>conda install -c conda-forge just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://brew.sh>Homebrew</a></td>
+      <td><a href=https://formulae.brew.sh/formula/just>just</a></td>
+      <td><code>brew install just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://nixos.org/nix/>Nix</a></td>
+      <td><a href=https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/ju/just/package.nix>just</a></td>
+      <td><code>nix-env -iA nixpkgs.just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://www.npmjs.com/>npm</a></td>
+      <td><a href=https://www.npmjs.com/package/rust-just>rust-just</a></td>
+      <td><code>npm install -g rust-just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://pipx.pypa.io/stable/>pipx</a></td>
+      <td><a href=https://pypi.org/project/rust-just/>rust-just</a></td>
+      <td><code>pipx install rust-just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://snapcraft.io>Snap</a></td>
+      <td><a href=https://snapcraft.io/just>just</a></td>
+      <td><code>snap install --edge --classic just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://spack.io/>Spack</a></td>
+      <td><a href=https://packages.spack.io/package.html?name=just>just</a></td>
+      <td><code>spack install just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://docs.astral.sh/uv/>uv</a></td>
+      <td><a href=https://pypi.org/project/rust-just/>rust-just</a></td>
+      <td><code>uv tool install rust-just</code></td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="bsd"><a class="header" href="#bsd">BSD</a></h4>
+<table>
+  <thead>
+    <tr>
+      <th>Operating System</th>
+      <th>Package Manager</th>
+      <th>Package</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href=https://www.freebsd.org>FreeBSD</a></td>
+      <td><a href=https://www.freebsd.org/doc/handbook/pkgng-intro.html>pkg</a></td>
+      <td><a href=https://www.freshports.org/deskutils/just/>just</a></td>
+      <td><code>pkg install just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://www.openbsd.org>OpenBSD</a></td>
+      <td><a href=https://www.openbsd.org/faq/faq15.html>pkg_*</a></td>
+      <td><a href=https://cvsweb.openbsd.org/cgi-bin/cvsweb/ports/sysutils/just>just</a></td>
+      <td><code>pkg_add just</code></td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="linux"><a class="header" href="#linux">Linux</a></h4>
+<table>
+  <thead>
+    <tr>
+      <th>Operating System</th>
+      <th>Package Manager</th>
+      <th>Package</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href=https://alpinelinux.org>Alpine</a></td>
+      <td><a href=https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management>apk-tools</a></td>
+      <td><a href=https://pkgs.alpinelinux.org/package/edge/community/x86_64/just>just</a></td>
+      <td><code>apk add just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://www.archlinux.org>Arch</a></td>
+      <td><a href=https://wiki.archlinux.org/title/Pacman>pacman</a></td>
+      <td><a href=https://archlinux.org/packages/extra/x86_64/just/>just</a></td>
+      <td><code>pacman -S just</code></td>
+    </tr>
+    <tr>
+      <td>
+        <a href=https://debian.org>Debian 13</a> and
+        <a href=https://ubuntu.com>Ubuntu 24.04</a> derivatives</td>
+      <td><a href=https://en.wikipedia.org/wiki/APT_(software)>apt</a></td>
+      <td><a href=https://packages.debian.org/trixie/just>just</a></td>
+      <td><code>apt install just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://getfedora.org>Fedora</a></td>
+      <td><a href=https://dnf.readthedocs.io/en/latest/>DNF</a></td>
+      <td><a href=https://src.fedoraproject.org/rpms/rust-just>just</a></td>
+      <td><code>dnf install just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://www.gentoo.org>Gentoo</a></td>
+      <td><a href=https://wiki.gentoo.org/wiki/Portage>Portage</a></td>
+      <td><a href=https://packages.gentoo.org/packages/dev-build/just>dev-build/just</a></td>
+      <td>
+        <code>emerge -av dev-build/just</code>
+      </td>
+    </tr>
+    <tr>
+      <td><a href=https://nixos.org/nixos/>NixOS</a></td>
+      <td><a href=https://nixos.org/nix/>Nix</a></td>
+      <td><a href=https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/ju/just/package.nix>just</a></td>
+      <td><code>nix-env -iA nixos.just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://opensuse.org>openSUSE</a></td>
+      <td><a href=https://en.opensuse.org/Portal:Zypper>Zypper</a></td>
+      <td><a href=https://build.opensuse.org/package/show/Base:System/just>just</a></td>
+      <td><code>zypper in just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://getsol.us>Solus</a></td>
+      <td><a href=https://getsol.us/articles/package-management/basics/en>eopkg</a></td>
+      <td><a href=https://dev.getsol.us/source/just/>just</a></td>
+      <td><code>eopkg install just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://voidlinux.org>Void</a></td>
+      <td><a href=https://wiki.voidlinux.org/XBPS>XBPS</a></td>
+      <td><a href=https://github.com/void-linux/void-packages/blob/master/srcpkgs/just/template>just</a></td>
+      <td><code>xbps-install -S just</code></td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="windows"><a class="header" href="#windows">Windows</a></h4>
+<table>
+  <thead>
+    <tr>
+      <th>Package Manager</th>
+      <th>Package</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href=https://chocolatey.org>Chocolatey</a></td>
+      <td><a href=https://github.com/michidk/just-choco>just</a></td>
+      <td><code>choco install just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://scoop.sh>Scoop</a></td>
+      <td><a href=https://github.com/ScoopInstaller/Main/blob/master/bucket/just.json>just</a></td>
+      <td><code>scoop install just</code></td>
+    </tr>
+    <tr>
+      <td><a href=https://learn.microsoft.com/en-us/windows/package-manager/>Windows Package Manager</a></td>
+      <td><a href=https://github.com/microsoft/winget-pkgs/tree/master/manifests/c/Casey/Just>Casey/Just</a></td>
+      <td><code>winget install --id Casey.Just --exact</code></td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="macos"><a class="header" href="#macos">macOS</a></h4>
+<table>
+  <thead>
+    <tr>
+      <th>Package Manager</th>
+      <th>Package</th>
+      <th>Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href=https://www.macports.org>MacPorts</a></td>
+      <td><a href=https://ports.macports.org/port/just/summary>just</a></td>
+      <td><code>port install just</code></td>
+    </tr>
+  </tbody>
+</table>
+<p><img src="https://repology.org/badge/vertical-allrepos/just.svg" alt="just package version table" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="prerequisites.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="pre-built-binaries.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="prerequisites.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="pre-built-binaries.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
