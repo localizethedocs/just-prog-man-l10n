@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Just Programmer's Manual\n"
-"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"POT-Creation-Date: 2026-11-03T16:04:25Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/implementation.md:1
@@ -48,7 +48,7 @@ msgid "`extra`: user-supplied value"
 msgstr ""
 
 #: src/implementation.md:15
-msgid "`inputs`: map of file paths to content hashs"
+msgid "`inputs`: map of file paths to content hashes"
 msgstr ""
 
 #: src/implementation.md:16
@@ -76,7 +76,7 @@ msgstr ""
 #: src/implementation.md:25
 msgid ""
 "The environment variables included in `environment` may be controlled with "
-"`[cache(environment = EXPRESSION])`<sup>1.59.0<sup>."
+"`[cache(environment = EXPRESSION)]`<sup>1.59.0</sup>."
 msgstr ""
 
 #: src/implementation.md:28
@@ -93,25 +93,31 @@ msgid ""
 msgstr ""
 
 #: src/implementation.md:35
-msgid "If the cache entry is non-empty, it skips the invocation."
+msgid ""
+"If the cache entry is non-empty and outputs in the cache entry match their "
+"current state, it skips the invocation. Otherwise it runs the invocation and "
+"writes a JSON object with the following keys:"
 msgstr ""
 
-#: src/implementation.md:37
-msgid ""
-"If the cache entry does not exist or is empty, it runs the invocation and "
-"writes `{}` to the cache entry."
+#: src/implementation.md:39
+msgid "`outputs`: map of output path to state"
 msgstr ""
 
 #: src/implementation.md:40
+msgid "`recipe`: recipe path"
+msgstr ""
+
+#: src/implementation.md:42
 msgid ""
 "File locks are taken on cache entries, so concurrent execution of cached "
 "recipes by multiple `just` processes is safe. If two processes run a recipe "
 "invocation with the same cache key, the first will take the lock, run the "
 "recipe, write to the cache entry, and relinquish the lock. The second will "
-"block until the first relinquishes the lock, see that the entry is non-"
-"empty, and skip the invocation."
+"block until the first relinquishes the lock, see that the entry is non-empty "
+"and that outputs in the entry match their current state, and skip the "
+"invocation."
 msgstr ""
 
-#: src/implementation.md:47
+#: src/implementation.md:50
 msgid "The cache can be bypassed entirely with the `--no-cache` flag."
 msgstr ""
