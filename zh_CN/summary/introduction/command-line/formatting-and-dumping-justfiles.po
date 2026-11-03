@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/formatting-and-dumping-justfiles.md:1
+msgid "Formatting and dumping `justfile`s"
+msgstr ""
+
+#: src/formatting-and-dumping-justfiles.md:3
+msgid ""
+"Each `justfile` has a canonical formatting with respect to whitespace and "
+"newlines."
+msgstr ""
+
+#: src/formatting-and-dumping-justfiles.md:6
+msgid ""
+"You can overwrite the current justfile with a canonically-formatted version "
+"using the `--fmt` flag:"
+msgstr ""
+
+#: src/formatting-and-dumping-justfiles.md:9
+msgid ""
+"```console\n"
+"$ cat justfile\n"
+"# A lot of blank lines\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"some-recipe:\n"
+"  echo \"foo\"\n"
+"$ just --fmt\n"
+"$ cat justfile\n"
+"# A lot of blank lines\n"
+"\n"
+"some-recipe:\n"
+"    echo \"foo\"\n"
+"```"
+msgstr ""
+
+#: src/formatting-and-dumping-justfiles.md:27
+msgid ""
+"When the `justfile` is read from standard input with `--justfile -` or "
+"extracted from a markdown file, `--fmt` prints the formatted `justfile` to "
+"stdout."
+msgstr ""
+
+#: src/formatting-and-dumping-justfiles.md:31
+msgid ""
+"Note that formatting is not covered by any backwards compatibility guarantee "
+"and is subject to change from time to time."
+msgstr ""
+
+#: src/formatting-and-dumping-justfiles.md:34
+msgid ""
+"Recipe bodies are indented with four spaces by default. This can be changed "
+"with the `--indentation` command-line option, the `JUST_INDENTATION` "
+"environment variable, or the `indentation` setting:"
+msgstr ""
+
+#: src/formatting-and-dumping-justfiles.md:38
+msgid ""
+"```just\n"
+"set indentation := \"  \"\n"
+"```"
+msgstr ""
+
+#: src/formatting-and-dumping-justfiles.md:42
+msgid ""
+"Invoking `just --fmt --check` runs `--fmt` in check mode. Instead of "
+"overwriting the `justfile`, `just` will exit with an exit code of 0 if it is "
+"formatted correctly, and will exit with 1 and print a diff if it is not."
+msgstr ""
+
+#: src/formatting-and-dumping-justfiles.md:46
+msgid ""
+"You can use the `--dump` command to output a formatted version of the "
+"`justfile` to stdout:"
+msgstr ""
+
+#: src/formatting-and-dumping-justfiles.md:53
+msgid ""
+"The `--dump` command can be used with `--dump-format json` to print a JSON "
+"representation of a `justfile`."
+msgstr ""

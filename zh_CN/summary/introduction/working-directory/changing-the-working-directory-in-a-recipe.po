@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/changing-the-working-directory-in-a-recipe.md:1
+msgid "Changing the Working Directory in a Recipe"
+msgstr ""
+
+#: src/changing-the-working-directory-in-a-recipe.md:3
+msgid ""
+"Each recipe line is executed by a new shell, so if you change the working "
+"directory on one line, it won’t have an effect on later lines:"
+msgstr ""
+
+#: src/changing-the-working-directory-in-a-recipe.md:13
+msgid ""
+"There are a couple ways around this. One is to call `cd` on the same line as "
+"the command you want to run:"
+msgstr ""
+
+#: src/changing-the-working-directory-in-a-recipe.md:21
+msgid ""
+"The other is to use a shebang recipe. Shebang recipe bodies are extracted "
+"and run as scripts, so a single shell instance will run the whole thing, and "
+"thus a `cd` on one line will affect later lines, just like a shell script:"
+msgstr ""

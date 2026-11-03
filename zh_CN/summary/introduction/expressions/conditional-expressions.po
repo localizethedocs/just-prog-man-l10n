@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/conditional-expressions.md:1
+msgid "Conditional Expressions"
+msgstr ""
+
+#: src/conditional-expressions.md:3
+msgid ""
+"`if`/`else` expressions evaluate different branches depending on if two "
+"expressions evaluate to the same value:"
+msgstr ""
+
+#: src/conditional-expressions.md:6
+msgid ""
+"```just\n"
+"foo := if \"2\" == \"2\" { \"Good!\" } else { \"1984\" }\n"
+"\n"
+"bar:\n"
+"  @echo \"{{foo}}\"\n"
+"```"
+msgstr ""
+
+#: src/conditional-expressions.md:18
+msgid "It is also possible to test for inequality:"
+msgstr ""
+
+#: src/conditional-expressions.md:20
+msgid ""
+"```just\n"
+"foo := if \"hello\" != \"goodbye\" { \"xyz\" } else { \"abc\" }\n"
+"\n"
+"bar:\n"
+"  @echo {{foo}}\n"
+"```"
+msgstr ""
+
+#: src/conditional-expressions.md:32
+msgid "And match against regular expressions:"
+msgstr ""
+
+#: src/conditional-expressions.md:34
+msgid ""
+"```just\n"
+"foo := if \"hello\" =~ 'hel+o' { \"match\" } else { \"mismatch\" }\n"
+"\n"
+"bar:\n"
+"  @echo {{foo}}\n"
+"```"
+msgstr ""
+
+#: src/conditional-expressions.md:46
+msgid ""
+"Regular expressions are provided by the [regex crate](https://github.com/"
+"rust-lang/regex), whose syntax is documented on [docs.rs](https://docs.rs/"
+"regex/1.5.4/regex/#syntax). Since regular expressions commonly use backslash "
+"escape sequences, consider using single-quoted string literals, which will "
+"pass slashes to the regex parser unmolested."
+msgstr ""
+
+#: src/conditional-expressions.md:52
+msgid ""
+"Conditional expressions short-circuit, which means they only evaluate one of "
+"their branches. This can be used to make sure that backtick expressions "
+"don’t run when they shouldn’t."
+msgstr ""
+
+#: src/conditional-expressions.md:56
+msgid ""
+"```just\n"
+"foo := if env_var(\"RELEASE\") == \"true\" { `get-something-from-release-"
+"database` } else { \"dummy-value\" }\n"
+"```"
+msgstr ""
+
+#: src/conditional-expressions.md:60
+msgid "Conditionals can be used inside of recipes:"
+msgstr ""
+
+#: src/conditional-expressions.md:62
+msgid ""
+"```just\n"
+"bar foo:\n"
+"  echo {{ if foo == \"bar\" { \"hello\" } else { \"goodbye\" } }}\n"
+"```"
+msgstr ""
+
+#: src/conditional-expressions.md:67
+msgid "Multiple conditionals can be chained:"
+msgstr ""
+
+#: src/conditional-expressions.md:69
+msgid ""
+"```just\n"
+"foo := if \"hello\" == \"goodbye\" {\n"
+"  \"xyz\"\n"
+"} else if \"a\" == \"a\" {\n"
+"  \"abc\"\n"
+"} else {\n"
+"  \"123\"\n"
+"}\n"
+"\n"
+"bar:\n"
+"  @echo {{foo}}\n"
+"```"
+msgstr ""

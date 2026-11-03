@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/prerequisites.md:1
+msgid "Prerequisites"
+msgstr ""
+
+#: src/prerequisites.md:3
+msgid ""
+"`just` should run on any system with a reasonable `sh`, including Linux, "
+"macOS, and the BSDs."
+msgstr ""
+
+#: src/prerequisites.md:6
+msgid "Windows"
+msgstr ""
+
+#: src/prerequisites.md:8
+msgid ""
+"On Windows, `just` works with the `sh` provided by [Git for Windows](https://"
+"git-scm.com), [GitHub Desktop](https://desktop.github.com), or [Cygwin]"
+"(http://www.cygwin.com). After installation, `sh` must be available in the "
+"`PATH` of the shell you want to invoke `just` from."
+msgstr ""
+
+#: src/prerequisites.md:14
+msgid ""
+"If you’d rather not install `sh`, you can use the `shell` setting to use the "
+"shell of your choice."
+msgstr ""
+
+#: src/prerequisites.md:17
+msgid "Like PowerShell:"
+msgstr ""
+
+#: src/prerequisites.md:19
+msgid ""
+"```just\n"
+"# use PowerShell instead of sh:\n"
+"set shell := [\"powershell.exe\", \"-c\"]\n"
+"\n"
+"hello:\n"
+"  Write-Host \"Hello, world!\"\n"
+"```"
+msgstr ""
+
+#: src/prerequisites.md:27
+msgid "…or `cmd.exe`:"
+msgstr ""
+
+#: src/prerequisites.md:29
+msgid ""
+"```just\n"
+"# use cmd.exe instead of sh:\n"
+"set shell := [\"cmd.exe\", \"/c\"]\n"
+"\n"
+"list:\n"
+"  dir\n"
+"```"
+msgstr ""
+
+#: src/prerequisites.md:37
+msgid ""
+"You can also set the shell using command-line arguments. For example, to use "
+"PowerShell, launch `just` with `--shell powershell.exe --shell-arg -c`."
+msgstr ""
+
+#: src/prerequisites.md:40
+msgid ""
+"(PowerShell is installed by default on Windows 7 SP1 and Windows Server 2008 "
+"R2 SP1 and later, and `cmd.exe` is quite fiddly, so PowerShell is "
+"recommended for most Windows users.)"
+msgstr ""

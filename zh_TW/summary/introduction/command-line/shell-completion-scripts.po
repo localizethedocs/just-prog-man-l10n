@@ -1,0 +1,102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/shell-completion-scripts.md:1
+msgid "Shell Completion Scripts"
+msgstr ""
+
+#: src/shell-completion-scripts.md:3
+msgid ""
+"Shell completion scripts for Bash, Elvish, Fish, Nushell, PowerShell, and "
+"Zsh are available in [release archives](https://github.com/casey/just/"
+"releases)."
+msgstr ""
+
+#: src/shell-completion-scripts.md:6
+msgid ""
+"The `just` binary can also generate the same completion scripts at runtime "
+"using `just --completions SHELL`:"
+msgstr ""
+
+#: src/shell-completion-scripts.md:13
+msgid "Bash"
+msgstr ""
+
+#: src/shell-completion-scripts.md:15
+msgid ""
+"The recommended approach is to use the `bash-completions` package to lazy-"
+"load the completion script:"
+msgstr ""
+
+#: src/shell-completion-scripts.md:23
+msgid ""
+"If `bash-completions` is not installed, you can source the completion script "
+"in your `.bashrc`:"
+msgstr ""
+
+#: src/shell-completion-scripts.md:30
+msgid ""
+"If you use an alias like `alias j=just`, you should also save the completion "
+"script with the name `j` when lazy-loading:"
+msgstr ""
+
+#: src/shell-completion-scripts.md:37
+msgid ""
+"Or if not lazy-loading, add this line after sourcing the completion script "
+"in your `.bashrc`:"
+msgstr ""
+
+#: src/shell-completion-scripts.md:44
+msgid "Elvish"
+msgstr ""
+
+#: src/shell-completion-scripts.md:46
+msgid "In your `rc.elv`:"
+msgstr ""
+
+#: src/shell-completion-scripts.md:56
+msgid "Fish"
+msgstr ""
+
+#: src/shell-completion-scripts.md:58
+msgid ""
+"Save the completion script to the completions directory to lazy-load it:"
+msgstr ""
+
+#: src/shell-completion-scripts.md:65
+msgid "Nushell"
+msgstr ""
+
+#: src/shell-completion-scripts.md:67 src/shell-completion-scripts.md:89
+msgid "First save the completion script:"
+msgstr ""
+
+#: src/shell-completion-scripts.md:73
+msgid "Then in `config.nu`:"
+msgstr ""
+
+#: src/shell-completion-scripts.md:79
+msgid "PowerShell"
+msgstr ""
+
+#: src/shell-completion-scripts.md:81
+msgid "In your PowerShell `$PROFILE`:"
+msgstr ""
+
+#: src/shell-completion-scripts.md:87
+msgid "Zsh"
+msgstr ""
+
+#: src/shell-completion-scripts.md:96
+msgid "Then in your `.zshrc`:"
+msgstr ""
