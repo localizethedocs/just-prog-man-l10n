@@ -37,9 +37,9 @@
     "branch" : "master",
     "commit" : 
     {
-      "date" : "2026-10-18 17:17:15 -0700",
-      "hash" : "d6fee036379c531369dc37f67f8d4640f6bf1e2d",
-      "title" : "Print module usage with `just module --help` (#3757)"
+      "date" : "2026-11-01 21:24:07 -0800",
+      "hash" : "7b7b51bec9359a5b4a76321018db65d07978fecc",
+      "title" : "Various refactors (#3768)"
     }
   },
   "type" : "branch",

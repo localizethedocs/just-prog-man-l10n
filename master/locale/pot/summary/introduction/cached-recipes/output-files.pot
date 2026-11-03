@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Just Programmer's Manual\n"
-"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"POT-Creation-Date: 2026-11-03T16:04:25Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/output-files.md:1
@@ -24,23 +24,26 @@ msgid ""
 msgstr ""
 
 #: src/output-files.md:8
-msgid "Outputs are not part of the cache key."
+msgid ""
+"After an invocation, the current state of outputs is recorded in the "
+"invocation’s cache entry. This includes whether they are files or "
+"directories, and for files, the BLAKE3 hash of their contents."
 msgstr ""
 
-#: src/output-files.md:10
+#: src/output-files.md:12
 msgid ""
-"All output files must exist for an invocation to be skipped, and after an "
-"invocation runs successfully, it is an error if any output file does not "
-"exist."
-msgstr ""
-
-#: src/output-files.md:13
-msgid ""
-"In this example, `build` re-runs whenever `main` is missing, and errors if "
-"it runs without producing `main`:"
+"All outputs must exist and match their recorded state in the cache entry for "
+"an invocation to be skipped, and after an invocation runs successfully, it "
+"is an error if any outputs do not exist."
 msgstr ""
 
 #: src/output-files.md:16
+msgid ""
+"In this example, `build` re-runs whenever `main` is missing or modified, and "
+"errors if it runs without producing `main`:"
+msgstr ""
+
+#: src/output-files.md:19
 msgid ""
 "```just\n"
 "set unstable\n"
@@ -56,6 +59,6 @@ msgid ""
 "```"
 msgstr ""
 
-#: src/output-files.md:29
+#: src/output-files.md:32
 msgid "This forces `build` to re-run if `main` is deleted by `clean`."
 msgstr ""
