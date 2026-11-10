@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="zh_TW" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Attributes - Just Programmer&#x27;s Manual</title>
+
+
+        <!-- Custom HTML head -->
+        <script type="text/javascript" src="ltd-provenance.js"></script>
+        <script type="text/javascript" src="ltd-current.js"></script>
+        <script type="text/javascript" src="../../ltd-config.js"></script>
+        <script type="text/javascript" src="../../ltd-flyout.js"></script>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Just Programmer&#x27;s Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/casey/just" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h3 id="attributes"><a class="header" href="#attributes">Attributes</a></h3>
+<p>Recipes, <code>mod</code> statements, and aliases may be annotated with attributes that change their behavior.</p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>[arg(ARG, help="HELP")]</code><sup>1.46.0</sup></td><td>recipe</td><td>Print help string <code>HELP</code> for <code>ARG</code> in usage messages. May be a const expression<sup>1.55.0</sup>.</td></tr>
+<tr><td><code>[arg(ARG, long="LONG")]</code><sup>1.46.0</sup></td><td>recipe</td><td>Require values of argument <code>ARG</code> to be passed as <code>--LONG</code> option. If the parameter is variadic, the option is repeatable<sup>1.55.0master</sup>.</td></tr>
+<tr><td><code>[arg(ARG, max="MAX")]</code><sup>1.56.0</sup></td><td>recipe</td><td>Allow at most <code>MAX</code> values to be passed to argument <code>ARG</code>. Requires <code>multiple</code> or a variadic parameter.</td></tr>
+<tr><td><code>[arg(ARG, min="MIN")]</code><sup>1.56.0</sup></td><td>recipe</td><td>Require at least <code>MIN</code> values to be passed to argument <code>ARG</code>. Requires <code>multiple</code> or a variadic parameter.</td></tr>
+<tr><td><code>[arg(ARG, pattern="PATTERN")]</code><sup>1.45.0</sup></td><td>recipe</td><td>Require values of argument <code>ARG</code> to match regular expression <code>PATTERN</code>. May be a const expression<sup>1.55.0</sup>.</td></tr>
+<tr><td><code>[arg(ARG, short="S")]</code><sup>1.46.0</sup></td><td>recipe</td><td>Require values of argument <code>ARG</code> to be passed as short <code>-S</code> option. If the parameter is variadic, the option is repeatable<sup>1.55.0</sup>.</td></tr>
+<tr><td><code>[arg(ARG, value=VALUE)]</code><sup>1.46.0</sup></td><td>recipe</td><td>Makes option <code>ARG</code> a flag which does not take a value.</td></tr>
+<tr><td><code>[cache]</code><sup>1.54.0</sup></td><td>recipe</td><td>Skip recipe invocations when a matching entry exists in the cache. See <a href="cached-recipes.html">cached recipes</a> for details. Currently unstable.</td></tr>
+<tr><td><code>[confirm(PROMPT)]</code><sup>1.23.0</sup></td><td>recipe</td><td>Require confirmation prior to executing recipe with a custom prompt.</td></tr>
+<tr><td><code>[confirm]</code><sup>1.17.0</sup></td><td>recipe</td><td>Require confirmation prior to executing recipe.</td></tr>
+<tr><td><code>[continue(SIGNALS)]</code><sup>1.54.0</sup></td><td>recipe</td><td>Continue execution normally if a command is interrupted by any of <code>SIGNALS</code> and exits successfully. Defaults to <code>SIGINT</code>.</td></tr>
+<tr><td><code>[default]</code><sup>1.43.0</sup></td><td>recipe</td><td>Use recipe as module’s default recipe.</td></tr>
+<tr><td><code>[doc(DOC)]</code><sup>1.27.0</sup></td><td>module, recipe</td><td>Set recipe or module’s <a href="documentation-comments.html">documentation comment</a> to <code>DOC</code>. May be a const expression<sup>1.56.0</sup>.</td></tr>
+<tr><td><code>[dragonfly]</code><sup>1.47.0</sup></td><td>any<sup>1.56.0</sup></td><td>Enable item on DragonFly BSD.</td></tr>
+<tr><td><code>[env(NAME, VALUE)]</code> <sup>1.47.0</sup></td><td>recipe</td><td>Set environment variable <code>NAME</code> to <code>VALUE</code> for recipe. <code>NAME</code> and <code>VALUE</code> may be expressions<sup>1.51.0</sup>.</td></tr>
+<tr><td><code>[extension(EXT)]</code><sup>1.32.0</sup></td><td>recipe</td><td>Set shebang recipe script’s file extension to <code>EXT</code>. <code>EXT</code> should include a period if one is desired.</td></tr>
+<tr><td><code>[exit-message]</code><sup>1.39.0</sup></td><td>recipe</td><td>Print error message if recipe fails regardless of <code>set no-exit-message</code>.</td></tr>
+<tr><td><code>[freebsd]</code><sup>1.47.0</sup></td><td>any<sup>1.56.0</sup></td><td>Enable item on FreeBSD.</td></tr>
+<tr><td><code>[group(NAME)]</code><sup>1.27.0</sup></td><td>module, recipe</td><td>Put recipe or module in <a href="groups.html">group</a> <code>NAME</code>.</td></tr>
+<tr><td><code>[android]</code><sup>1.50.0</sup></td><td>any<sup>1.56.0</sup></td><td>Enable item on Android.</td></tr>
+<tr><td><code>[linux]</code><sup>1.8.0</sup></td><td>any<sup>1.56.0</sup></td><td>Enable item on Linux.</td></tr>
+<tr><td><code>[macos]</code><sup>1.8.0</sup></td><td>any<sup>1.56.0</sup></td><td>Enable item on macOS.</td></tr>
+<tr><td><code>[metadata(METADATA)]</code><sup>1.42.0</sup></td><td>recipe</td><td>Attach <code>METADATA</code> to recipe.</td></tr>
+<tr><td><code>[netbsd]</code><sup>1.47.0</sup></td><td>any<sup>1.56.0</sup></td><td>Enable item on NetBSD.</td></tr>
+<tr><td><code>[no-cd]</code><sup>1.9.0</sup></td><td>recipe</td><td>Don’t change directory before executing recipe.</td></tr>
+<tr><td><code>[no-exit-message]</code><sup>1.7.0</sup></td><td>recipe</td><td>Don’t print an error message if recipe fails.</td></tr>
+<tr><td><code>[no-quiet]</code><sup>1.23.0</sup></td><td>recipe</td><td>Override globally quiet recipes and always echo out the recipe.</td></tr>
+<tr><td><code>[openbsd]</code><sup>1.38.0</sup></td><td>any<sup>1.56.0</sup></td><td>Enable item on OpenBSD.</td></tr>
+<tr><td><code>[parallel]</code><sup>1.42.0</sup></td><td>recipe</td><td>Run this recipe’s dependencies in parallel.</td></tr>
+<tr><td><code>[positional-arguments]</code><sup>1.29.0</sup></td><td>recipe</td><td>Turn on <a href="positional-arguments.html">positional arguments</a> for this recipe.</td></tr>
+<tr><td><code>[private]</code><sup>1.10.0</sup></td><td>alias, recipe</td><td>Make recipe, alias, or variable private. See <a href="private-recipes.html">Private Recipes</a>.</td></tr>
+<tr><td><code>[script(COMMAND)]</code><sup>1.32.0</sup></td><td>recipe</td><td>Execute recipe as a script interpreted by <code>COMMAND</code>. See <a href="script-recipes.html">script recipes</a> for more details.</td></tr>
+<tr><td><code>[script]</code><sup>1.33.0</sup></td><td>recipe</td><td>Execute recipe as script. See <a href="script-recipes.html">script recipes</a> for more details.</td></tr>
+<tr><td><code>[shell]</code><sup>1.52.0</sup></td><td>recipe</td><td>Execute recipe as a shell recipe, overriding <code>set default-script</code>.</td></tr>
+<tr><td><code>[timestamp(FORMAT)]</code><sup>1.58.0</sup></td><td>recipe</td><td>Print command timestamps with format <code>FORMAT</code>. <code>FORMAT</code> may be an expression.</td></tr>
+<tr><td><code>[timestamp]</code><sup>1.58.0</sup></td><td>recipe</td><td>Print command timestamps.</td></tr>
+<tr><td><code>[unix]</code><sup>1.8.0</sup></td><td>any<sup>1.56.0</sup></td><td>Enable item on unixes. (Includes macOS).</td></tr>
+<tr><td><code>[windows]</code><sup>1.8.0</sup></td><td>any<sup>1.56.0</sup></td><td>Enable item on Windows.</td></tr>
+<tr><td><code>[working-directory(PATH)]</code><sup>1.38.0</sup></td><td>recipe</td><td>Set recipe working directory. <code>PATH</code> may be an expression<sup>1.51.0</sup> whose value is relative or absolute. If relative, it is interpreted relative to the default working directory.</td></tr>
+</tbody></table>
+</div>
+<p>A recipe can have multiple attributes, either on multiple lines:</p>
+<pre><code class="language-just">[no-cd]
+[private]
+foo:
+    echo "foo"
+</code></pre>
+<p>Or separated by commas on a single line<sup>1.14.0</sup>:</p>
+<pre><code class="language-just">[no-cd, private]
+foo:
+    echo "foo"
+</code></pre>
+<p>Attributes with a single argument may be written with a colon:</p>
+<pre><code class="language-just">[group: 'bar']
+foo:
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="reference.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="settings.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="reference.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="settings.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
