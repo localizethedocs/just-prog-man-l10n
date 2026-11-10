@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Just Programmer's Manual\n"
-"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"POT-Creation-Date: 2026-11-10T16:22:52Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/settings.md:1
@@ -61,18 +61,18 @@ msgid "`allow-duplicate-recipes`"
 msgstr ""
 
 #: src/settings.md:20 src/settings.md:21 src/settings.md:22 src/settings.md:23
-#: src/settings.md:26 src/settings.md:27 src/settings.md:29 src/settings.md:30
-#: src/settings.md:31 src/settings.md:32 src/settings.md:33 src/settings.md:35
-#: src/settings.md:36 src/settings.md:38 src/settings.md:39 src/settings.md:40
-#: src/settings.md:41 src/settings.md:45 src/settings.md:46
+#: src/settings.md:26 src/settings.md:27 src/settings.md:29 src/settings.md:31
+#: src/settings.md:32 src/settings.md:33 src/settings.md:34 src/settings.md:36
+#: src/settings.md:37 src/settings.md:39 src/settings.md:40 src/settings.md:41
+#: src/settings.md:42 src/settings.md:46 src/settings.md:47
 msgid "boolean"
 msgstr ""
 
 #: src/settings.md:20 src/settings.md:21 src/settings.md:22 src/settings.md:23
-#: src/settings.md:26 src/settings.md:27 src/settings.md:29 src/settings.md:30
-#: src/settings.md:31 src/settings.md:32 src/settings.md:33 src/settings.md:35
-#: src/settings.md:36 src/settings.md:38 src/settings.md:39 src/settings.md:40
-#: src/settings.md:41 src/settings.md:45 src/settings.md:46
+#: src/settings.md:26 src/settings.md:27 src/settings.md:29 src/settings.md:31
+#: src/settings.md:32 src/settings.md:33 src/settings.md:34 src/settings.md:36
+#: src/settings.md:37 src/settings.md:39 src/settings.md:40 src/settings.md:41
+#: src/settings.md:42 src/settings.md:46 src/settings.md:47
 msgid "`false`"
 msgstr ""
 
@@ -112,14 +112,14 @@ msgstr ""
 msgid "`dotenv-command`<sup>1.54.0</sup>"
 msgstr ""
 
-#: src/settings.md:24 src/settings.md:25 src/settings.md:28 src/settings.md:34
-#: src/settings.md:37 src/settings.md:44 src/settings.md:48
+#: src/settings.md:24 src/settings.md:25 src/settings.md:28 src/settings.md:30
+#: src/settings.md:35 src/settings.md:38 src/settings.md:45 src/settings.md:49
 msgid "string"
 msgstr ""
 
-#: src/settings.md:24 src/settings.md:25 src/settings.md:28 src/settings.md:34
-#: src/settings.md:37 src/settings.md:43 src/settings.md:44 src/settings.md:47
-#: src/settings.md:48
+#: src/settings.md:24 src/settings.md:25 src/settings.md:28 src/settings.md:35
+#: src/settings.md:38 src/settings.md:44 src/settings.md:45 src/settings.md:48
+#: src/settings.md:49
 msgid "\\-"
 msgstr ""
 
@@ -171,195 +171,210 @@ msgid "Error if a `.env` file isn’t found."
 msgstr ""
 
 #: src/settings.md:30
-msgid "`export`"
+msgid "`dry-run`<sup>master</sup>"
 msgstr ""
 
 #: src/settings.md:30
+msgid "`\"all\"`"
+msgstr ""
+
+#: src/settings.md:30
+msgid ""
+"What to skip when invoked with `--dry-run`. `\"all\"` skips recipe bodies, "
+"backticks, `shell()`, and `dotenv-command`. `\"recipes\"` only skips recipe "
+"bodies."
+msgstr ""
+
+#: src/settings.md:31
+msgid "`export`"
+msgstr ""
+
+#: src/settings.md:31
 msgid "Export all variables as environment variables."
 msgstr ""
 
-#: src/settings.md:31
+#: src/settings.md:32
 msgid "`fallback`"
 msgstr ""
 
-#: src/settings.md:31
+#: src/settings.md:32
 msgid ""
 "Search for `justfile` in parent directory if the first recipe on the command "
 "line is not found."
 msgstr ""
 
-#: src/settings.md:32
+#: src/settings.md:33
 msgid "`guards`<sup>1.47.0</sup>"
 msgstr ""
 
-#: src/settings.md:32
+#: src/settings.md:33
 msgid "Enable the `?` guard sigil on recipe lines. See [sigils](sigils.html)."
 msgstr ""
 
-#: src/settings.md:33
+#: src/settings.md:34
 msgid "`ignore-comments`"
 msgstr ""
 
-#: src/settings.md:33
+#: src/settings.md:34
 msgid ""
 "Ignore shell recipe lines beginning with `#`. Does not apply to script "
 "recipes."
 msgstr ""
 
-#: src/settings.md:34
+#: src/settings.md:35
 msgid "`indentation`<sup>1.56.0</sup>"
 msgstr ""
 
-#: src/settings.md:34
+#: src/settings.md:35
 msgid ""
 "Set recipe body indentation used when formatting with `--fmt` or `--dump`."
 msgstr ""
 
-#: src/settings.md:35
+#: src/settings.md:36
 msgid "`lazy`<sup>1.47.0</sup>"
 msgstr ""
 
-#: src/settings.md:35
+#: src/settings.md:36
 msgid "Don’t evaluate unused variables."
 msgstr ""
 
-#: src/settings.md:36
+#: src/settings.md:37
 msgid "`lists`<sup>1.53.0</sup>"
 msgstr ""
 
-#: src/settings.md:36
+#: src/settings.md:37
 msgid "Values may be lists of strings instead of strings. Currently unstable."
 msgstr ""
 
-#: src/settings.md:37
+#: src/settings.md:38
 msgid "`minimum-version`<sup>1.55.0</sup>"
 msgstr ""
 
-#: src/settings.md:37
+#: src/settings.md:38
 msgid ""
 "Error if `just` is older than `minimum-version`. Accepts a string of the "
 "form `MAJOR.MINOR.PATCH`, e.g., `\"1.55.0\"`."
 msgstr ""
 
-#: src/settings.md:38
+#: src/settings.md:39
 msgid "`no-cd`<sup>1.51.0</sup>"
 msgstr ""
 
-#: src/settings.md:38
+#: src/settings.md:39
 msgid "Don’t change directory when executing recipes by recipe attribute."
 msgstr ""
 
-#: src/settings.md:39
+#: src/settings.md:40
 msgid "`no-exit-message`<sup>1.39.0</sup>"
 msgstr ""
 
-#: src/settings.md:39
+#: src/settings.md:40
 msgid "Don’t print exit messages if recipes fail."
 msgstr ""
 
-#: src/settings.md:40
+#: src/settings.md:41
 msgid "`positional-arguments`"
 msgstr ""
 
-#: src/settings.md:40
+#: src/settings.md:41
 msgid "Pass positional arguments."
 msgstr ""
 
-#: src/settings.md:41
+#: src/settings.md:42
 msgid "`quiet`"
 msgstr ""
 
-#: src/settings.md:41
+#: src/settings.md:42
 msgid "Disable echoing recipe lines before executing."
 msgstr ""
 
-#: src/settings.md:42
+#: src/settings.md:43
 msgid "`script-interpreter`<sup>1.33.0</sup>"
 msgstr ""
 
-#: src/settings.md:42 src/settings.md:43 src/settings.md:47
+#: src/settings.md:43 src/settings.md:44 src/settings.md:48
 msgid "`[COMMAND, ARGS…]`"
 msgstr ""
 
-#: src/settings.md:42
+#: src/settings.md:43
 msgid "`['sh', '-eu']`"
 msgstr ""
 
-#: src/settings.md:42
+#: src/settings.md:43
 msgid "Set command used to invoke recipes with empty `[script]` attribute."
 msgstr ""
 
-#: src/settings.md:43
+#: src/settings.md:44
 msgid "`shell`"
 msgstr ""
 
-#: src/settings.md:43
+#: src/settings.md:44
 msgid "Set command used to invoke recipes and evaluate backticks."
 msgstr ""
 
-#: src/settings.md:44
+#: src/settings.md:45
 msgid "`tempdir`"
 msgstr ""
 
-#: src/settings.md:44
+#: src/settings.md:45
 msgid ""
 "Create temporary directories in `tempdir` instead of the system default "
 "temporary directory."
 msgstr ""
 
-#: src/settings.md:45
+#: src/settings.md:46
 msgid "`unstable`<sup>1.31.0</sup>"
 msgstr ""
 
-#: src/settings.md:45
+#: src/settings.md:46
 msgid "Enable unstable features."
 msgstr ""
 
-#: src/settings.md:46
+#: src/settings.md:47
 msgid "`windows-powershell`"
 msgstr ""
 
-#: src/settings.md:46
+#: src/settings.md:47
 msgid ""
 "Use PowerShell on Windows as default shell. (Deprecated. Use the `[windows]` "
 "attribute on `set shell`.)"
 msgstr ""
 
-#: src/settings.md:47
+#: src/settings.md:48
 msgid "`windows-shell`"
 msgstr ""
 
-#: src/settings.md:47
+#: src/settings.md:48
 msgid ""
 "Set the command used to invoke recipes and evaluate backticks. (Deprecated. "
 "Use the `[windows]` attribute on `set shell`.)"
 msgstr ""
 
-#: src/settings.md:48
+#: src/settings.md:49
 msgid "`working-directory`<sup>1.33.0</sup>"
 msgstr ""
 
-#: src/settings.md:48
+#: src/settings.md:49
 msgid ""
 "Set the working directory for recipes and backticks, relative to the default "
 "working directory."
 msgstr ""
 
-#: src/settings.md:50
+#: src/settings.md:51
 msgid "Boolean settings can be written as:"
 msgstr ""
 
-#: src/settings.md:56
+#: src/settings.md:57
 msgid "Which is equivalent to:"
 msgstr ""
 
-#: src/settings.md:62
+#: src/settings.md:63
 msgid ""
 "Non-boolean settings can be set to both strings and expressions<sup>1.46.0</"
 "sup>."
 msgstr ""
 
-#: src/settings.md:65
+#: src/settings.md:66
 msgid ""
 "However, because settings affect the behavior of backticks and many "
 "functions, those expressions may not contain backticks or function calls, "

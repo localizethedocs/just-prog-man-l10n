@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Just Programmer's Manual\n"
-"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"POT-Creation-Date: 2026-11-10T16:22:52Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/introduction.md:21
@@ -24,8 +24,8 @@ msgstr ""
 
 #: src/introduction.md:28
 msgid ""
-"(中文文档在 [这里](https://github.com/casey/just/blob/master/README.中文."
-"md), 快看过来!)"
+"(中文文档在 [这里](https://github.com/casey/just/blob/master/README.中"
+"文.md), 快看过来!)"
 msgstr ""
 
 #: src/introduction.md:31
@@ -95,8 +95,8 @@ msgstr ""
 
 #: src/introduction.md:70
 msgid ""
-"Recipes can be [listed from the command line](listing-available-recipes."
-"html)."
+"Recipes can be [listed from the command line](listing-available-"
+"recipes.html)."
 msgstr ""
 
 #: src/introduction.md:72
@@ -119,8 +119,8 @@ msgstr ""
 
 #: src/introduction.md:81
 msgid ""
-"`justfiles` can be organized into multiple files using [modules](modules."
-"html) and [imports](imports.html)."
+"`justfiles` can be organized into multiple files using [modules]"
+"(modules.html) and [imports](imports.html)."
 msgstr ""
 
 #: src/introduction.md:84
