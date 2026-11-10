@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/listing-available-recipes.md:1
+msgid "Listing Available Recipes"
+msgstr ""
+
+#: src/listing-available-recipes.md:3
+msgid "Recipes can be listed in alphabetical order with `just --list`:"
+msgstr ""
+
+#: src/listing-available-recipes.md:14
+msgid ""
+"Recipes in [submodules](modules.html) can be listed with `just --list PATH`, "
+"where `PATH` is a space- or `::`\\-separated module path:"
+msgstr ""
+
+#: src/listing-available-recipes.md:32
+msgid "`just --summary` is more concise:"
+msgstr ""
+
+#: src/listing-available-recipes.md:39
+msgid ""
+"Pass `--unsorted` to print recipes in the order they appear in the "
+"`justfile`:"
+msgstr ""
+
+#: src/listing-available-recipes.md:61
+msgid ""
+"If you’d like `just` to default to listing the recipes in the `justfile`, "
+"set `default-list`<sup>1.52.0</sup>:"
+msgstr ""
+
+#: src/listing-available-recipes.md:68
+msgid ""
+"The setting is per-module, so invoking a module path with `default-list` "
+"enabled lists that module’s recipes."
+msgstr ""
+
+#: src/listing-available-recipes.md:71
+msgid ""
+"You can also default to listing recipes this behavior by settting the "
+"environment variable `JUST_DEFAULT_LIST=true` or passing `--default-"
+"list`<sup>1.52.0</sup>."
+msgstr ""
+
+#: src/listing-available-recipes.md:75
+msgid "The heading text can be customized with `--list-heading`:"
+msgstr ""
+
+#: src/listing-available-recipes.md:84
+msgid "And the indentation can be customized with `--list-prefix`:"
+msgstr ""
+
+#: src/listing-available-recipes.md:93
+msgid ""
+"The argument to `--list-heading` replaces both the heading and the newline "
+"following it, so it should contain a newline if non-empty. It works this way "
+"so you can suppress the heading line entirely by passing the empty string:"
+msgstr ""

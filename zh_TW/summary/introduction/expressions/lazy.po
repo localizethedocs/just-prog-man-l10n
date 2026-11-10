@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/lazy.md:1
+msgid "Lazy"
+msgstr ""
+
+#: src/lazy.md:3
+msgid ""
+"The `lazy` setting<sup>1.47.0</sup> causes the evaluator to skip evaluating "
+"unused variables. This can be beneficial when a `justfile` contains "
+"variables that are expensive to evaluate but only sometimes used."
+msgstr ""
+
+#: src/lazy.md:7
+msgid ""
+"In the following `justfile`, `token` will be skipped when only invoking "
+"`bar`:"
+msgstr ""
+
+#: src/lazy.md:9
+msgid ""
+"```just\n"
+"set lazy\n"
+"\n"
+"token := `expensive-script-to-get-credentials`\n"
+"\n"
+"foo:\n"
+"  curl -H \"Authorization: Bearer {{ token }}\" https://example.com/foo\n"
+"\n"
+"bar:\n"
+"  cargo test\n"
+"```"
+msgstr ""
+
+#: src/lazy.md:21
+msgid ""
+"Because `just` cannot determine when exported variables are used, "
+"assignments with `export` and assignments in a module with `set export` will "
+"always be evaluated."
+msgstr ""

@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/allow-duplicate-variables.md:1
+msgid "Allow Duplicate Variables"
+msgstr ""
+
+#: src/allow-duplicate-variables.md:3
+msgid ""
+"If `allow-duplicate-variables` is set to `true`, defining multiple variables "
+"with the same name is not an error and the last definition is used. Defaults "
+"to `false`."
+msgstr ""
+
+#: src/allow-duplicate-variables.md:7
+msgid ""
+"```just\n"
+"set allow-duplicate-variables\n"
+"\n"
+"a := \"foo\"\n"
+"a := \"bar\"\n"
+"\n"
+"@foo:\n"
+"  echo {{a}}\n"
+"```"
+msgstr ""

@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Just Programmer's Manual\n"
+"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/visual-studio-code.md:1
+msgid "Visual Studio Code"
+msgstr ""
+
+#: src/visual-studio-code.md:3
+msgid ""
+"An extension for VS Code is [available here](https://github.com/nefrob/"
+"vscode-just)."
+msgstr ""
+
+#: src/visual-studio-code.md:5
+msgid ""
+"Unmaintained VS Code extensions include [skellock/vscode-just](https://"
+"github.com/skellock/vscode-just) and [sclu1034/vscode-just](https://"
+"github.com/sclu1034/vscode-just)."
+msgstr ""
