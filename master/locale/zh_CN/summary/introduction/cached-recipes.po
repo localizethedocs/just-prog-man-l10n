@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Just Programmer's Manual\n"
-"POT-Creation-Date: 2026-10-24T18:55:28Z\n"
+"POT-Creation-Date: 2026-11-10T16:22:52Z\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -25,9 +25,9 @@ msgstr ""
 
 #: src/cached-recipes.md:8
 msgid ""
-"For example, this recipe will be skipped if `image.jpg` exists and the "
-"contents of `image.png` and the output of `convert -version` haven’t changed "
-"since the last run:"
+"For example, this recipe will be skipped if the contents of `image.png` and "
+"`image.jpg` and the output of `convert -version` haven’t changed since the "
+"last run:"
 msgstr ""
 
 #: src/cached-recipes.md:12
